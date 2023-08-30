@@ -8,4 +8,3 @@ dependencies:
   flutter:
     sdk: flutter
   speech_to_text: ^6.2.0
-  flutter_neumorphic: ^3.2.0
