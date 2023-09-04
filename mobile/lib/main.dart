@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: VoiceRecognitionPage(), // Définissez VoiceRecognitionPage comme page d'accueil
+      home: VoiceRecognitionPage(),
     );
   }
 }
