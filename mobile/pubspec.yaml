@@ -9,3 +9,8 @@ dependencies:
     sdk: flutter
   speech_to_text: ^6.2.0
   neumorphic_button: ^0.0.1+2
+  http: ^0.13.3
+
+flutter:
+  assets:
+    - config/config.json
