@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/exception/ItinaryException.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class VoiceRecognitionPage extends StatefulWidget {
@@ -58,7 +59,7 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
                   items: _localeNames.map((localeName) {
                     return DropdownMenuItem(
                       value: localeName,
-                      child: Text(localeName.name ?? localeName.localeId),
+                      child: Text(localeName.localeId),
                     );
                   }).toList(),
                   onChanged: (value) {
@@ -97,11 +98,11 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
               ElevatedButton(
                 onPressed: () {
                   // Action de validation
+                  throw ItinaryException("message", "code");
                 },
                 child: Text('Valider'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
-                  onPrimary: Colors.white,
+                  foregroundColor: Colors.white, backgroundColor: Colors.blue,
                 ),
               ),
             ],

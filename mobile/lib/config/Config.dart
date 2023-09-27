@@ -10,7 +10,7 @@ class Config {
 
   static Future<Config> getInstance() async {
     if (_instance == null) {
-      final configString = await rootBundle.loadString('assets/config.json');
+      final configString = await rootBundle.loadString('config.json');
       final configJson = jsonDecode(configString);
       _instance = Config._internal(configJson['NLP_API_URL']);
     }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'model/ItinaryResponse.dart';
+import '../model/ItinaryResponse.dart';
 
 class ItinaryPage extends StatelessWidget {
   final ItinaryResponse itinaryResponse;

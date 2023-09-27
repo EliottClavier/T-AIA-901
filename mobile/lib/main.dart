@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
-import 'VoiceRecognitionPage.dart';
-import 'ItinaryPage.dart';
+import 'package:mobile/exception/CommonException.dart';
+import 'package:mobile/exception/CommonExceptionHandler.dart';
+import 'widgets/VoiceRecognitionPage.dart';
 import 'model/ItinaryResponse.dart';
 
-void main() => runApp(MyApp());
+void main(){
+  FlutterError.onError = (error) {
+    print(error);
+    if (error.exception is CommonException) {
+      CommonExceptionHandler.handleException(error.exception as CommonException);
+    } else {
+      FlutterError.presentError(error);
+    }
+  };
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -21,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ItinaryPage(itinaryResponse: itinaryResponse),
+      home: VoiceRecognitionPage(),
     );
   }
 }
