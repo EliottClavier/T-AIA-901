@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:mobile/services/NavigationService.dart';
 import '../config/Config.dart';
 import '../model/ItinaryResponse.dart';
 import '../widgets/LoadingPage.dart';
@@ -18,7 +19,8 @@ class PathRequestService {
     print("Config API URL : ${NLP_API_URL}");
   }
 
-  sendShortestPathRequest(String input, BuildContext context) async {
+  sendShortestPathRequest(String input) async {
+    BuildContext context = NavigationService.navigatorKey.currentContext!;
     navigateToLoadingScreen(context);
 
     final response = await http.post(

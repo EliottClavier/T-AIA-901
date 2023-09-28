@@ -3,10 +3,10 @@ import 'package:mobile/exception/CommonException.dart';
 import 'package:mobile/exception/CommonExceptionHandler.dart';
 import 'widgets/VoiceRecognitionPage.dart';
 import 'model/ItinaryResponse.dart';
+import 'services/NavigationService.dart';
 
 void main(){
   FlutterError.onError = (error) {
-    print(error);
     if (error.exception is CommonException) {
       CommonExceptionHandler.handleException(error.exception as CommonException);
     } else {
@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
+      navigatorKey: NavigationService.navigatorKey,
       title: 'Voice Recognition App',
       theme: ThemeData(
         primarySwatch: Colors.blue,

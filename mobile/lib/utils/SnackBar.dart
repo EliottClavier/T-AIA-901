@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../services/NavigationService.dart';
+
 
 // Shows a snackbar with the given message and status
-void showSnackBar(
-    BuildContext context, String message, String status, int duration) {
+void showSnackBar(String message, String status, int duration) {
+  BuildContext context = NavigationService.navigatorKey.currentContext!;
   ScaffoldMessenger.of(context)
       .showSnackBar(getSnackBar(message, status, duration));
 }

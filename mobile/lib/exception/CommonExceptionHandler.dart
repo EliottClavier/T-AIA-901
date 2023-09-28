@@ -1,5 +1,6 @@
 import 'package:mobile/exception/CommonException.dart';
 import 'package:mobile/exception/ItinaryException.dart';
+import 'package:mobile/utils/SnackBar.dart';
 
 class CommonExceptionHandler{
 
@@ -17,5 +18,6 @@ class CommonExceptionHandler{
 
   static _handleItinaryException(ItinaryException exception){
     print("Itinary Exception occured");
+    showSnackBar(exception.message, "", 3000);
   }
 }
