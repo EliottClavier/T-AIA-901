@@ -1,15 +1,25 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:mobile/exception/CommonException.dart';
 import 'package:mobile/exception/CommonExceptionHandler.dart';
 import 'widgets/VoiceRecognitionPage.dart';
-import 'model/ItinaryResponse.dart';
+import 'model/ItineraryResponse.dart';
 import 'services/NavigationService.dart';
 
 void main(){
   FlutterError.onError = (error) {
     if (error.exception is CommonException) {
       CommonExceptionHandler.handleException(error.exception as CommonException);
-    } else {
+    } else if(error.exception is HttpException){
+      CommonExceptionHandler.handleException(
+          CommonException(
+              "Http Exception",
+              error.exception.toString()
+          )
+      );
+    }
+    else {
       FlutterError.presentError(error);
     }
   };
@@ -20,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    ItinaryResponse itinaryResponse = ItinaryResponse(
+    ItineraryResponse itineraryResponse = ItineraryResponse(
       sentenceID: "12345",
       departure: "Paris",
       destination: "Marseille",

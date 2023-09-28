@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../model/ItinaryResponse.dart';
 
 class LoadingPage extends StatelessWidget {
 

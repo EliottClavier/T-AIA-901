@@ -1,7 +1,7 @@
-class ItinaryRequest{
+class ItineraryRequest{
   final String textInput;
 
-  ItinaryRequest({
+  ItineraryRequest({
     required this.textInput
   });
 }

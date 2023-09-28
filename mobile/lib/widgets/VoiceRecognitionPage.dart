@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/exception/ItinaryException.dart';
-import 'package:mobile/services/PathRequestService.dart';
+import 'package:mobile/services/ItineraryService.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class VoiceRecognitionPage extends StatefulWidget {
@@ -14,7 +13,7 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
   String _text = '';
   List<stt.LocaleName> _localeNames = [];
   stt.LocaleName? _selectedLocale;
-  PathRequestService pathRequestService = PathRequestService();
+  ItineraryService itineraryService = ItineraryService();
 
   @override
   void initState() {
@@ -100,7 +99,7 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
               ElevatedButton(
                 onPressed: () {
                   // Action de validation
-                  pathRequestService.sendShortestPathRequest(_text);
+                  itineraryService.askItineraryFromInputText(_text);
                 },
                 child: Text('Valider'),
                 style: ElevatedButton.styleFrom(

@@ -1,4 +1,3 @@
-import 'package:mobile/exception/CommonExceptionHandler.dart';
 
 class CommonException implements Exception {
   late String message;
@@ -7,10 +6,6 @@ class CommonException implements Exception {
   CommonException(String message, String code) {
     this.message = message;
     this.code = code;
-  }
-
-  throwException(){
-
   }
 
 }

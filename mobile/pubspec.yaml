@@ -13,4 +13,4 @@ dependencies:
 
 flutter:
   assets:
-    - config/config.json
+    - config/
