@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/exception/ItineraryException.dart';
+import 'package:mobile/exception/enums/ItinaryExceptionEnumCode.dart';
 import 'package:mobile/services/ItineraryService.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
@@ -98,7 +100,6 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
               SizedBox(height: 60),
               ElevatedButton(
                 onPressed: () {
-                  // Action de validation
                   itineraryService.askItineraryFromInputText(_text);
                 },
                 child: Text('Valider'),

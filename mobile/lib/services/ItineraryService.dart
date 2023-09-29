@@ -5,6 +5,7 @@ import 'package:mobile/config/Config.dart';
 import 'package:mobile/model/ItineraryResponse.dart';
 
 import '../exception/ItineraryException.dart';
+import '../exception/enums/ItinaryExceptionEnumCode.dart';
 
 class ItineraryService {
 
@@ -33,10 +34,18 @@ class ItineraryService {
     );
 
     if (response.statusCode == 200) {
-      this.itineraryResponse = ItineraryResponse.fromJson(jsonDecode(response.body));
-      NavigationService.navigateToItineraryPage(itineraryResponse);
+      try{
+        this.itineraryResponse = ItineraryResponse.fromJson(jsonDecode(response.body));
+        NavigationService.navigateToItineraryPage(itineraryResponse);
+      } catch (e) {
+        throw ItineraryException("Error while parsing the response", e.toString());
+      }
     } else {
-      throw ItineraryException("Error", "Error while sending request to NLP API");
+      String sentenceId = jsonDecode(response.body)["sentenceId"] ?? null;
+      throw ItineraryException.createFromEnumCode(
+          ItineraryExceptionEnumCode.fromCode(jsonDecode(response.body)["code"]), sentenceId
+      );
     }
   }
+
 }
