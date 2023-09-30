@@ -14,7 +14,7 @@ class Wrapper extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 1,
       height: MediaQuery.of(context).size.height * 1,
       decoration: BoxDecoration(
-      color: AppColors.backgroundColor,
+        color: AppColors.backgroundColor,
       ),
       child: child,
     );

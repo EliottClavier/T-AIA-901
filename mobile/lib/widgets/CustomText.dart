@@ -3,6 +3,7 @@ import 'package:mobile/utils/AppColors.dart';
 
 class CustomText extends StatelessWidget {
   final String text;
+  final bool isUpperCase;
   final TextAlign textAlign;
   final String fontFamily;
   final FontWeight fontWeight;
@@ -13,6 +14,7 @@ class CustomText extends StatelessWidget {
 
   CustomText({
     required this.text,
+    this.isUpperCase = true,
     this.textAlign = TextAlign.center,
     this.fontFamily = 'SofiaSans',
     this.fontWeight = FontWeight.bold,
@@ -25,7 +27,7 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      text.toUpperCase(),
+      isUpperCase ? text.toUpperCase() : text,
       textAlign: textAlign,
       style: TextStyle(
         fontFamily: fontFamily,
