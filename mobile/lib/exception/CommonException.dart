@@ -1,11 +1,11 @@
 
 class CommonException implements Exception {
-  late String message;
   late String code;
+  late String message;
 
-  CommonException(String message, String code) {
-    this.message = message;
+  CommonException(String code, String message) {
     this.code = code;
+    this.message = message;
   }
 
 }

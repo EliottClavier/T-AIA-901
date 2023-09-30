@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mobile/exception/CommonException.dart';
@@ -17,15 +15,7 @@ void main(){
   FlutterError.onError = (error) {
     if (error.exception is CommonException) {
       CommonExceptionHandler.handleException(error.exception as CommonException);
-    } else if(error.exception is HttpException){
-      CommonExceptionHandler.handleException(
-          CommonException(
-              "Http Exception",
-              error.exception.toString()
-          )
-      );
-    }
-    else {
+    } else {
       FlutterError.presentError(error);
     }
   };

@@ -3,7 +3,7 @@ import 'enums/ItinaryExceptionEnumCode.dart';
 
 class ItineraryException extends CommonException {
 
-  ItineraryException(super.message, super.code);
+  ItineraryException(super.code, super.message);
 
   factory ItineraryException.createFromEnumCode(ItineraryExceptionEnumCode code, String? sentenceId){
     String message = code.getMessage();

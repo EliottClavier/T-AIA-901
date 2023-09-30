@@ -16,13 +16,13 @@ class CommonExceptionHandler{
 
   static _handleCommonException(CommonException exception){
     SnackBarUtils.showSnackBar(exception.message, Colors.redAccent.shade400, 3).closed.then((value) => {
-      NavigationService.navigateToVoiceRecognitionPage()
+      NavigationService.backToVoiceRecognitionPage()
     });
   }
 
   static _handleItineraryException(ItineraryException exception){
     SnackBarUtils.showSnackBar(exception.message, Colors.deepOrange.shade400, 3).closed.then((value) => {
-      NavigationService.navigateToVoiceRecognitionPage()
+      NavigationService.backToVoiceRecognitionPage()
     });
   }
 }

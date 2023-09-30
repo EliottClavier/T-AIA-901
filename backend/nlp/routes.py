@@ -7,8 +7,12 @@ def nlp_route():
     print("NLP route with input : ", request.json)
     result = {
        "sentenceID": "12345",
-       "departure": "Paris",
+       "departure": "Avignon",
        "destination": "Nantes",
        "steps": ["Lyon", "Avignon"]
    }
+    """ result = {
+        "sentenceId": "serverSentenceID",
+        "code": "NOT_FRENCH",
+    } """
     return jsonify(result)

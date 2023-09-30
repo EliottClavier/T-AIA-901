@@ -29,4 +29,8 @@ class NavigationService {
     );
   }
 
+  static void backToVoiceRecognitionPage() {
+    return Navigator.of(context).popUntil((route) => route.isFirst);
+  }
+
 }

@@ -4,8 +4,8 @@ enum ItineraryExceptionEnumCode {
   UNKNOWN("UNKONWN", "An unknown error has occurred");
 
   const ItineraryExceptionEnumCode(this._code, this._message);
-  final String _code;
   final String _message;
+  final String _code;
 
   getCode(){
     return this._code;
@@ -13,5 +13,14 @@ enum ItineraryExceptionEnumCode {
 
   getMessage(){
     return this._message;
+  }
+
+  factory ItineraryExceptionEnumCode.fromCode(String code){
+    for(var value in ItineraryExceptionEnumCode.values){
+      if(value.getCode() == code){
+        return value;
+      }
+    }
+    return UNKNOWN;
   }
 }
