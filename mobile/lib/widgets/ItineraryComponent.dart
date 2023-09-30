@@ -7,13 +7,15 @@ class ItineraryComponent extends StatelessWidget {
 
   final String text;
   final String prependText;
+  final double size;
 
-  ItineraryComponent({required this.text, this.prependText = ""});
+  ItineraryComponent({required this.text, this.prependText = "", this.size = 50.0});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 22.0, vertical: 15.0),
+        padding: EdgeInsets.symmetric(horizontal: 22.0),
+        height: size,
         decoration: BoxDecoration(
           color: AppColors.secondaryColor,
           borderRadius: BorderRadius.circular(4.0),
