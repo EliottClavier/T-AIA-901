@@ -1,13 +1,19 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mobile/exception/CommonException.dart';
 import 'package:mobile/exception/CommonExceptionHandler.dart';
-import 'widgets/VoiceRecognitionPage.dart';
+import 'package:mobile/screens/VoiceRecognitionPage.dart';
+import 'package:mobile/utils/AppColors.dart';
 import 'model/ItineraryResponse.dart';
 import 'services/NavigationService.dart';
 
 void main(){
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: AppColors.backgroundColor,
+  ));
+
   FlutterError.onError = (error) {
     if (error.exception is CommonException) {
       CommonExceptionHandler.handleException(error.exception as CommonException);

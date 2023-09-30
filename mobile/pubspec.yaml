@@ -14,3 +14,11 @@ dependencies:
 flutter:
   assets:
     - config/
+  fonts:
+    - family: SofiaSans
+      fonts:
+        - asset: fonts/SofiaSans/SofiaSans-Medium.ttf
+        - asset: fonts/SofiaSans/SofiaSans-MediumItalic.ttf
+        - asset: fonts/SofiaSans/SofiaSans-SemiBold.ttf
+        - asset: fonts/SofiaSans/SofiaSans-Bold.ttf
+  uses-material-design: true

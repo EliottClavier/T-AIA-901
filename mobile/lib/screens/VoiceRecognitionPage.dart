@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/services/ItineraryService.dart';
 import 'package:mobile/widgets/CustomText.dart';
+import 'package:mobile/widgets/Wrapper.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 import '../utils/AppColors.dart';
@@ -38,55 +39,56 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          padding: EdgeInsets.all(30.0),
-          constraints: BoxConstraints(
-            minHeight: MediaQuery.of(context).size.height * 1,
-          ),
-          width: MediaQuery.of(context).size.width * 1,
-          decoration: BoxDecoration(
-            color: AppColors.backgroundColor,
-          ),
-          child: Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: CustomText(
-                    text: "Hi !",
-                    fontWeight: FontWeight.w600,
+      body: Wrapper(
+        child: Container(
+            padding: EdgeInsets.all(30.0),
+            constraints: BoxConstraints(
+              minHeight: MediaQuery.of(context).size.height * 1,
+            ),
+            width: MediaQuery.of(context).size.width * 1,
+            decoration: BoxDecoration(
+              color: AppColors.backgroundColor,
+            ),
+            child: Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: CustomText(
+                      text: "Hi !",
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                ),
-                SizedBox(height: 10),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: CustomText(
-                    text: "Tell us about your travelling desires.",
-                    fontWeight: FontWeight.w700,
+                  SizedBox(height: 10),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: CustomText(
+                      text: "Tell us about your travelling desires.",
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
-                ),
-                SizedBox(height: 50),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryColor,
-                        borderRadius: BorderRadius.circular(80.0),
-                      ),
-                      child: IconButton(
-                        iconSize: 50.0,
-                        padding: EdgeInsets.all(25.0),
-                        icon: const Icon(Icons.mic),
-                        color: AppColors.whiteColor,
-                        onPressed: _listen,
-                      ),
-                    )
-                  ],
-                ),
-                SizedBox(height: 30),
-                //if (_localeNames.isNotEmpty)
+                  SizedBox(height: 50),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                          color: AppColors.primaryColor,
+                          borderRadius: BorderRadius.circular(80.0),
+                        ),
+                        child: IconButton(
+                          iconSize: 50.0,
+                          padding: EdgeInsets.all(25.0),
+                          icon: const Icon(Icons.mic),
+                          color: AppColors.whiteColor,
+                          onPressed: _listen,
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 30),
+                  //if (_localeNames.isNotEmpty)
                   Column(
                     children: [
                       Container(
@@ -133,59 +135,61 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
                       SizedBox(height: 50),
                     ],
                   ),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  child: Divider(
-                    color: AppColors.whiteColor,
-                    thickness: 1,
-                  ),
-                ),
-                SizedBox(height: 50),
-                SizedBox(
+                  Container(
                     width: MediaQuery.of(context).size.width * 0.8,
-                    child: Container(
-                      child: TextField(
-                        style: TextStyle(
-                          fontFamily: 'SofiaSans',
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.whiteColor,
+                    child: Divider(
+                      color: AppColors.whiteColor,
+                      thickness: 1,
+                    ),
+                  ),
+                  SizedBox(height: 50),
+                  SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      child: Container(
+                        child: TextField(
+                          style: TextStyle(
+                            fontFamily: 'SofiaSans',
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.whiteColor,
+                          ),
+                          decoration: InputDecoration(
+                              filled: true,
+                              fillColor: AppColors.secondaryColor,
+                              contentPadding: EdgeInsets.symmetric(horizontal: 22.0, vertical: 15.0),
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(4.0)
+                              ),
+                              hintText: 'Commande textuelle'.toUpperCase(),
+                              hintStyle: TextStyle(
+                                  color: AppColors.whiteColor,
+                                  fontFamily: 'SofiaSans',
+                                  fontSize: 17.0,
+                                  fontWeight: FontWeight.bold
+                              ),
+                              suffixIcon: IconButton(
+                                icon: Icon(Icons.send),
+                                onPressed: _text.isEmpty ? null : () {
+                                  itineraryService.askItineraryFromInputText(_text);
+                                },
+                                disabledColor: AppColors.greyColor,
+                              ),
+                              suffixIconColor: AppColors.whiteColor
+                          ),
+                          maxLines: 1,
+                          onChanged: (value) {
+                            setState(() {
+                              _text = value;
+                            });
+                          },
+                          controller: TextEditingController(text: _text),
                         ),
-                        decoration: InputDecoration(
-                            filled: true,
-                            fillColor: AppColors.secondaryColor,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 22.0, vertical: 15.0),
-                            enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(4.0)
-                            ),
-                            hintText: 'Commande textuelle'.toUpperCase(),
-                            hintStyle: TextStyle(
-                                color: AppColors.whiteColor,
-                                fontFamily: 'SofiaSans',
-                                fontSize: 17.0,
-                                fontWeight: FontWeight.bold
-                            ),
-                            suffixIcon: IconButton(
-                              icon: Icon(Icons.send),
-                              onPressed: () {
-                                itineraryService.askItineraryFromInputText(_text);
-                              },
-                            ),
-                            suffixIconColor: AppColors.whiteColor
-                        ),
-                        maxLines: 1,
-                        onChanged: (value) {
-                          setState(() {
-                            _text = value;
-                          });
-                        },
-                        controller: TextEditingController(text: _text),
-                      ),
-                    )
-                ),
-              ],
-            ),
-          )
-      ),
+                      )
+                  ),
+                ],
+              ),
+            )
+        ),
+      )
     );
   }
 
