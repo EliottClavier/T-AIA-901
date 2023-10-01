@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/services/NavigationService.dart';
 import 'package:mobile/widgets/CustomText.dart';
 import 'package:mobile/widgets/ItineraryComponent.dart';
 import 'package:mobile/widgets/ItineraryComponentDot.dart';
@@ -11,7 +12,7 @@ class ItineraryPage extends StatelessWidget {
 
   ItineraryPage({required this.itineraryResponse});
 
-  String getCurrentStep(int index) {
+  String _getCurrentStep(int index) {
     if (index == 0) {
       return itineraryResponse.departure;
     } else if (index == itineraryResponse.steps.length + 1) {
@@ -19,6 +20,18 @@ class ItineraryPage extends StatelessWidget {
     } else {
       return itineraryResponse.steps[index - 1];
     }
+  }
+
+  Widget _createEmptyContainer() {
+    return Container(
+        decoration: BoxDecoration(
+          // No border
+          border: Border.all(
+            color: Colors.transparent,
+            width: 0,
+          ),
+        )
+    );
   }
 
   @override
@@ -32,7 +45,23 @@ class ItineraryPage extends StatelessWidget {
             itemBuilder: (context, index) {
               return Column(
                 children: [
-                  if (index == 0)
+                  if (index == 0) ... [
+                    AppBar(
+                      backgroundColor: AppColors.backgroundColor,
+                      elevation: 0,
+                      title: CustomText(
+                        text: "Back",
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      leading: IconButton(
+                        icon: Icon(Icons.arrow_back),
+                        iconSize: 40.0,
+                        onPressed: () {
+                          NavigationService.backToVoiceRecognitionPage();
+                        },
+                      )
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       child: Column(
@@ -70,6 +99,7 @@ class ItineraryPage extends StatelessWidget {
                         ],
                       ),
                     ),
+                  ],
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,12 +116,12 @@ class ItineraryPage extends StatelessWidget {
                       ),
                       Expanded(
                         flex: 1,
-                        child: Container(),
+                        child: _createEmptyContainer(),
                       ),
                       Expanded(
                         flex: 14,
                         child: ItineraryComponent(
-                          text: "${getCurrentStep(index)}",
+                          text: "${_getCurrentStep(index)}",
                         ),
                       )
                     ],
@@ -101,7 +131,7 @@ class ItineraryPage extends StatelessWidget {
                       Expanded(
                         flex: 2,
                         child: index == itineraryResponse.steps.length + 1 ?
-                        Container() :
+                        _createEmptyContainer() :
                         Container(
                           height: MediaQuery.of(context).size.height * 0.15,
                           color: AppColors.whiteColor,
@@ -109,12 +139,12 @@ class ItineraryPage extends StatelessWidget {
                       ),
                       Expanded(
                         flex: 1,
-                        child: Container(),
+                        child: _createEmptyContainer(),
                       ),
                       Expanded(
                         flex: 14,
                         child: index == itineraryResponse.steps.length + 1 ?
-                        Container() :
+                        _createEmptyContainer() :
                         Container(
                             height: MediaQuery.of(context).size.height * 0.15,
                             alignment: Alignment.centerLeft,

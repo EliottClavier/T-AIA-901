@@ -1,3 +1,4 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile/services/ItineraryService.dart';
 import 'package:mobile/widgets/CustomText.dart';
@@ -13,8 +14,8 @@ class VoiceRecognitionPage extends StatefulWidget {
 
 class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
   late stt.SpeechToText _speech;
-  bool _isListening = false;
   String _text = '';
+  bool _isListening = false;
   List<stt.LocaleName> _localeNames = [];
   stt.LocaleName? _selectedLocale;
   ItineraryService itineraryService = ItineraryService();
@@ -68,23 +69,27 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
                     ),
                   ),
                   SizedBox(height: 50),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                          color: AppColors.primaryColor,
-                          borderRadius: BorderRadius.circular(80.0),
-                        ),
-                        child: IconButton(
-                          iconSize: 50.0,
-                          padding: EdgeInsets.all(25.0),
-                          icon: const Icon(Icons.mic),
-                          color: AppColors.whiteColor,
-                          onPressed: _listen,
-                        ),
-                      )
-                    ],
+                  AvatarGlow(
+                    glowColor: AppColors.primaryColor,
+                    endRadius: 90.0,
+                    duration: Duration(milliseconds: 2000),
+                    repeat: true,
+                    showTwoGlows: true,
+                    repeatPauseDuration: Duration(milliseconds: 100),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: _isListening ? AppColors.secondaryColor : AppColors.primaryColor,
+                        borderRadius: BorderRadius.circular(80.0),
+                      ),
+                      child: IconButton(
+                        iconSize: 50.0,
+                        padding: EdgeInsets.all(25.0),
+                        icon: const Icon(Icons.mic),
+                        color: AppColors.whiteColor,
+                        disabledColor: AppColors.greyColor,
+                        onPressed: _listen,
+                      ),
+                    ),
                   ),
                   SizedBox(height: 30),
                   if (_localeNames.isNotEmpty)
@@ -98,6 +103,7 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
                           ),
                           child: DropdownButtonHideUnderline(
                             child: DropdownButton<stt.LocaleName>(
+                              dropdownColor: AppColors.secondaryColor,
                               isExpanded: true,
                               borderRadius: BorderRadius.circular(4.0),
                               focusColor: AppColors.primaryColor,
@@ -117,7 +123,7 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
                                     child: Center(
                                       child: CustomText(
                                           text: localeName.name,
-                                          color: Colors.black
+                                          color: AppColors.whiteColor
                                       ),
                                     )
                                 );
@@ -184,15 +190,22 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
   }
 
   void _listen() async {
-    if (!_isListening) {
+    if (!_speech.isListening) {
       bool available = await _speech.initialize(
-        onStatus: (val) => setState(() => _isListening = val == 'listening'),
+        onStatus: (val) => print('onStatus: $val'),
+        onError: (val) => setState(() => _isListening = true)
       );
       if (available) {
+        setState(() => _isListening = true);
+
         _speech.listen(
-          onResult: (val) => setState(() => _text = val.recognizedWords),
+          onResult: (val) => setState(() {
+            _text = val.recognizedWords;
+            _isListening = false;
+          }),
           localeId: _selectedLocale?.localeId,
         );
+        setState(() {});
       }
     } else {
       _speech.stop();

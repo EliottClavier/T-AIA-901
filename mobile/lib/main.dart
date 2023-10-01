@@ -10,6 +10,7 @@ import 'services/NavigationService.dart';
 void main(){
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: AppColors.backgroundColor,
+    systemNavigationBarColor: AppColors.backgroundColor,
   ));
 
   FlutterError.onError = (error) {
