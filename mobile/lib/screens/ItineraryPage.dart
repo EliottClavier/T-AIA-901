@@ -50,7 +50,7 @@ class ItineraryPage extends StatelessWidget {
                       backgroundColor: AppColors.backgroundColor,
                       elevation: 0,
                       title: CustomText(
-                        text: "Back",
+                        text: "Retour",
                         fontSize: 22.0,
                         fontWeight: FontWeight.w600,
                       ),
@@ -73,12 +73,12 @@ class ItineraryPage extends StatelessWidget {
                             height: 40,
                           ),
                           ItineraryComponent(
-                            prependText: "Departure : ",
+                            prependText: "Départ : ",
                             text: " ${itineraryResponse.departure}",
                           ),
                           SizedBox(height: 15.0),
                           ItineraryComponent(
-                            prependText: "Arrival : ",
+                            prependText: "Arrivée : ",
                             text: " ${itineraryResponse.destination}",
                           ),
                           Divider(
@@ -87,12 +87,12 @@ class ItineraryPage extends StatelessWidget {
                             height: 40,
                           ),
                           ItineraryComponent(
-                            prependText: "Total time : ",
-                            text: "",
+                            prependText: "Durée totale : ",
+                            text: "_h__",
                           ),
                           SizedBox(height: 30.0),
                           CustomText(
-                            text: "Your trip summary",
+                            text: "Résume de votre voyage",
                             fontSize: 22.0,
                           ),
                           SizedBox(height: 30.0)
@@ -134,7 +134,13 @@ class ItineraryPage extends StatelessWidget {
                         _createEmptyContainer() :
                         Container(
                           height: MediaQuery.of(context).size.height * 0.15,
-                          color: AppColors.whiteColor,
+                          decoration: BoxDecoration(
+                            color: AppColors.whiteColor,
+                            border: Border.all(
+                              color: AppColors.whiteColor,
+                              width: 0.0,
+                            ),
+                          ),
                         ),
                       ),
                       Expanded(

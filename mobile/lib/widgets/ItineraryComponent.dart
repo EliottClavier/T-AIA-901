@@ -28,8 +28,8 @@ class ItineraryComponent extends StatelessWidget {
               CustomText(
                 text: prependText,
                 isUpperCase: false,
-                fontWeight: FontWeight.w600,
-                color: AppColors.darkGreyColor,
+                fontWeight: FontWeight.w700,
+                color: AppColors.greyColor,
               ),
             CustomText(
               text: text,

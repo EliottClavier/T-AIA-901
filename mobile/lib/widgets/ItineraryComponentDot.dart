@@ -46,10 +46,14 @@ class ItineraryComponentDot extends StatelessWidget {
             shape: BoxShape.circle,
           ),
           child: Container(
-            padding: EdgeInsets.all(3.0),
+            padding: EdgeInsets.all(3.5),
             decoration: BoxDecoration(
               color: AppColors.whiteColor,
               borderRadius: _getBorderRadiusByType(),
+              border: Border.all(
+                color: AppColors.whiteColor,
+                width: 0.0,
+              ),
             ),
             child: Container(
               decoration: BoxDecoration(

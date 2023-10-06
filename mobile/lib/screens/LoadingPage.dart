@@ -37,12 +37,12 @@ class LoadingPage extends StatelessWidget {
                 ),
                 SizedBox(height: 60),
                 CustomText(
-                    text: "Processing",
+                    text: "Chargement",
                     fontSize: 30.0,
                 ),
                 SizedBox(height: 20),
                 CustomText(
-                  text: "We are searching for the shortest path",
+                  text: "Nous recherchons pour vous le chemin le plus court",
                   fontWeight: FontWeight.w600,
                   fontStyle: FontStyle.italic,
                 ),

@@ -32,7 +32,10 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
     if (available) {
       _localeNames = await _speech.locales();
       setState(() {
-        _selectedLocale = _localeNames.first;
+        _selectedLocale = _localeNames.firstWhere(
+                (localeName) => localeName.localeId == 'fr_FR',
+            orElse: () => _localeNames.first
+        );
       });
     }
   }
@@ -40,151 +43,155 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: Wrapper(
-        child: Container(
-            padding: EdgeInsets.all(30.0),
-            constraints: BoxConstraints(
-              minHeight: MediaQuery.of(context).size.height * 1,
-            ),
-            decoration: BoxDecoration(
-              color: AppColors.backgroundColor,
-            ),
-            child: Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: CustomText(
-                      text: "Hi !",
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: CustomText(
-                      text: "Tell us about your travelling desires.",
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  SizedBox(height: 50),
-                  AvatarGlow(
-                    glowColor: AppColors.primaryColor,
-                    endRadius: 90.0,
-                    duration: Duration(milliseconds: 2000),
-                    repeat: true,
-                    showTwoGlows: true,
-                    repeatPauseDuration: Duration(milliseconds: 100),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: _isListening ? AppColors.secondaryColor : AppColors.primaryColor,
-                        borderRadius: BorderRadius.circular(80.0),
-                      ),
-                      child: IconButton(
-                        iconSize: 50.0,
-                        padding: EdgeInsets.all(25.0),
-                        icon: const Icon(Icons.mic),
-                        color: AppColors.whiteColor,
-                        disabledColor: AppColors.greyColor,
-                        onPressed: _listen,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 30),
-                  if (_localeNames.isNotEmpty)
-                    Column(
-                    children: [
-                      Container(
-                          padding: EdgeInsets.symmetric(horizontal: 22.0),
-                          decoration: BoxDecoration(
-                            color: AppColors.primaryColor,
-                            borderRadius: BorderRadius.circular(4.0),
-                          ),
-                          child: DropdownButtonHideUnderline(
-                            child: DropdownButton<stt.LocaleName>(
-                              dropdownColor: AppColors.secondaryColor,
-                              isExpanded: true,
-                              borderRadius: BorderRadius.circular(4.0),
-                              focusColor: AppColors.primaryColor,
-                              hint: Center(
-                                child: CustomText(
-                                  text: 'Select a language',
-                                ),
-                              ),
-                              icon: Icon(
-                                Icons.arrow_drop_down,
-                                color: AppColors.whiteColor,
-                              ),
-                              value: _selectedLocale,
-                              items: _localeNames.map((localeName) {
-                                return DropdownMenuItem(
-                                    value: localeName,
-                                    child: Center(
-                                      child: CustomText(
-                                          text: localeName.name,
-                                          color: AppColors.whiteColor
-                                      ),
-                                    )
-                                );
-                              }).toList(),
-                              onChanged: (value) {
-                                setState(() {
-                                  _selectedLocale = value;
-                                });
-                              },
-                            ),
-                          )
-                      ),
-                      SizedBox(height: 50),
-                    ],
-                  ),
-                  Divider(
-                    color: AppColors.whiteColor,
-                    thickness: 1,
-                  ),
-                  SizedBox(height: 50),
-                  TextField(
-                    style: TextStyle(
-                      fontFamily: 'SofiaSans',
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.whiteColor,
-                    ),
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: AppColors.secondaryColor,
-                        contentPadding: EdgeInsets.symmetric(horizontal: 22.0, vertical: 15.0),
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(4.0)
-                        ),
-                        hintText: 'Commande textuelle'.toUpperCase(),
-                        hintStyle: TextStyle(
-                            color: AppColors.whiteColor,
-                            fontFamily: 'SofiaSans',
-                            fontSize: 17.0,
-                            fontWeight: FontWeight.bold
-                        ),
-                        suffixIcon: IconButton(
-                          icon: Icon(Icons.send),
-                          onPressed: _text.isEmpty ? null : () {
-                            itineraryService.askItineraryFromInputText(_text);
-                          },
-                          disabledColor: AppColors.greyColor,
-                        ),
-                        suffixIconColor: AppColors.whiteColor
-                    ),
-                    maxLines: 1,
-                    onChanged: (value) {
-                      setState(() {
-                        _text = value;
-                      });
-                    },
-                    controller: TextEditingController(text: _text),
-                  ),
-                ],
+        child: SingleChildScrollView(
+          child: Container(
+              padding: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, MediaQuery.of(context).viewInsets.bottom + 30.0),
+              constraints: BoxConstraints(
+                minHeight: MediaQuery.of(context).size.height * 1,
               ),
-            )
-        ),
+              decoration: BoxDecoration(
+                color: AppColors.backgroundColor,
+              ),
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: CustomText(
+                        text: "Bonjour !",
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: CustomText(
+                        text: "Parlez-nous de vos envies de voyage.",
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    SizedBox(height: 50),
+                    AvatarGlow(
+                      glowColor: AppColors.primaryColor,
+                      endRadius: 90.0,
+                      duration: Duration(milliseconds: 2000),
+                      repeat: true,
+                      showTwoGlows: true,
+                      repeatPauseDuration: Duration(milliseconds: 100),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: _isListening ? AppColors.secondaryColor : AppColors.primaryColor,
+                          borderRadius: BorderRadius.circular(80.0),
+                        ),
+                        child: IconButton(
+                          iconSize: 50.0,
+                          padding: EdgeInsets.all(25.0),
+                          icon: const Icon(Icons.mic),
+                          color: AppColors.whiteColor,
+                          disabledColor: AppColors.greyColor,
+                          onPressed: _listen,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 30),
+                    if (_localeNames.isNotEmpty)
+                      Column(
+                        children: [
+                          Container(
+                              padding: EdgeInsets.symmetric(horizontal: 22.0),
+                              decoration: BoxDecoration(
+                                color: AppColors.primaryColor,
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              child: DropdownButtonHideUnderline(
+                                child: DropdownButton<stt.LocaleName>(
+                                  dropdownColor: AppColors.secondaryColor,
+                                  isExpanded: true,
+                                  borderRadius: BorderRadius.circular(4.0),
+                                  focusColor: AppColors.primaryColor,
+                                  hint: Center(
+                                    child: CustomText(
+                                      text: 'Select a language',
+                                    ),
+                                  ),
+                                  icon: Icon(
+                                    Icons.arrow_drop_down,
+                                    color: AppColors.whiteColor,
+                                  ),
+                                  value: _selectedLocale,
+                                  items: _localeNames.map((localeName) {
+                                    return DropdownMenuItem(
+                                        value: localeName,
+                                        child: Center(
+                                          child: CustomText(
+                                              text: localeName.name,
+                                              color: AppColors.whiteColor
+                                          ),
+                                        )
+                                    );
+                                  }).toList(),
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _selectedLocale = value;
+                                    });
+                                  },
+                                ),
+                              )
+                          ),
+                          SizedBox(height: 50),
+                        ],
+                      ),
+                    Divider(
+                      color: AppColors.whiteColor,
+                      thickness: 1,
+                    ),
+                    SizedBox(height: 50),
+                    TextField(
+                      keyboardType: TextInputType.text,
+                      style: TextStyle(
+                        fontFamily: 'SofiaSans',
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.whiteColor,
+                      ),
+                      maxLines: 1,
+                      onChanged: (value) {
+                        setState(() {
+                          _text = value;
+                        });
+                      },
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: AppColors.secondaryColor,
+                          contentPadding: EdgeInsets.symmetric(horizontal: 22.0, vertical: 15.0),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(4.0)
+                          ),
+                          hintText: 'Commande textuelle'.toUpperCase(),
+                          hintStyle: TextStyle(
+                              color: AppColors.greyColor,
+                              fontFamily: 'SofiaSans',
+                              fontSize: 17.0,
+                              fontWeight: FontWeight.bold
+                          ),
+                          suffixIcon: IconButton(
+                            icon: Icon(Icons.send),
+                            onPressed: _text.isEmpty ? null : () {
+                              itineraryService.askItineraryFromInputText(_text);
+                              FocusManager.instance.primaryFocus?.unfocus();
+                            },
+                            disabledColor: AppColors.greyColor,
+                          ),
+                          suffixIconColor: AppColors.whiteColor
+                      ),
+                    ),
+                  ],
+                ),
+              )
+          ),
+        )
       )
     );
   }
