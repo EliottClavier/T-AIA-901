@@ -29,18 +29,22 @@ class LoadingPage extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                CircularProgressIndicator(
-                  color: AppColors.whiteColor,
-                  backgroundColor: AppColors.secondaryColor,
-                  strokeWidth: 7.0,
-                  strokeAlign: 5,
+                Container(
+                  margin: EdgeInsets.only(bottom: 60.0),
+                  child: CircularProgressIndicator(
+                    color: AppColors.whiteColor,
+                    backgroundColor: AppColors.secondaryColor,
+                    strokeWidth: 7.0,
+                    strokeAlign: 5,
+                  ),
                 ),
-                SizedBox(height: 60),
-                CustomText(
+                Container(
+                  margin: EdgeInsets.only(bottom: 20.0),
+                  child: CustomText(
                     text: "Chargement",
                     fontSize: 30.0,
+                  ),
                 ),
-                SizedBox(height: 20),
                 CustomText(
                   text: "Nous recherchons pour vous le chemin le plus court",
                   fontWeight: FontWeight.w600,
