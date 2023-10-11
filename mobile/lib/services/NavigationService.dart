@@ -9,7 +9,7 @@ class NavigationService {
   static BuildContext get context => navigatorKey.currentContext!;
 
   static Future<dynamic> navigateToLoadingScreen() {
-    return Navigator.of(context).pushReplacement(MaterialPageRoute(
+    return Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => LoadingPage(),
     )
     );
