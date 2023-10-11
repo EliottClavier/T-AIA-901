@@ -11,10 +11,14 @@ dependencies:
   neumorphic_button: ^0.0.1+2
   http: ^0.13.3
   avatar_glow: ^2.0.2
+  lottie: ^2.6.0
+  dotlottie_loader: ^0.0.3
+  animate_do: ^3.1.2
 
 flutter:
   assets:
     - config/
+    - assets/images/
   fonts:
     - family: SofiaSans
       fonts:

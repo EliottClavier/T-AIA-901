@@ -35,7 +35,7 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
       _localeNames = await _speech.locales();
       setState(() {
         _selectedLocale = _localeNames.firstWhere(
-                (localeName) => localeName.localeId == 'fr_FR',
+            (localeName) => localeName.localeId == 'fr_FR',
             orElse: () => _localeNames.first
         );
       });

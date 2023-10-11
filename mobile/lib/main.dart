@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mobile/exception/CommonException.dart';
 import 'package:mobile/exception/CommonExceptionHandler.dart';
+import 'package:mobile/screens/SplashScreen.dart';
 import 'package:mobile/screens/VoiceRecognitionPage.dart';
 import 'package:mobile/utils/AppColors.dart';
 import 'services/NavigationService.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: VoiceRecognitionPage(),
+      home: SplashScreen()
     );
   }
 }

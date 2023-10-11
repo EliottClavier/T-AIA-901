@@ -9,21 +9,21 @@ class NavigationService {
   static BuildContext get context => navigatorKey.currentContext!;
 
   static Future<dynamic> navigateToLoadingScreen() {
-    return Navigator.of(context).push(MaterialPageRoute(
+    return Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => LoadingPage(),
     )
     );
   }
 
   static Future<dynamic> navigateToVoiceRecognitionPage() {
-    return Navigator.of(context).push(MaterialPageRoute(
+    return Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => VoiceRecognitionPage(),
     )
     );
   }
 
   static Future<dynamic> navigateToItineraryPage(ItineraryResponse itineraryResponse) {
-    return Navigator.of(context).push(MaterialPageRoute(
+    return Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => ItineraryPage(itineraryResponse: itineraryResponse),
     )
     );
