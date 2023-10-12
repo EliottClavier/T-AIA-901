@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/model/ItineraryResponse.dart';
-import 'package:mobile/widgets/ItineraryPage.dart';
-import 'package:mobile/widgets/VoiceRecognitionPage.dart';
-
-import '../widgets/LoadingPage.dart';
+import '../screens/ItineraryPage.dart';
+import '../screens/LoadingPage.dart';
+import '../screens/VoiceRecognitionPage.dart';
 
 class NavigationService {
   static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -17,14 +16,14 @@ class NavigationService {
   }
 
   static Future<dynamic> navigateToVoiceRecognitionPage() {
-    return Navigator.of(context).push(MaterialPageRoute(
+    return Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => VoiceRecognitionPage(),
     )
     );
   }
 
   static Future<dynamic> navigateToItineraryPage(ItineraryResponse itineraryResponse) {
-    return Navigator.of(context).push(MaterialPageRoute(
+    return Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => ItineraryPage(itineraryResponse: itineraryResponse),
     )
     );
