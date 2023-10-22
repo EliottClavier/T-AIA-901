@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:mobile/exception/CommonException.dart';
 import 'package:mobile/exception/CommonExceptionHandler.dart';
 import 'package:mobile/screens/SplashScreen.dart';
-import 'package:mobile/screens/VoiceRecognitionPage.dart';
 import 'package:mobile/utils/AppColors.dart';
 import 'services/NavigationService.dart';
 
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       navigatorKey: NavigationService.navigatorKey,
-      title: 'Voice Recognition App',
+      title: 'Travelling optimiser',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

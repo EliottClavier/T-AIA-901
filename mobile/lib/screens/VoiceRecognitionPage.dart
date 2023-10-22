@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile/services/ItineraryService.dart';
 import 'package:mobile/widgets/CustomText.dart';
 import 'package:mobile/widgets/Wrapper.dart';
+import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 import '../utils/AppColors.dart';
@@ -15,7 +16,6 @@ class VoiceRecognitionPage extends StatefulWidget {
 class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
   late stt.SpeechToText _speech;
   String _text = '';
-  bool _isListening = false;
   List<stt.LocaleName> _localeNames = [];
   stt.LocaleName? _selectedLocale;
   ItineraryService itineraryService = ItineraryService();
@@ -30,7 +30,11 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
   }
 
   void _initializeSpeech() async {
-    bool available = await _speech.initialize();
+    bool available = await _speech.initialize(
+        onError: (errorNotification) {
+          _stopListening();
+        }
+    );
     if (available) {
       _localeNames = await _speech.locales();
       setState(() {
@@ -59,27 +63,26 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
   }
 
   void _listen() async {
-    if (!_speech.isListening) {
-      bool available = await _speech.initialize(
-          onStatus: (val) => print('onStatus: $val'),
-          onError: (val) => setState(() => _isListening = true)
+    bool available = await _speech.initialize();
+    if (available) {
+      await _speech.listen(
+        onResult: _onSpeechResult,
+        localeId: _selectedLocale?.localeId,
       );
-      if (available) {
-        setState(() => _isListening = true);
-
-        _speech.listen(
-          onResult: (val) => setState(() {
-            _text = val.recognizedWords;
-            _isListening = false;
-          }),
-          localeId: _selectedLocale?.localeId,
-        );
-        setState(() {});
-      }
-    } else {
-      _speech.stop();
-      setState(() => _isListening = false);
+      setState(() {});
     }
+  }
+
+  void _onSpeechResult(SpeechRecognitionResult result) {
+    setState(() {
+      _text = result.recognizedWords;
+      _textEditingController.text = _text;
+    });
+  }
+
+  void _stopListening() {
+    _speech.stop();
+    setState(() {});
   }
 
   Container _getTitle() {
@@ -120,7 +123,7 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
         repeatPauseDuration: Duration(milliseconds: 100),
         child: Container(
           decoration: BoxDecoration(
-            color: _isListening ? AppColors.secondaryColor : AppColors.primaryColor,
+            color: _speech.isListening ? AppColors.secondaryColor : AppColors.primaryColor,
             borderRadius: BorderRadius.circular(80.0),
           ),
           child: IconButton(
@@ -129,7 +132,7 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
             icon: const Icon(Icons.mic),
             color: AppColors.whiteColor,
             disabledColor: AppColors.greyColor,
-            onPressed: _listen,
+            onPressed: _speech.isListening ? _stopListening : _listen,
           ),
         ),
       )
@@ -234,7 +237,7 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
           prefixIconColor: Colors.red,
           suffixIcon: IconButton(
             icon: Icon(Icons.send),
-            onPressed: _onSend,
+            onPressed: _textEditingController.text.isNotEmpty ? _onSend : null,
             disabledColor: AppColors.greyColor,
           ),
           suffixIconColor: AppColors.whiteColor
