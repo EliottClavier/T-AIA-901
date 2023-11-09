@@ -1,0 +1,4786 @@
+{
+    "Le Havre": {
+        "Paris-St-Lazare": 138,
+        "Montivilliers": 15,
+        "Rolleville": 26,
+        "F\u00e9camp": 46,
+        "Rouen-Rive-Droite": 61
+    },
+    "Paris-St-Lazare": {
+        "Le Havre": 138,
+        "Dieppe": 145,
+        "Rouen-Rive-Droite": 97,
+        "Cherbourg": 194,
+        "Caen": 149,
+        "Trouville-Deauville": 147,
+        "Vernon-Giverny": 60,
+        "Oissel": 94,
+        "Evreux": 69,
+        "Serquigny": 105
+    },
+    "Dieppe": {
+        "Paris-St-Lazare": 145,
+        "Rouen-Rive-Droite": 63
+    },
+    "Rouen-Rive-Droite": {
+        "Paris-St-Lazare": 97,
+        "Caen": 100,
+        "Mantes-la-Jolie": 125,
+        "Amiens": 186,
+        "Lille Flandres": 168,
+        "Le Havre": 61,
+        "Yvetot": 34,
+        "Dieppe": 63
+    },
+    "Cherbourg": {
+        "Paris-St-Lazare": 194,
+        "Caen": 174
+    },
+    "Caen": {
+        "Paris-St-Lazare": 149,
+        "Le Mans": 111,
+        "Tours": 182,
+        "Rouen-Rive-Droite": 100,
+        "Rennes": 170,
+        "Cherbourg": 174,
+        "Lisieux": 33,
+        "Coutances": 75,
+        "St-L\u00f4": 51,
+        "Dol": 167,
+        "Granville": 103,
+        "Alen\u00e7on": 71,
+        "Argentan": 40
+    },
+    "Trouville-Deauville": {
+        "Paris-St-Lazare": 147,
+        "Lisieux": 50,
+        "Dives-Cabourg": 35
+    },
+    "Granville": {
+        "Paris-Montp.3-Vaug.": 201,
+        "Paris-Montparnasse 1-2": 195,
+        "Dreux": 142,
+        "Lison": 84,
+        "Coutances": 36,
+        "Vire-Centre": 75,
+        "Rennes": 110,
+        "Dol": 59,
+        "Argentan": 83,
+        "Caen": 103
+    },
+    "Paris-Montp.3-Vaug.": {
+        "Granville": 201,
+        "Argentan": 121
+    },
+    "Paris-Montparnasse 1-2": {
+        "Granville": 195,
+        "Le Mans": 135,
+        "Nogent-le-Rotrou": 102,
+        "Chartres": 70
+    },
+    "Dreux": {
+        "Granville": 142,
+        "Argentan": 69,
+        "L'Aigle": 79
+    },
+    "Bourges": {
+        "Paris-Austerlitz": 122,
+        "Paris-Bercy": 131,
+        "Nevers": 38,
+        "St-Amand-Montrond-Orval": 65,
+        "Ch\u00e2teauroux Gare Rout.": 106,
+        "Issoudun-Place-de-la-G.": 71,
+        "Vierzon": 70,
+        "Montlu\u00e7on-Ville": 160,
+        "Tours": 110,
+        "Commentry": 121,
+        "Orl\u00e9ans": 73
+    },
+    "Paris-Austerlitz": {
+        "Bourges": 122,
+        "Vierzon": 101,
+        "Nevers": 177,
+        "Orl\u00e9ans": 75,
+        "Tours": 131,
+        "Aubrais-(les)": 71,
+        "St-Pierre-des-Corps": 118,
+        "Vend\u00f4me": 139,
+        "Ch\u00e2teaudun": 95
+    },
+    "Vierzon": {
+        "Paris-Austerlitz": 101,
+        "Montlu\u00e7on-Ville": 125,
+        "Issoudun-Place-de-la-G.": 50,
+        "Issoudun": 56,
+        "Romorantin-BA-G.R.": 43,
+        "Ch\u00e2teauroux": 90,
+        "Argenton-sur-Creuse": 130,
+        "Bourges": 70,
+        "Tours": 87,
+        "Orl\u00e9ans": 51,
+        "Nevers": 69,
+        "Limoges-B\u00e9n\u00e9dictins": 129
+    },
+    "Paris-Bercy": {
+        "Bourges": 131,
+        "Nevers": 154,
+        "Tours": 146,
+        "Orl\u00e9ans": 84,
+        "Dijon-Ville": 171,
+        "Lyon-Part-Dieu": 308,
+        "M\u00e2con-Ville": 262,
+        "Lyon-Perrache": 324,
+        "Vend\u00f4me": 149,
+        "Laroche-Migennes": 124,
+        "Corbigny": 213,
+        "Auxerre-St-Gervais": 105,
+        "Clamecy": 165,
+        "Avallon": 158
+    },
+    "Nevers": {
+        "Paris-Austerlitz": 177,
+        "Bourges": 38,
+        "Paris-Bercy": 154,
+        "Paris-Gare-de-Lyon": 146,
+        "Lyon-Perrache": 211,
+        "Dijon-Ville": 203,
+        "Decize": 33,
+        "Luzy(Ni\u00e8vre)": 98,
+        "Cercy-la-Tour": 68,
+        "Moulins-sur-Allier": 68,
+        "St-Pierre-le-Mo\u00fbtier": 33,
+        "Nevers-Le-Banlay": 13,
+        "Tours": 146,
+        "Orl\u00e9ans": 132,
+        "Vierzon": 69,
+        "Clermont-Ferrand": 106,
+        "Vic-le-Comte": 124,
+        "Autun": 94,
+        "Cosne-sur-Loire": 48
+    },
+    "Paris-Gare-de-Lyon": {
+        "Nevers": 146,
+        "Dijon-Ville": 170,
+        "Lyon-Part-Dieu": 309,
+        "M\u00e2con-Ville": 263,
+        "Lyon-Perrache": 323,
+        "Ch\u00e2teaudun": 97,
+        "Vend\u00f4me": 132,
+        "Laroche-Migennes": 125,
+        "Montereau": 57,
+        "Corbigny": 215,
+        "Clamecy": 159,
+        "Avallon": 160,
+        "Auxerre-St-Gervais": 119
+    },
+    "Argentan": {
+        "Paris-Montp.3-Vaug.": 121,
+        "Dreux": 69,
+        "Flers": 53,
+        "Bagnoles- Orne Egl.Mad.": 60,
+        "Granville": 83,
+        "Caen": 40
+    },
+    "Orl\u00e9ans": {
+        "Paris-Austerlitz": 75,
+        "Tours": 72,
+        "Paris-Bercy": 84,
+        "Nantes": 170,
+        "Le Croisic": 258,
+        "Blois-Chambord": 49,
+        "St-Pierre-des-Corps": 58,
+        "Bourges": 73,
+        "Vierzon": 51,
+        "Nevers": 132,
+        "Argenton-sur-Creuse": 117,
+        "Ch\u00e2teauroux": 95,
+        "Limoges-B\u00e9n\u00e9dictins": 203
+    },
+    "Tours": {
+        "Paris-Austerlitz": 131,
+        "Orl\u00e9ans": 72,
+        "Paris-Bercy": 146,
+        "Caen": 182,
+        "Blois-Chambord": 38,
+        "Lyon-Perrache": 366,
+        "Chinon": 82,
+        "Chinon-Lyc\u00e9e-Rabelais": 75,
+        "St Christophe / Nais C.": 60,
+        "Ch\u00e2teau-du-Loir": 75,
+        "Loches": 58,
+        "Ch\u00e2teauroux Gare Rout.": 150,
+        "Reignac-Bourg-Du-Fau": 74,
+        "Loches-LEP": 80,
+        "Cormery": 43,
+        "Chatillon-Mail": 95,
+        "Chartres-Gare-Routi\u00e8re": 159,
+        "Vend\u00f4me": 65,
+        "Ch\u00e2teaudun": 111,
+        "St-Pierre-des-Corps": 5,
+        "Port-de-Piles": 85,
+        "Port-Boulet": 77,
+        "Aubrais-(les)": 160,
+        "Le Mans": 133,
+        "Alen\u00e7on": 145,
+        "Le Croisic": 190,
+        "Nantes": 93,
+        "Angers-St-Laud": 78,
+        "Saumur": 51,
+        "Thouars": 78,
+        "Bressuire": 103,
+        "Reignac": 45,
+        "Voves": 137,
+        "Bl\u00e9r\u00e9-la-Croix": 28,
+        "St-Aignan-Noyers": 57,
+        "Vierzon": 87,
+        "Bourges": 110,
+        "Nevers": 146,
+        "Poitiers": 74,
+        "La Roche-sur-Yon": 199
+    },
+    "Aubrais-(les)": {
+        "Paris-Austerlitz": 71,
+        "Cosne-sur-Loire": 135,
+        "Toury": 45,
+        "Tours": 160,
+        "Ch\u00e2teau-Gaillard": 45
+    },
+    "St-Pierre-des-Corps": {
+        "Paris-Austerlitz": 118,
+        "Tours": 5,
+        "Orl\u00e9ans": 58
+    },
+    "Calais Ville": {
+        "Paris Gare du Nord": 183,
+        "Amiens": 107,
+        "Boulogne Ville": 28,
+        "Calais Fr\u00e9thun": 15,
+        "Hazebrouck": 109,
+        "Rang du Fl. Verton Ber.": 68,
+        "Etaples Le Touquet": 62,
+        "Lille Europe": 49,
+        "Dunkerque": 50,
+        "Lille Flandres": 75,
+        "Arras": 123
+    },
+    "Paris Gare du Nord": {
+        "Calais Ville": 183,
+        "Boulogne Ville": 145,
+        "Amiens": 74,
+        "Cambrai Ville": 155,
+        "Maubeuge": 119,
+        "St Quentin": 100,
+        "Beauvais-Gare-SNCF": 73,
+        "Persan-Beaumont": 63,
+        "Creil": 21,
+        "Compi\u00e8gne": 56,
+        "Tergnier": 88,
+        "St-Just-SNCF": 64,
+        "Clermont-de-l'Oise": 50,
+        "Laon": 90
+    },
+    "Boulogne Ville": {
+        "Paris Gare du Nord": 145,
+        "Calais Ville": 28,
+        "Amiens": 75,
+        "Abbeville": 104,
+        "Calais Fr\u00e9thun": 30,
+        "Lille Europe": 72
+    },
+    "Amiens": {
+        "Calais Ville": 107,
+        "Boulogne Ville": 75,
+        "Paris Gare du Nord": 74,
+        "Albert": 46,
+        "Arras": 104,
+        "Abbeville": 56,
+        "Lille Flandres": 223,
+        "Douai": 164,
+        "Rouen-Rive-Droite": 186,
+        "Tergnier": 159,
+        "St Quentin": 93,
+        "St-Just-SNCF": 87,
+        "Creil": 95,
+        "Dunkerque": 104,
+        "Compi\u00e8gne": 60,
+        "Laon": 84,
+        "Abancourt": 35
+    },
+    "Cambrai Ville": {
+        "Paris Gare du Nord": 155,
+        "St Quentin": 101,
+        "Valenciennes": 95,
+        "Douai": 34,
+        "Lille Flandres": 59
+    },
+    "Maubeuge": {
+        "Paris Gare du Nord": 119,
+        "Compi\u00e8gne": 80,
+        "Namur": 84,
+        "Aulnoye Aymeries": 28,
+        "St Quentin": 116,
+        "Jeumont": 15,
+        "Charleroi Sud": 60,
+        "Valenciennes": 42,
+        "Busigny": 36,
+        "Lille Flandres": 72
+    },
+    "St Quentin": {
+        "Paris Gare du Nord": 100,
+        "Busigny": 60,
+        "Compi\u00e8gne": 100,
+        "Cambrai Ville": 101,
+        "Maubeuge": 116,
+        "Amiens": 93,
+        "Tergnier": 28,
+        "Aulnoye Aymeries": 48,
+        "Lille Flandres": 107,
+        "Douai": 93,
+        "Creil": 104
+    },
+    "Compi\u00e8gne": {
+        "Maubeuge": 80,
+        "Rib\u00e9court": 28,
+        "St Quentin": 100,
+        "Tergnier": 94,
+        "Paris Gare du Nord": 56,
+        "Creil": 37,
+        "Amiens": 60
+    },
+    "Le Mans": {
+        "Caen": 111,
+        "Paris-Montparnasse 1-2": 135,
+        "Chartres": 70,
+        "Tours": 133,
+        "Nogent-le-Rotrou": 95,
+        "Connerr\u00e9-Beill\u00e9": 50,
+        "Laval": 135,
+        "Ch\u00e2teau-du-Loir": 50,
+        "Alen\u00e7on": 53,
+        "Nantes": 94,
+        "Le Croisic": 177,
+        "Angers-St-Laud": 66,
+        "Sabl\u00e9-sur-Sarthe": 22,
+        "Rennes": 103
+    },
+    "Nogent-le-Rotrou": {
+        "Paris-Montparnasse 1-2": 102,
+        "Chartres": 91,
+        "Le Mans": 95
+    },
+    "Chartres": {
+        "Paris-Montparnasse 1-2": 70,
+        "Le Mans": 70,
+        "Brou": 50,
+        "Drou\u00e9 (Centre)": 92,
+        "Nogent-le-Rotrou": 91,
+        "La Verri\u00e8re": 108,
+        "Versailles-Chantiers": 110,
+        "Courtalain-St-Pellerin": 90,
+        "Voves": 23,
+        "Angers-St-Laud": 163
+    },
+    "Blois-Chambord": {
+        "Tours": 38,
+        "Limeray": 35,
+        "Orl\u00e9ans": 49
+    },
+    "Lyon-Perrache": {
+        "Tours": 366,
+        "Nevers": 211,
+        "Paris-Bercy": 324,
+        "Dijon-Ville": 137,
+        "Paris-Gare-de-Lyon": 323,
+        "Paray-le-Monial": 150,
+        "Clermont-Ferrand": 171,
+        "M\u00e2con-Ville": 60,
+        "Valence-Ville": 70,
+        "Avignon-Centre": 168,
+        "Firminy": 82,
+        "St-Etienne-Ch\u00e2teaucreux": 55,
+        "Givors-Ville": 25,
+        "Oyonnax": 130,
+        "Bourg-en-Bresse": 65,
+        "Roanne": 89,
+        "Vienne": 34,
+        "Villefranche-sur-Sa\u00f4ne": 36,
+        "St-Andr\u00e9-le-Gaz": 56,
+        "Bourgoin-Jallieu": 37,
+        "Sathonay-Rillieux": 19,
+        "Besan\u00e7on-Viotte": 176,
+        "Mouchard": 139,
+        "Belfort-Ville": 244,
+        "Lons-le-Saunier": 103
+    },
+    "Latour-de-Carol-Enveitg": {
+        "Villefranche-Vernet-l.B": 174,
+        "Toulouse-Matabiau": 174,
+        "Foix": 105
+    },
+    "Villefranche-Vernet-l.B": {
+        "Latour-de-Carol-Enveitg": 174,
+        "Font-Romeu-Odeillo-Via": 88,
+        "Perpignan": 64
+    },
+    "Font-Romeu-Odeillo-Via": {
+        "Villefranche-Vernet-l.B": 88
+    },
+    "Brian\u00e7on": {
+        "Romans-Bourg-de-P\u00e9age": 241,
+        "Veynes-D\u00e9voluy": 97,
+        "Gap": 75,
+        "Valence-Ville": 247,
+        "Marseille-St-Charles": 302
+    },
+    "Romans-Bourg-de-P\u00e9age": {
+        "Brian\u00e7on": 241,
+        "Veynes-D\u00e9voluy": 153,
+        "Gap": 172,
+        "Die": 83
+    },
+    "Veynes-D\u00e9voluy": {
+        "Brian\u00e7on": 97,
+        "Romans-Bourg-de-P\u00e9age": 153,
+        "Valence-TGV": 185,
+        "Valence-Gare-Routi\u00e8re": 165,
+        "Clelles-Mens": 56,
+        "Gap": 30,
+        "Grenoble": 134
+    },
+    "Gap": {
+        "Romans-Bourg-de-P\u00e9age": 172,
+        "Brian\u00e7on": 75,
+        "Marseille-St-Charles": 216,
+        "Grenoble-Gare-Routi\u00e8re": 127,
+        "Clelles-Mens": 80,
+        "Veynes-D\u00e9voluy": 30,
+        "Grenoble": 181
+    },
+    "Valence-Ville": {
+        "Brian\u00e7on": 247,
+        "Grenoble": 74,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 125,
+        "Annecy": 181,
+        "Gen\u00e8ve": 195,
+        "Grenoble U.-Gi\u00e8res": 97,
+        "St-Marcellin": 39,
+        "Lyon-Perrache": 70,
+        "Lyon-Part-Dieu": 71,
+        "M\u00e2con-Ville": 138,
+        "Marseille-St-Charles": 145,
+        "Avignon-Centre": 89
+    },
+    "Marseille-St-Charles": {
+        "Brian\u00e7on": 302,
+        "Gap": 216,
+        "Aix-en-Provence": 50,
+        "Nice-Ville": 159,
+        "Les Arcs-Draguignan": 83,
+        "Lyon-Part-Dieu": 246,
+        "Avignon-Centre": 78,
+        "Toulon": 125,
+        "Aix-Gare-Routi\u00e8re": 55,
+        "Sisteron": 175,
+        "Martigues": 70,
+        "B\u00e9ziers": 171,
+        "Narbonne": 188,
+        "Montpellier-Saint-Roch": 119,
+        "Miramas": 33,
+        "Avignon-TGV": 133,
+        "Cavaillon": 70,
+        "Gardanne": 36,
+        "Manosque-Gr\u00e9oux": 95,
+        "Aubagne": 31,
+        "Hy\u00e8res": 84,
+        "Menton": 205,
+        "Valence-Ville": 145
+    },
+    "Aix-en-Provence": {
+        "Marseille-St-Charles": 50,
+        "Manosque-Gr\u00e9oux": 45
+    },
+    "Nice-Ville": {
+        "Marseille-St-Charles": 159,
+        "Tende": 137,
+        "Breil-sur-Roya": 70,
+        "Ventimiglia-Stazione": 53,
+        "Grasse": 71,
+        "Menton": 39,
+        "Monaco-Monte-Carlo": 24,
+        "Sospel": 65,
+        "Touet-de-l'Escar\u00e8ne": 65
+    },
+    "Les Arcs-Draguignan": {
+        "Marseille-St-Charles": 83,
+        "Ventimiglia-Stazione": 138,
+        "Menton": 118,
+        "St-Rapha\u00ebl-Valescure": 30,
+        "Cannes": 55,
+        "Toulon": 60
+    },
+    "Grenoble": {
+        "Valence-Ville": 74,
+        "Annecy": 103,
+        "Lyon-Part-Dieu": 82,
+        "Gen\u00e8ve": 144,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 53,
+        "St-Marcellin": 40,
+        "St-Andr\u00e9-le-Gaz": 62,
+        "Rives": 30,
+        "Gap": 181,
+        "Clelles-Mens": 71,
+        "Veynes-D\u00e9voluy": 134
+    },
+    "Chamb\u00e9ry-Chal.-les-Eaux": {
+        "Valence-Ville": 125,
+        "Annecy": 53,
+        "Lyon-Part-Dieu": 80,
+        "Bourgoin-Jallieu": 55,
+        "Lyon-Part-Dieu-Gare-Rou": 90,
+        "Grenoble-Gare-Routi\u00e8re": 70,
+        "Cluses (Hte-Savoie)": 130,
+        "St-Gervais-L-B-Le-Fayet": 165,
+        "Annemasse": 110,
+        "Chamonix-Mont-Blanc": 200,
+        "Bourg-en-Bresse Gare R": 170,
+        "Evian-les-Bains": 180,
+        "Thonon-les-Bains": 165,
+        "Bonneville": 130,
+        "Bourg-St-Maurice": 145,
+        "Pont-de-Beauvoisin": 48,
+        "St-Andr\u00e9-le-Gaz": 71,
+        "La Tour-du-Pin": 86,
+        "Aix-les-Bains-le-Revard": 30,
+        "Modane": 113,
+        "Epierre-St-L\u00e9ger": 82,
+        "Culoz": 65,
+        "Mo\u00fbtiers-Salins-Brides": 80,
+        "Amb\u00e9rieu-en-Bugey": 73,
+        "Grenoble": 53,
+        "Rives": 90
+    },
+    "Annecy": {
+        "Valence-Ville": 181,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 53,
+        "Avignon-Centre": 277,
+        "Grenoble": 103,
+        "Gen\u00e8ve": 89,
+        "Coppet": 117,
+        "Lyon-Part-Dieu-Gare-Rou": 112,
+        "Aix-les-Bains-le-Revard": 35,
+        "Chamonix-Mont-Blanc": 120,
+        "Annemasse": 60,
+        "Albens": 45,
+        "Rumilly": 25,
+        "La Roche-sur-Foron": 55,
+        "St-Gervais-L-B-Le-Fayet": 97
+    },
+    "Avignon-Centre": {
+        "Annecy": 277,
+        "Lyon-Part-Dieu": 141,
+        "Marseille-St-Charles": 78,
+        "Port-Bou": 259,
+        "Miramas": 100,
+        "S\u00e8te": 109,
+        "Montpellier-Saint-Roch": 76,
+        "Narbonne": 144,
+        "N\u00eemes": 37,
+        "Perpignan": 196,
+        "Cerb\u00e8re": 238,
+        "Orange": 26,
+        "Avignon-TGV": 5,
+        "Carpentras": 28,
+        "M\u00e2con-Ville": 235,
+        "Valence-Ville": 89,
+        "Lyon-Perrache": 168
+    },
+    "Lyon-Part-Dieu": {
+        "Grenoble": 82,
+        "Avignon-Centre": 141,
+        "Marseille-St-Charles": 246,
+        "Sens": 262,
+        "Paris-Bercy": 308,
+        "Dijon-Ville": 124,
+        "Paris-Gare-de-Lyon": 309,
+        "Bourg-St-Maurice": 217,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 80,
+        "Modane": 182,
+        "Aix-les-Bains-le-Revard": 78,
+        "Gen\u00e8ve": 117,
+        "St-Gervais-L-B-Le-Fayet": 228,
+        "M\u00e2con-Ville": 62,
+        "Valence-Ville": 71,
+        "Bourg-en-Bresse": 42,
+        "St-Etienne-Ch\u00e2teaucreux": 46,
+        "Givors-Ville": 17,
+        "Amb\u00e9rieu-en-Bugey": 41,
+        "Mouchard": 128,
+        "Besan\u00e7on-Viotte": 159,
+        "Belfort-Ville": 230
+    },
+    "Dijon-Ville": {
+        "Paris-Bercy": 171,
+        "Paris-Gare-de-Lyon": 170,
+        "Lyon-Part-Dieu": 124,
+        "M\u00e2con-Ville": 74,
+        "Lyon-Perrache": 137,
+        "Nevers": 203,
+        "Neuilly-l\u00e8s-Dijon": 25,
+        "Laroche-Migennes": 216,
+        "Is-sur-Tille": 65,
+        "Seurre": 98,
+        "Besan\u00e7on-Viotte": 164,
+        "Les Laumes-Al\u00e9sia": 107,
+        "Troyes": 145,
+        "Neufch\u00e2teau": 120,
+        "Nancy-Ville": 190,
+        "Paris-Est": 223,
+        "Culmont-Chalindrey": 46,
+        "Reims": 216,
+        "St-Dizier": 128,
+        "Clermont-Ferrand": 260,
+        "Moulins-sur-Allier": 178,
+        "Auxerre-St-Gervais": 114,
+        "Chalon-sur-Sa\u00f4ne": 43,
+        "Bourg-en-Bresse": 102,
+        "Montchanin": 45,
+        "Le Creusot": 53,
+        "Autun": 91,
+        "Dole-Ville": 28
+    },
+    "Sens": {
+        "Lyon-Part-Dieu": 262
+    },
+    "M\u00e2con-Ville": {
+        "Paris-Bercy": 262,
+        "Dijon-Ville": 74,
+        "Paris-Gare-de-Lyon": 263,
+        "Lyon-Part-Dieu-Gare-Rou": 75,
+        "Bourg-en-Bresse Gare R": 62,
+        "Amb\u00e9rieu-en-Bugey": 54,
+        "Bourg-en-Bresse": 29,
+        "Lyon-Part-Dieu": 62,
+        "Lyon-Perrache": 60,
+        "Valence-Ville": 138,
+        "Pierrelatte": 189,
+        "Avignon-Centre": 235,
+        "Vienne": 98,
+        "Chalon-sur-Sa\u00f4ne": 39
+    },
+    "Bourg-St-Maurice": {
+        "Lyon-Part-Dieu": 217,
+        "Bourgoin-Jallieu": 188,
+        "Grenoble-Gare-Routi\u00e8re": 160,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 145,
+        "Mo\u00fbtiers-Salins-Brides": 37,
+        "Aix-les-Bains-le-Revard": 129
+    },
+    "Bourgoin-Jallieu": {
+        "Bourg-St-Maurice": 188,
+        "Albertville": 119,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 55,
+        "Lyon-Part-Dieu-Gare-Rou": 51,
+        "Lyon-Perrache": 37
+    },
+    "Albertville": {
+        "Bourgoin-Jallieu": 119,
+        "Mo\u00fbtiers-Salins-Brides": 45
+    },
+    "La Chaux-de-Fonds": {
+        "Morteau": 29,
+        "Besan\u00e7on-Viotte": 118,
+        "Besan\u00e7on-Mouill\u00e8re": 112
+    },
+    "Morteau": {
+        "La Chaux-de-Fonds": 29,
+        "Besan\u00e7on-Viotte": 88,
+        "Le Locle": 20,
+        "Le Valdahon": 54,
+        "Besan\u00e7on-Mouill\u00e8re": 82
+    },
+    "Besan\u00e7on-Viotte": {
+        "La Chaux-de-Fonds": 118,
+        "Morteau": 88,
+        "Mouchard": 58,
+        "Dijon-Ville": 164,
+        "Dole-Ville": 78,
+        "Le Valdahon": 62,
+        "Besan\u00e7on-Franche-Comt\u00e9": 23,
+        "Belfort-Ville": 71,
+        "Saint-Claude": 148,
+        "Lyon-Perrache": 176,
+        "Lyon-Part-Dieu": 159,
+        "Bourg-en-Bresse": 118,
+        "Lons-le-Saunier": 89
+    },
+    "Besan\u00e7on-Mouill\u00e8re": {
+        "La Chaux-de-Fonds": 112,
+        "Le Valdahon": 43,
+        "Morteau": 82
+    },
+    "Pontarlier": {
+        "Vallorbe-Cff": 33,
+        "Frasne": 30,
+        "Dompierre-Halte-Rout.": 21,
+        "Les Granges-Narboz": 10,
+        "Dole-Ville": 75
+    },
+    "Vallorbe-Cff": {
+        "Pontarlier": 33,
+        "Dole-Ville": 63,
+        "Frasne": 17
+    },
+    "Frasne": {
+        "Neuch\u00e2tel": 60,
+        "Vallorbe-Cff": 17,
+        "Pontarlier": 30,
+        "Jougne": 56,
+        "Travers": 56
+    },
+    "Neuch\u00e2tel": {
+        "Frasne": 60,
+        "Travers": 22
+    },
+    "Travers": {
+        "Neuch\u00e2tel": 22,
+        "Frasne": 56
+    },
+    "Dole-Ville": {
+        "Vallorbe-Cff": 63,
+        "Mouchard": 47,
+        "Champagnole-PE-Victor": 102,
+        "Saint-Claude": 204,
+        "Besan\u00e7on-Viotte": 78,
+        "Dijon-Ville": 28,
+        "Pontarlier": 75,
+        "Andelot": 41
+    },
+    "Del\u00e9mont": {
+        "Meroux": 69,
+        "Delle": 52
+    },
+    "Meroux": {
+        "Del\u00e9mont": 69,
+        "Biel": 99,
+        "Belfort-Ville": 24,
+        "Delle": 17
+    },
+    "Delle": {
+        "Del\u00e9mont": 52,
+        "Biel": 82,
+        "Belfort-Ville": 75,
+        "Meroux": 17
+    },
+    "Biel": {
+        "Meroux": 99,
+        "Delle": 82
+    },
+    "Modane": {
+        "Lyon-Part-Dieu": 182,
+        "Grenoble-Gare-Routi\u00e8re": 130,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 113,
+        "Aix-les-Bains-le-Revard": 157
+    },
+    "Aix-les-Bains-le-Revard": {
+        "Lyon-Part-Dieu": 78,
+        "Annecy": 35,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 30,
+        "Modane": 157,
+        "Bourg-St-Maurice": 129
+    },
+    "St-Gervais-L-B-Le-Fayet": {
+        "Vallorcine": 95,
+        "Chamonix-Mont-Blanc": 45,
+        "Coppet": 132,
+        "Grenoble-Gare-Routi\u00e8re": 190,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 165,
+        "Chamberry-Jacob": 165,
+        "Bellegarde-s-V. Gare": 135,
+        "Annemasse": 111,
+        "Cluses (Hte-Savoie)": 40,
+        "Lyon-Part-Dieu": 228,
+        "La Roche-sur-Foron": 108,
+        "Chedde": 10,
+        "Annecy": 97
+    },
+    "Vallorcine": {
+        "St-Gervais-L-B-Le-Fayet": 95,
+        "Chamonix-Mont-Blanc": 33
+    },
+    "Chamonix-Mont-Blanc": {
+        "Vallorcine": 33,
+        "St-Gervais-L-B-Le-Fayet": 45,
+        "Annecy": 120,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 200,
+        "Lyon-Part-Dieu-Gare-Rou": 240,
+        "Grenoble-Gare-Routi\u00e8re": 220,
+        "Bellegarde-s-V. Gare": 185
+    },
+    "Aulnoye Aymeries": {
+        "Mons": 28,
+        "Jeumont": 50,
+        "Maubeuge": 28,
+        "Busigny": 82,
+        "Hirson": 104,
+        "Valenciennes": 29,
+        "Tergnier": 71,
+        "St Quentin": 48,
+        "Lille Flandres": 60,
+        "Laon": 111
+    },
+    "Mons": {
+        "Aulnoye Aymeries": 28
+    },
+    "Courtrai/Kortrijk": {
+        "Lille Flandres": 36
+    },
+    "Lille Flandres": {
+        "Courtrai/Kortrijk": 36,
+        "Tournai": 30,
+        "Comines (France)": 54,
+        "Wambrechies": 30,
+        "Lens": 80,
+        "Hazebrouck": 77,
+        "Mouscron / Moeskroen": 49,
+        "Douai": 118,
+        "Valenciennes": 127,
+        "Arras": 99,
+        "Amiens": 223,
+        "Dunkerque": 150,
+        "Maubeuge": 72,
+        "Aulnoye Aymeries": 60,
+        "Jeumont": 81,
+        "Hirson": 108,
+        "Charleville-M\u00e9zi\u00e8res": 146,
+        "B\u00e9thune": 39,
+        "St Quentin": 107,
+        "Cambrai Ville": 59,
+        "Tourcoing": 14,
+        "St Omer": 50,
+        "Calais Ville": 75,
+        "Rouen-Rive-Droite": 168
+    },
+    "Namur": {
+        "Maubeuge": 84
+    },
+    "Tournai": {
+        "Lille Flandres": 30
+    },
+    "Brive-la-Gaillarde": {
+        "Ussel": 106,
+        "Egletons": 63,
+        "P\u00e9rigueux": 105,
+        "Condat-le-Lardin": 44,
+        "Aurillac": 162,
+        "Objat": 46,
+        "Limoges-B\u00e9n\u00e9dictins": 174,
+        "Tulle": 44,
+        "Montauban-Ville-Bourbon": 198,
+        "Capdenac": 148,
+        "Bordeaux-St-Jean": 143,
+        "Rodez": 145,
+        "Toulouse-Matabiau": 147,
+        "Cahors": 66,
+        "Neussargues": 168
+    },
+    "Ussel": {
+        "Brive-la-Gaillarde": 106,
+        "Laqueuille": 39,
+        "Clermont-Ferrand": 100,
+        "Tulle": 89,
+        "Bort-les-Orgues": 35,
+        "Limoges-B\u00e9n\u00e9dictins": 192,
+        "Bordeaux-St-Jean": 262,
+        "P\u00e9rigueux": 169
+    },
+    "Le Creusot": {
+        "Montchanin": 11,
+        "Autun": 49,
+        "Luzy(Ni\u00e8vre)": 54,
+        "Dijon-Ville": 53
+    },
+    "Montchanin": {
+        "Le Creusot": 11,
+        "Autun": 62,
+        "Chagny": 57,
+        "Luzy(Ni\u00e8vre)": 68,
+        "Dijon-Ville": 45,
+        "Chalon-sur-Sa\u00f4ne": 39,
+        "Etang": 30,
+        "Paray-le-Monial": 43
+    },
+    "Tende": {
+        "Nice-Ville": 137,
+        "Breil-sur-Roya": 40
+    },
+    "Breil-sur-Roya": {
+        "Nice-Ville": 70,
+        "Tende": 40
+    },
+    "Annemasse": {
+        "Coppet": 51,
+        "Gen\u00e8ve": 23,
+        "Thonon-les-Bains": 33,
+        "Grenoble-Gare-Routi\u00e8re": 180,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 110,
+        "Evian-les-Bains": 60,
+        "St-Gervais-L-B-Le-Fayet": 111,
+        "Bellegarde-s-V. Gare": 71,
+        "La Roche-sur-Foron": 30,
+        "Annecy": 60
+    },
+    "Coppet": {
+        "Annemasse": 51,
+        "Evian-les-Bains": 94,
+        "Thonon-les-Bains": 85,
+        "Annecy": 117,
+        "La Roche-sur-Foron": 79,
+        "St-Gervais-L-B-Le-Fayet": 132,
+        "Cluses (Hte-Savoie)": 108
+    },
+    "Decize": {
+        "Nevers": 33,
+        "Luzy(Ni\u00e8vre)": 54,
+        "Moulins-sur-Allier": 75,
+        "Cosne-sur-Loire": 89
+    },
+    "Gen\u00e8ve": {
+        "Annemasse": 23,
+        "Annecy": 89,
+        "Lyon-Part-Dieu": 117,
+        "Bellegarde-s-V. Gare": 28,
+        "Grenoble": 144,
+        "Valence-Ville": 195
+    },
+    "Evian-les-Bains": {
+        "Coppet": 94,
+        "Grenoble-Gare-Routi\u00e8re": 210,
+        "Annemasse": 60,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 180,
+        "Bellegarde-s-V. Gare": 115,
+        "Thonon-les-Bains": 20
+    },
+    "Thonon-les-Bains": {
+        "Coppet": 85,
+        "Annemasse": 33,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 165,
+        "Grenoble-Gare-Routi\u00e8re": 200,
+        "Evian-les-Bains": 20
+    },
+    "La Roche-sur-Foron": {
+        "Coppet": 79,
+        "Annemasse": 30,
+        "St-Gervais-L-B-Le-Fayet": 108,
+        "Annecy": 55,
+        "Bellegarde-s-V. Gare": 65
+    },
+    "Cluses (Hte-Savoie)": {
+        "Coppet": 108,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 130,
+        "St-Gervais-L-B-Le-Fayet": 40
+    },
+    "Forbach": {
+        "Metz-Ville": 47,
+        "Saarbr\u00fccken /Sarrebruck": 10
+    },
+    "Metz-Ville": {
+        "Forbach": 47,
+        "Bening": 41,
+        "Nancy-Ville": 105,
+        "Longwy": 55,
+        "Conflans-Jarny": 40,
+        "Verdun": 90,
+        "Trier-Hbf (Tr\u00e8ves)": 96,
+        "Luxembourg": 49,
+        "Bettembourg": 36,
+        "Thionville": 27,
+        "Saarbr\u00fccken /Sarrebruck": 60,
+        "Bar-le-Duc": 138,
+        "Ch\u00e2lons-en-Champagne": 228,
+        "Strasbourg": 86,
+        "Epernay": 117,
+        "Epinal": 120,
+        "Remiremont": 135,
+        "Sarrebourg": 62,
+        "Sarreguemines": 62,
+        "Lun\u00e9ville": 73
+    },
+    "Bening": {
+        "Metz-Ville": 41,
+        "Sarreguemines": 34,
+        "Bitche-Quartier-Driant": 71,
+        "Saarbr\u00fccken /Sarrebruck": 53
+    },
+    "Bitche": {
+        "Haguenau": 69,
+        "Niederbronn": 26,
+        "Sarreguemines": 48
+    },
+    "Haguenau": {
+        "Bitche": 69,
+        "Niederbronn": 40,
+        "Bitche-Camp": 76,
+        "Strasbourg": 50,
+        "Wissembourg": 37
+    },
+    "Niederbronn": {
+        "Bitche": 26,
+        "Bitche-Camp": 38,
+        "Haguenau": 40,
+        "Strasbourg": 53
+    },
+    "Bitche-Camp": {
+        "Niederbronn": 38,
+        "Haguenau": 76
+    },
+    "Strasbourg": {
+        "Haguenau": 50,
+        "S\u00e9lestat": 53,
+        "Benfeld": 42,
+        "Sarreguemines": 125,
+        "Diemeringen": 91,
+        "Wingen-sur-Moder": 64,
+        "Saverne": 57,
+        "Herrlisheim (Bas-Rhin)": 51,
+        "Entzheim-A\u00e9roport": 20,
+        "Molsheim": 40,
+        "Barr": 89,
+        "Rothau": 72,
+        "Saales": 104,
+        "WOERTH RHEIN": 66,
+        "Saarbr\u00fccken /Sarrebruck": 102,
+        "Mommenheim": 15,
+        "Offenburg": 32,
+        "Basel-SBB": 89,
+        "Ingwiller": 66,
+        "Roeschwoog": 84,
+        "Lauterbourg": 114,
+        "Kehl": 25,
+        "Erstein": 26,
+        "Sarrebourg": 59,
+        "Krimmeri-Meinau": 7,
+        "Metz-Ville": 86,
+        "Wissembourg": 58,
+        "Colmar": 53,
+        "Obernai": 31,
+        "St-Di\u00e9-des-Vosges": 112,
+        "Mulhouse": 61,
+        "Niederbronn": 53,
+        "Nancy-Ville": 89,
+        "Lun\u00e9ville": 67,
+        "Paris-Est": 359,
+        "Bar-le-Duc": 158
+    },
+    "Wissembourg": {
+        "Haguenau": 37,
+        "Neustadt (Weinstr) Hbf": 62,
+        "WINDEN PFALZ": 16,
+        "Landau-Pfalz-Hbf": 28,
+        "Strasbourg": 58
+    },
+    "Bouxwiller-Schattenmann": {
+        "Haguenau-Moulin-Neuf.": 43,
+        "Niedermodern/Uberach": 25,
+        "Obermodern": 10
+    },
+    "Haguenau-Moulin-Neuf.": {
+        "Bouxwiller-Schattenmann": 43,
+        "Ingwiller": 41,
+        "Dossenheim-(Mairie)": 69,
+        "Saverne": 81,
+        "Obermodern": 31
+    },
+    "Saverne": {
+        "Niedermodern/Uberach": 50,
+        "Haguenau-Moulin-Neuf.": 81,
+        "Obermodern": 36,
+        "Neuwiller-R.-Bouxwiller": 18,
+        "Pfaffenhoffen-(Mairie).": 43,
+        "Strasbourg": 57,
+        "Lutzelbourg": 15,
+        "Frohmuhl- (Lavoir)": 58,
+        "Hattmatt-S.-Polyvalente": 20,
+        "Sarralbe": 64,
+        "Sarre-Union": 45
+    },
+    "Niedermodern/Uberach": {
+        "Saverne": 50,
+        "Bouxwiller-Schattenmann": 25,
+        "Obermodern": 12,
+        "Bouxwiller-Babenhausen": 20
+    },
+    "Ingwiller": {
+        "Haguenau-Moulin-Neuf.": 41,
+        "Saverne-(Ht-Barr)": 56,
+        "Reipertswiller-SP.": 18,
+        "Lichtenberg-(Eglise).": 23,
+        "Saverne-(Lyc\u00e9e-Verne)": 64,
+        "Mommenheim": 35,
+        "Strasbourg": 66
+    },
+    "Dossenheim-(Mairie)": {
+        "Haguenau-Moulin-Neuf.": 69,
+        "Bouxwiller-Babenhausen": 20,
+        "Obermodern": 23
+    },
+    "Obermodern": {
+        "Saverne-(Ht-Barr)": 47,
+        "Bouxwiller-Schattenmann": 10,
+        "Haguenau-Moulin-Neuf.": 31,
+        "Saverne": 36,
+        "Niedermodern/Uberach": 12,
+        "Dossenheim-(Mairie)": 23,
+        "Pfaffenhoffen-(Mairie).": 8
+    },
+    "Saverne-(Ht-Barr)": {
+        "Obermodern": 47,
+        "Ingwiller": 56,
+        "Frohmuhl- (Lavoir)": 83,
+        "Hattmatt-S.-Polyvalente": 43
+    },
+    "Bouxwiller-Babenhausen": {
+        "Dossenheim-(Mairie)": 20,
+        "Niedermodern/Uberach": 20,
+        "Mommenheim": 30
+    },
+    "Neuwiller-R.-Bouxwiller": {
+        "Saverne": 18
+    },
+    "Pfaffenhoffen-(Mairie).": {
+        "Obermodern": 8,
+        "Saverne": 43
+    },
+    "S\u00e9lestat": {
+        "Strasbourg": 53,
+        "Molsheim": 76,
+        "Ribeauville-Gare-Routi\u00e8": 20,
+        "Riquewihr-Poste": 36,
+        "Ste-Marie-/-Mines-Maire": 35,
+        "St-Di\u00e9-des-Vosges": 71,
+        "Ste-Marie/-Ms-(-Th\u00e9\u00e2tre": 36,
+        "Ste-Marie-/-Ms-Pl-.CdG": 35,
+        "Li\u00e8pvre-(Rte-Vancelle)": 45,
+        "Basel-SBB": 69,
+        "Mulhouse": 40
+    },
+    "Benfeld": {
+        "Strasbourg": 42
+    },
+    "Colmar": {
+        "Raedersheim": 45,
+        "Metzeral": 43,
+        "Munster": 36,
+        "Mulhouse": 50,
+        "Strasbourg": 53
+    },
+    "Raedersheim": {
+        "Colmar": 45
+    },
+    "Buswiller-Eglise": {
+        "Mommenheim": 19
+    },
+    "Mommenheim": {
+        "Buswiller-Eglise": 19,
+        "Ettendorf-Pl,-de-L'ecol": 15,
+        "Ettendorf-(Angle-Pont)": 13,
+        "Bouxwiller-Babenhausen": 30,
+        "Strasbourg": 15,
+        "Sarreguemines": 113,
+        "Saarbr\u00fccken /Sarrebruck": 154,
+        "Ingwiller": 35
+    },
+    "Ettendorf-Pl,-de-L'ecol": {
+        "Mommenheim": 15
+    },
+    "Ettendorf-(Angle-Pont)": {
+        "Mommenheim": 13
+    },
+    "Diemeringen": {
+        "Sarreguemines": 31,
+        "Strasbourg": 91,
+        "Sarralbe Centre": 36,
+        "Sarre-Union": 20,
+        "Saarbr\u00fccken /Sarrebruck": 75
+    },
+    "Sarreguemines": {
+        "Diemeringen": 31,
+        "Strasbourg": 125,
+        "Bening": 34,
+        "Sarre-Union": 52,
+        "Sarralbe Centre": 33,
+        "Sarrebourg": 85,
+        "Sarrebourg (Place Math)": 116,
+        "Bitche": 48,
+        "Bitche-Quartier-Driant": 56,
+        "Saarbr\u00fccken /Sarrebruck": 29,
+        "Mommenheim": 113,
+        "Krimmeri-Meinau": 92,
+        "Metz-Ville": 62
+    },
+    "Wingen-sur-Moder": {
+        "Strasbourg": 64
+    },
+    "Reipertswiller-SP.": {
+        "Ingwiller": 18
+    },
+    "Lichtenberg-(Eglise).": {
+        "Ingwiller": 23
+    },
+    "Lutzelbourg": {
+        "Saverne": 15,
+        "Sarrebourg": 50
+    },
+    "Kruth": {
+        "Thann Arr\u00eat La Poste": 32,
+        "Mulhouse": 77,
+        "Thann": 32,
+        "Wesserling": 7,
+        "Thann-Saint-Jacques": 28
+    },
+    "Thann Arr\u00eat La Poste": {
+        "Kruth": 32
+    },
+    "Mulhouse": {
+        "Kruth": 77,
+        "Basel-SBB": 60,
+        "Altkirch": 25,
+        "Belfort-Ville": 77,
+        "Mullheim-Baden-Bf": 23,
+        "Freiburg-Breisgau": 45,
+        "Colmar": 50,
+        "Strasbourg": 61,
+        "Erstein": 53,
+        "S\u00e9lestat": 40,
+        "Thann-Saint-Jacques": 32,
+        "Willer-sur-Thur": 36,
+        "Thann": 26,
+        "Wesserling": 47,
+        "Paris-Est": 294,
+        "Troyes": 182,
+        "Chaumont": 137,
+        "Longueville (S.-et-M.)": 234
+    },
+    "Thann": {
+        "Kruth": 32,
+        "Mulhouse-Gare-Centrale": 41,
+        "Mulhouse": 26
+    },
+    "Wesserling": {
+        "Kruth": 7,
+        "Thann-Saint-Jacques": 19,
+        "Mulhouse": 47
+    },
+    "Metzeral": {
+        "Colmar": 43
+    },
+    "Cernay (Haut-Rhin)": {
+        "Sewen-(Eglise)": 60
+    },
+    "Sewen-(Eglise)": {
+        "Cernay (Haut-Rhin)": 60,
+        "Cernay-(Lyc\u00e9e)": 66
+    },
+    "Cernay-(Lyc\u00e9e)": {
+        "Sewen-(Eglise)": 66
+    },
+    "Basel-SBB": {
+        "Mulhouse": 60,
+        "Strasbourg": 89,
+        "S\u00e9lestat": 69
+    },
+    "Saverne-(Lyc\u00e9e-Verne)": {
+        "Ingwiller": 64,
+        "Frohmuhl- (Lavoir)": 85,
+        "Hattmatt-S.-Polyvalente": 42
+    },
+    "Frohmuhl- (Lavoir)": {
+        "Saverne-(Ht-Barr)": 83,
+        "Saverne": 58,
+        "Saverne-(Lyc\u00e9e-Verne)": 85
+    },
+    "Hattmatt-S.-Polyvalente": {
+        "Saverne": 20,
+        "Saverne-(Pl.-Dragons)": 33,
+        "Saverne-(Lyc\u00e9e-Verne)": 42,
+        "Saverne-(Ht-Barr)": 43
+    },
+    "Saverne-(Pl.-Dragons)": {
+        "Hattmatt-S.-Polyvalente": 33
+    },
+    "Herrlisheim (Bas-Rhin)": {
+        "Strasbourg": 51
+    },
+    "Lauterbourg": {
+        "Roeschwoog": 30,
+        "WOERTH RHEIN": 15,
+        "Strasbourg": 114
+    },
+    "Roeschwoog": {
+        "Lauterbourg": 30,
+        "Strasbourg": 84
+    },
+    "Entzheim-A\u00e9roport": {
+        "Strasbourg": 20
+    },
+    "Barr": {
+        "Molsheim": 33,
+        "Strasbourg": 89
+    },
+    "Molsheim": {
+        "Barr": 33,
+        "Strasbourg": 40,
+        "S\u00e9lestat": 76,
+        "St-Di\u00e9-des-Vosges": 105,
+        "Rothau": 55,
+        "Saales": 76,
+        "Mutzig-Passage-A-Niveau": 8
+    },
+    "Rothau": {
+        "Strasbourg": 72,
+        "St-Di\u00e9-des-Vosges": 50,
+        "Molsheim": 55,
+        "Saales": 22
+    },
+    "Saales": {
+        "Strasbourg": 104,
+        "St-Di\u00e9-des-Vosges": 28,
+        "Rothau": 22,
+        "Molsheim": 76
+    },
+    "Altkirch": {
+        "Mulhouse": 25
+    },
+    "Belfort-Ville": {
+        "Mulhouse": 77,
+        "Montreux-Vieux": 30,
+        "Aillevillers": 102,
+        "Vesoul": 115,
+        "Meroux": 24,
+        "Delle": 75,
+        "Paris-Est": 247,
+        "Troyes": 163,
+        "Chaumont": 105,
+        "Besan\u00e7on-Viotte": 71,
+        "Epinal": 92,
+        "Montb\u00e9liard-Ville": 15,
+        "Lyon-Part-Dieu": 230,
+        "Bourg-en-Bresse": 186,
+        "Lyon-Perrache": 244,
+        "Lons-le-Saunier": 144
+    },
+    "Montreux-Vieux": {
+        "Belfort-Ville": 30
+    },
+    "Ribeauville-Gare-Routi\u00e8": {
+        "S\u00e9lestat": 20
+    },
+    "Riquewihr-Poste": {
+        "S\u00e9lestat": 36
+    },
+    "Ste-Marie-/-Mines-Maire": {
+        "S\u00e9lestat": 35,
+        "S\u00e8lestat-(Schwilgu\u00e9)": 64
+    },
+    "St-Di\u00e9-des-Vosges": {
+        "S\u00e9lestat": 71,
+        "Laveline-d-Bruy. Mairie": 64,
+        "Epinal": 65,
+        "Bruy\u00e8res (Vosges)": 48,
+        "Arches": 85,
+        "Bruy\u00e8res Chanzy Gare": 48,
+        "Saales": 28,
+        "Molsheim": 105,
+        "Rothau": 50,
+        "Nancy-Ville": 121,
+        "Lun\u00e9ville": 41,
+        "Strasbourg": 112
+    },
+    "Ste-Marie/-Ms-(-Th\u00e9\u00e2tre": {
+        "S\u00e9lestat": 36
+    },
+    "Ste-Croix/Mines-Sq-de-G": {
+        "S\u00e8lestat-(Schwilgu\u00e9)": 55
+    },
+    "S\u00e8lestat-(Schwilgu\u00e9)": {
+        "Ste-Croix/Mines-Sq-de-G": 55,
+        "Ste-Marie-/-Mines-Maire": 64,
+        "Liepvre-(-R.-GUTH-)": 49
+    },
+    "Ste-Marie-/-Ms-Pl-.CdG": {
+        "S\u00e9lestat": 35,
+        "S\u00e9lestat-(Schweisguth)": 69
+    },
+    "Liepvre-(-R.-GUTH-)": {
+        "S\u00e8lestat-(Schwilgu\u00e9)": 49
+    },
+    "S\u00e9lestat-(Schweisguth)": {
+        "Ste-Marie-/-Ms-Pl-.CdG": 69
+    },
+    "Li\u00e8pvre-(Rte-Vancelle)": {
+        "S\u00e9lestat": 45
+    },
+    "Montlu\u00e7on-Ville": {
+        "Vierzon": 125,
+        "Vichy": 108,
+        "Clermont-Ferrand": 146,
+        "Riom-Ch\u00e2tel-Guyon": 120,
+        "Urcay-Hotel-du-Lyon-d'O": 44,
+        "St-Amand-Montrond-Orval": 59,
+        "St-Eloy": 40,
+        "St-Gervais-Ch-LPA.": 60,
+        "Gu\u00e9ret": 66,
+        "Commentry": 25,
+        "Bourges": 160,
+        "Vallon-en-Sully": 31,
+        "Limoges-B\u00e9n\u00e9dictins": 131,
+        "Bordeaux-St-Jean": 259
+    },
+    "Laqueuille": {
+        "Le-Mont-Dore-Gare": 24,
+        "Ussel": 39
+    },
+    "Le-Mont-Dore-Gare": {
+        "Laqueuille": 24,
+        "Clermont-Ferrand": 84
+    },
+    "Clermont-Ferrand": {
+        "Gannat": 57,
+        "Le-Mont-Dore-Gare": 84,
+        "Saint-Etienne-Chtx GR": 156,
+        "Le Puy-en-Velay": 184,
+        "Montlu\u00e7on-Ville": 146,
+        "Thiers": 71,
+        "Volvic": 39,
+        "Ancizes-St-Georges-Bour": 69,
+        "St-Gervais-Mairie": 91,
+        "Le Mont Dore Ski": 98,
+        "Vertaizon": 32,
+        "Mauriac-Lyc\u00e9e-Cortat": 136,
+        "Mauriac": 133,
+        "St-Flour-les-All\u00e9es": 93,
+        "Ussel": 100,
+        "Mende": 180,
+        "Moulins-sur-Allier": 165,
+        "Riom-Ch\u00e2tel-Guyon": 25,
+        "Vichy": 85,
+        "Al\u00e8s": 344,
+        "Aurillac": 152,
+        "Arvant": 47,
+        "Durtol-Nohanent": 13,
+        "St-Germain-des-Foss\u00e9s": 40,
+        "Nevers": 106,
+        "Vic-le-Comte": 21,
+        "Brioude": 67,
+        "Issoire": 40,
+        "Le Lioran": 111,
+        "N\u00eemes": 307,
+        "Dijon-Ville": 260,
+        "Lyon-Perrache": 171
+    },
+    "Gannat": {
+        "Clermont-Ferrand": 57,
+        "Riom-Ch\u00e2tel-Guyon": 46,
+        "Vichy": 32,
+        "Issoire": 81,
+        "Vic-le-Comte": 66,
+        "Brioude": 100
+    },
+    "Riom-Ch\u00e2tel-Guyon": {
+        "Gannat": 46,
+        "Montlu\u00e7on-Ville": 120,
+        "St-Gervais-Ch-LPA.": 54,
+        "Clermont-Ferrand": 25,
+        "Issoire": 57,
+        "Vic-le-Comte": 38
+    },
+    "Aurillac": {
+        "St-Denis-pr\u00e8s-Martel": 111,
+        "Capdenac": 88,
+        "Arvant": 121,
+        "Neussargues": 74,
+        "Figeac": 80,
+        "Brive-la-Gaillarde": 162,
+        "Toulouse-Matabiau": 244,
+        "Clermont-Ferrand": 152
+    },
+    "St-Denis-pr\u00e8s-Martel": {
+        "Aurillac": 111,
+        "Souillac": 27
+    },
+    "Capdenac": {
+        "Aurillac": 88,
+        "Figeac": 20,
+        "Rodez": 86,
+        "Brive-la-Gaillarde": 148,
+        "Toulouse-Matabiau": 137
+    },
+    "Vichy": {
+        "Montlu\u00e7on-Ville": 108,
+        "Moulins-sur-Allier": 78,
+        "Ambert": 119,
+        "Pont-de-Dore": 66,
+        "Clermont-Ferrand": 85,
+        "Gannat": 32
+    },
+    "Saint-Etienne-Chtx GR": {
+        "Clermont-Ferrand": 156,
+        "Thiers": 118,
+        "Le Puy-en-Velay": 80,
+        "Lyon-Part-Dieu-Gare-Rou": 71,
+        "Valence-Gare-Routi\u00e8re": 110,
+        "Bo\u00ebn": 92,
+        "Noir\u00e9table": 108,
+        "Montbrison": 60,
+        "Feurs": 60,
+        "Roanne-Gare-Routi\u00e8re": 119
+    },
+    "Thiers": {
+        "Saint-Etienne-Chtx GR": 118,
+        "Clermont-Ferrand": 71,
+        "Vertaizon": 40
+    },
+    "Le Puy-en-Velay": {
+        "Clermont-Ferrand": 184,
+        "Brioude": 64,
+        "Langeac": 49,
+        "St-Georges-d'Aurac": 53,
+        "Arvant": 81,
+        "Saint-Etienne-Chtx GR": 80,
+        "La Chaise-Dieu": 47,
+        "Ambert": 107,
+        "Marvejols": 135,
+        "Firminy": 129,
+        "Vorey": 41,
+        "St-Etienne-Ch\u00e2teaucreux": 113
+    },
+    "Arvant": {
+        "Aurillac": 121,
+        "St-Flour-les-All\u00e9es": 50,
+        "St-Ch\u00e9ly-d'Apcher": 77,
+        "Le Puy-en-Velay": 81,
+        "Issoire": 46,
+        "Brioude": 12,
+        "Langeac": 46,
+        "N\u00eemes": 334,
+        "Al\u00e8s": 263,
+        "Clermont-Ferrand": 47
+    },
+    "Moulins-sur-Allier": {
+        "Vichy": 78,
+        "Nevers": 68,
+        "Paray-le-Monial": 82,
+        "Clermont-Ferrand": 165,
+        "Vic-le-Comte": 92,
+        "Issoire": 113,
+        "Brioude": 149,
+        "Dijon-Ville": 178,
+        "Decize": 75
+    },
+    "Volvic": {
+        "Clermont-Ferrand": 39,
+        "Ancizes-St-Georges-Bour": 39,
+        "St-Eloy": 113,
+        "Pontgibaud-Ville": 22
+    },
+    "Ancizes-St-Georges-Bour": {
+        "Volvic": 39,
+        "Clermont-Ferrand": 69
+    },
+    "Urcay-Hotel-du-Lyon-d'O": {
+        "Montlu\u00e7on-Ville": 44
+    },
+    "St-Amand-Montrond-Orval": {
+        "Montlu\u00e7on-Ville": 59,
+        "Bourges-Gare-Routi\u00e8re": 76,
+        "Bourges": 65,
+        "Commentry": 98
+    },
+    "Vertaizon": {
+        "Thiers": 40,
+        "Clermont-Ferrand": 32
+    },
+    "St-Eloy": {
+        "Montlu\u00e7on-Ville": 40,
+        "Volvic": 113,
+        "Lapeyrouse(Puy-de-D\u00f4me)": 15
+    },
+    "Lapeyrouse(Puy-de-D\u00f4me)": {
+        "St-Eloy-les-Mines-Lyc\u00e9e": 20,
+        "St-Eloy": 15
+    },
+    "St-Eloy-les-Mines-Lyc\u00e9e": {
+        "Lapeyrouse(Puy-de-D\u00f4me)": 20
+    },
+    "St-Gervais-Mairie": {
+        "Clermont-Ferrand": 91
+    },
+    "Le Mont Dore Ski": {
+        "Clermont-Ferrand": 98
+    },
+    "St-Flour-les-All\u00e9es": {
+        "Arvant": 50,
+        "Massiac-Blesle": 30,
+        "Clermont-Ferrand": 93,
+        "St-Ch\u00e9ly-d'Apcher": 30
+    },
+    "Massiac-Blesle": {
+        "St-Flour-les-All\u00e9es": 30,
+        "St-Ch\u00e9ly-d'Apcher": 49
+    },
+    "St-Ch\u00e9ly-d'Apcher": {
+        "Arvant": 77,
+        "Neussargues": 56,
+        "St-Flour-les-All\u00e9es": 30,
+        "Massiac-Blesle": 49,
+        "Mende": 84,
+        "B\u00e9ziers": 244,
+        "Millau": 111,
+        "Montpellier-Saint-Roch": 297
+    },
+    "Mauriac-Lyc\u00e9e-Cortat": {
+        "Clermont-Ferrand": 136
+    },
+    "Mauriac": {
+        "Clermont-Ferrand": 133
+    },
+    "St-Gervais-Ch-LPA.": {
+        "Riom-Ch\u00e2tel-Guyon": 54,
+        "Montlu\u00e7on-Ville": 60
+    },
+    "Neussargues": {
+        "Riom_Es_M_la_Poste.": 69,
+        "St-Ch\u00e9ly-d'Apcher": 56,
+        "St-Flour-Chaudes-Aigues": 31,
+        "Aurillac": 74,
+        "Brive-la-Gaillarde": 168
+    },
+    "Riom_Es_M_la_Poste.": {
+        "Neussargues": 69
+    },
+    "St-Flour-Chaudes-Aigues": {
+        "Neussargues": 31
+    },
+    "Pontgibaud-Ville": {
+        "Volvic": 22
+    },
+    "Brioude-Lyc\u00e9e-Lafayette": {
+        "Brioude": 5
+    },
+    "Brioude": {
+        "Brioude-Lyc\u00e9e-Lafayette": 5,
+        "Langeac": 37,
+        "Le Puy-en-Velay": 64,
+        "Issoire": 54,
+        "Arvant": 12,
+        "Al\u00e8s": 254,
+        "Clermont-Ferrand": 67,
+        "Gannat": 100,
+        "Moulins-sur-Allier": 149
+    },
+    "Langeac": {
+        "St-Georges-d'Aurac": 10,
+        "St-George-d'Aurac-Bourg": 12,
+        "Brioude": 37,
+        "Le Puy-en-Velay": 49,
+        "Arvant": 46
+    },
+    "St-Georges-d'Aurac": {
+        "Langeac": 10,
+        "Le Puy-en-Velay": 53
+    },
+    "St-George-d'Aurac-Bourg": {
+        "Langeac": 12
+    },
+    "La Chaise-Dieu": {
+        "Le Puy-en-Velay": 47
+    },
+    "Ambert": {
+        "Le Puy-en-Velay": 107,
+        "Vichy": 119
+    },
+    "Pont-de-Dore": {
+        "Vichy": 66
+    },
+    "Issoire": {
+        "Arvant": 46,
+        "Le-Breuil-sur-Couze-Lyc": 13,
+        "Brioude": 54,
+        "Clermont-Ferrand": 40,
+        "Moulins-sur-Allier": 113,
+        "Riom-Ch\u00e2tel-Guyon": 57,
+        "St-Germain-des-Foss\u00e9s": 88,
+        "Gannat": 81
+    },
+    "Vic-le-Comte": {
+        "Issoire-Lyc\u00e9e-Deville": 30,
+        "Clermont-Ferrand": 21,
+        "Nevers": 124,
+        "Moulins-sur-Allier": 92,
+        "St-Germain-des-Foss\u00e9s": 66,
+        "Riom-Ch\u00e2tel-Guyon": 38,
+        "Gannat": 66
+    },
+    "Issoire-Lyc\u00e9e-Deville": {
+        "Vic-le-Comte": 30
+    },
+    "Le-Breuil-sur-Couze-Lyc": {
+        "Issoire": 13
+    },
+    "Luzy(Ni\u00e8vre)": {
+        "Nevers": 98,
+        "Decize": 54,
+        "Montchanin": 68,
+        "Le Creusot": 54
+    },
+    "Cercy-la-Tour": {
+        "Nevers": 68
+    },
+    "Autun": {
+        "Etang": 21,
+        "Le Creusot": 49,
+        "Montchanin": 62,
+        "Dijon-Ville": 91,
+        "Nevers": 94
+    },
+    "Etang": {
+        "Autun": 21,
+        "Montchanin": 30
+    },
+    "St-Pierre-le-Mo\u00fbtier": {
+        "Nevers": 33
+    },
+    "Paray-le-Monial": {
+        "Moulins-sur-Allier": 82,
+        "Lozanne": 120,
+        "Lyon-Perrache": 150,
+        "Montchanin": 43
+    },
+    "Chauffailles-Gambetta": {
+        "Digoin": 67
+    },
+    "Digoin": {
+        "Chauffailles-Gambetta": 67,
+        "Lozanne": 133
+    },
+    "Lozanne": {
+        "Digoin": 133,
+        "Lyon-Gorge-de-Loup": 37,
+        "Lyon-St-Paul-Quai-Bondy": 48,
+        "Grandris-Centre": 42,
+        "Lamure-sur-Azergues": 46,
+        "Poule-Mairie": 60,
+        "Paray-le-Monial": 120,
+        "Bois-d'Oingt-Centre": 23,
+        "Tassin": 25
+    },
+    "Louhans": {
+        "Seurre": 48
+    },
+    "Seurre": {
+        "Louhans": 48,
+        "Bourg-en-Bresse": 103,
+        "Dijon-Ville": 98
+    },
+    "Bourg-en-Bresse": {
+        "Seurre": 103,
+        "Lons-le-Saunier": 89,
+        "Amb\u00e9rieu-en-Bugey": 23,
+        "M\u00e2con-Ville": 29,
+        "Oyonnax": 53,
+        "Lyon-Perrache": 65,
+        "Lyon-Part-Dieu": 42,
+        "Dijon-Ville": 102,
+        "Besan\u00e7on-Viotte": 118,
+        "Belfort-Ville": 186,
+        "Mouchard": 81
+    },
+    "Auxerre-St-Gervais": {
+        "Avallon": 63,
+        "Clamecy": 76,
+        "Corbigny": 111,
+        "Laroche-Migennes": 28,
+        "Paris-Bercy": 105,
+        "Paris-Gare-de-Lyon": 119,
+        "Dijon-Ville": 114
+    },
+    "Avallon": {
+        "Auxerre-St-Gervais": 63,
+        "Laroche-Migennes": 110,
+        "Paris-Bercy": 158,
+        "Paris-Gare-de-Lyon": 160
+    },
+    "Clamecy": {
+        "Auxerre-St-Gervais": 76,
+        "Corbigny": 35,
+        "Laroche-Migennes": 113,
+        "Paris-Bercy": 165,
+        "Paris-Gare-de-Lyon": 159
+    },
+    "Corbigny": {
+        "Auxerre-St-Gervais": 111,
+        "Clamecy": 35,
+        "Paris-Bercy": 213,
+        "Paris-Gare-de-Lyon": 215,
+        "Laroche-Migennes": 113
+    },
+    "Lorient": {
+        "Quimperl\u00e9": 22,
+        "Quimper": 95,
+        "Rosporden": 65,
+        "Vannes": 80,
+        "Redon": 140
+    },
+    "Quimperl\u00e9": {
+        "Lorient": 22
+    },
+    "Ch\u00e2teaubriant": {
+        "Janz\u00e9": 57,
+        "Retiers": 33
+    },
+    "Janz\u00e9": {
+        "Ch\u00e2teaubriant": 57,
+        "Rennes": 36
+    },
+    "Retiers": {
+        "Ch\u00e2teaubriant": 33,
+        "Rennes": 42
+    },
+    "Dinan": {
+        "Dol": 30,
+        "St-Brieuc": 60,
+        "Lamballe": 73
+    },
+    "Dol": {
+        "Dinan": 30,
+        "Caen": 167,
+        "Granville": 59,
+        "Rennes": 33
+    },
+    "Valen\u00e7ay": {
+        "Lu\u00e7ay-le-Male": 15,
+        "Faubourg-d'Orl\u00e9ans": 55,
+        "Romorantin-Blanc-Argent": 45,
+        "Salbris": 87
+    },
+    "Lu\u00e7ay-le-Male": {
+        "Valen\u00e7ay": 15
+    },
+    "Romorantin-Blanc-Argent": {
+        "Salbris": 50,
+        "Faubourg-d'Orl\u00e9ans": 5,
+        "Valen\u00e7ay": 45
+    },
+    "Salbris": {
+        "Romorantin-Blanc-Argent": 50,
+        "Valen\u00e7ay": 87
+    },
+    "Faubourg-d'Orl\u00e9ans": {
+        "Romorantin-Blanc-Argent": 5,
+        "Valen\u00e7ay": 55
+    },
+    "La Fert\u00e9-sur-Chiers": {
+        "Sedan-Place-Calonne": 59
+    },
+    "Sedan-Place-Calonne": {
+        "La Fert\u00e9-sur-Chiers": 59
+    },
+    "Ch\u00e2lons-en-Champagne": {
+        "Verdun": 108,
+        "Chaumont": 164,
+        "St-Dizier": 75,
+        "Ch\u00e2teau-Thierry": 105,
+        "Bar-le-Duc": 110,
+        "Metz-Ville": 228,
+        "Paris-Est": 101,
+        "Reims": 44
+    },
+    "Verdun": {
+        "Ch\u00e2lons-en-Champagne": 108,
+        "Metz-Ville": 90,
+        "Conflans-Jarny": 45,
+        "Hagondange": 113,
+        "Nancy-Ville": 108
+    },
+    "St-Dizier": {
+        "Vitry-le-Fran\u00e7ois": 51,
+        "Joinville": 50,
+        "Chaumont": 123,
+        "Ch\u00e2lons-en-Champagne": 75,
+        "Bar-le-Duc": 35,
+        "Paris-Est": 140,
+        "Ch\u00e2teau-Thierry": 85,
+        "Reims": 93,
+        "Culmont-Chalindrey": 89,
+        "Dijon-Ville": 128
+    },
+    "Vitry-le-Fran\u00e7ois": {
+        "St-Dizier": 51
+    },
+    "Joinville": {
+        "St-Dizier": 50,
+        "Chaumont": 77
+    },
+    "Chaumont": {
+        "St-Dizier": 123,
+        "Joinville": 77,
+        "Langres-Gendarmerie": 67,
+        "Troyes": 100,
+        "Vendeuvre (Aube)": 60,
+        "Ville-sous-La-Fert\u00e9": 48,
+        "Bricon(la Poste)": 19,
+        "Ch\u00e2lons-en-Champagne": 164,
+        "Culmont-Chalindrey": 33,
+        "Paris-Est": 145,
+        "Mulhouse": 137,
+        "Belfort-Ville": 105,
+        "Reims": 130
+    },
+    "Langres-Gendarmerie": {
+        "Chaumont": 67
+    },
+    "Troyes": {
+        "Chaumont": 100,
+        "Bar-sur-Aube": 98,
+        "Vendeuvre (Aube)": 55,
+        "St-Florentin-Vergigny": 97,
+        "Laroche-Migennes": 130,
+        "Romilly-sur-Seine": 78,
+        "Payns Abri Savi\u00e8res": 26,
+        "Culmont-Chalindrey": 161,
+        "Dijon-Ville": 145,
+        "Paris-Est": 90,
+        "Mulhouse": 182,
+        "Belfort-Ville": 163
+    },
+    "Bar-sur-Aube": {
+        "Juvancourt": 32,
+        "Troyes": 98
+    },
+    "Juvancourt": {
+        "Bar-sur-Aube": 32,
+        "Bayel-Eglise": 18,
+        "Vendeuvre (Aube)": 85
+    },
+    "Vendeuvre (Aube)": {
+        "Troyes": 55,
+        "Chaumont": 60,
+        "Juvancourt": 85
+    },
+    "Bayel-Eglise": {
+        "Juvancourt": 18
+    },
+    "Ville-sous-La-Fert\u00e9": {
+        "Chaumont": 48
+    },
+    "Bricon(la Poste)": {
+        "Chaumont": 19
+    },
+    "St-Florentin-Vergigny": {
+        "Troyes": 97
+    },
+    "Laroche-Migennes": {
+        "Troyes": 130,
+        "Dijon-Ville": 216,
+        "Tonnerre": 69,
+        "Montereau": 148,
+        "Clamecy": 113,
+        "Auxerre-St-Gervais": 28,
+        "Avallon": 110,
+        "Paris-Gare-de-Lyon": 125,
+        "Paris-Bercy": 124,
+        "Corbigny": 113
+    },
+    "Romilly-sur-Seine": {
+        "Troyes": 78,
+        "Nogent-sur-Seine": 35
+    },
+    "Payns Abri Savi\u00e8res": {
+        "Troyes": 26
+    },
+    "Nogent-sur-Seine": {
+        "Romilly-sur-Seine": 35
+    },
+    "Charleville-M\u00e9zi\u00e8res": {
+        "Hirson": 60,
+        "Givet": 107,
+        "Nouzonville": 20,
+        "Reims": 80,
+        "Sedan": 43,
+        "Longwy": 151,
+        "Longuyon": 60,
+        "Thionville": 96,
+        "Champagne-Ardenne": 71,
+        "Lille Flandres": 146
+    },
+    "Hirson": {
+        "Charleville-M\u00e9zi\u00e8res": 60,
+        "Laon-Gare-Routi\u00e8re-Poma": 80,
+        "Aulnoye Aymeries": 104,
+        "Valenciennes": 90,
+        "Lille Flandres": 108,
+        "Laon": 51
+    },
+    "Fismes": {
+        "Reims": 58
+    },
+    "Reims": {
+        "Fismes": 58,
+        "Charleville-M\u00e9zi\u00e8res": 80,
+        "Sedan": 163,
+        "Laon": 110,
+        "Champagne-Ardenne": 12,
+        "Ch\u00e2teau-Thierry": 66,
+        "Ch\u00e2lons-en-Champagne": 44,
+        "St-Dizier": 93,
+        "Culmont-Chalindrey": 171,
+        "Chaumont": 130,
+        "Dijon-Ville": 216,
+        "Epernay": 35
+    },
+    "Aillevillers": {
+        "Belfort-Ville": 102,
+        "Lure": 37
+    },
+    "Lure": {
+        "Aillevillers": 37
+    },
+    "Le Locle": {
+        "Morteau": 20
+    },
+    "Le Valdahon": {
+        "Morteau": 54,
+        "Besan\u00e7on-Viotte": 62,
+        "Besan\u00e7on-Mouill\u00e8re": 43
+    },
+    "Mouchard": {
+        "Dole-Ville": 47,
+        "Lons-le-Saunier": 84,
+        "Poligny": 28,
+        "Besan\u00e7on-Viotte": 58,
+        "Saint-Claude": 124,
+        "Lyon-Part-Dieu": 128,
+        "Lyon-Perrache": 139,
+        "Bourg-en-Bresse": 81
+    },
+    "Lons-le-Saunier": {
+        "Mouchard": 84,
+        "Bourg-en-Bresse": 89,
+        "Lyon-Perrache": 103,
+        "Belfort-Ville": 144,
+        "Besan\u00e7on-Viotte": 89
+    },
+    "Poligny": {
+        "Mouchard": 28
+    },
+    "Dompierre-Halte-Rout.": {
+        "Pontarlier": 21
+    },
+    "Les Granges-Narboz": {
+        "Pontarlier": 10
+    },
+    "Jougne": {
+        "Frasne": 56
+    },
+    "Champagnole": {
+        "Saint-Claude": 87
+    },
+    "Saint-Claude": {
+        "Champagnole": 87,
+        "Andelot": 107,
+        "Dole-Ville": 204,
+        "Mouchard": 124,
+        "Lyon-Part-Dieu-Gare-Rou": 135,
+        "Besan\u00e7on-Viotte": 148
+    },
+    "Champagnole-PE-Victor": {
+        "Dole-Ville": 102
+    },
+    "Andelot": {
+        "Saint-Claude": 107,
+        "Dole-Ville": 41
+    },
+    "Al\u00e8s": {
+        "N\u00eemes": 50,
+        "Clermont-Ferrand": 344,
+        "Brioude": 254,
+        "G\u00e9nolhac": 57,
+        "La Bastide-St-Laurent": 111,
+        "Mende": 187,
+        "Langogne": 136,
+        "Arvant": 263
+    },
+    "N\u00eemes": {
+        "Al\u00e8s": 50,
+        "Port-Bou": 209,
+        "Arvant": 334,
+        "Le Grau-du-Roi": 93,
+        "Langogne": 180,
+        "Mende": 247,
+        "Marvejols": 297,
+        "Clermont-Ferrand": 307,
+        "Toulouse-Matabiau": 210,
+        "Carcassonne": 140,
+        "Montpellier-Saint-Roch": 43,
+        "S\u00e8te": 66,
+        "Avignon-Centre": 37,
+        "Perpignan": 160,
+        "Narbonne": 98,
+        "Cerb\u00e8re": 197,
+        "G\u00e9nolhac": 77,
+        "La Bastide-St-Laurent": 114,
+        "Vauvert": 24
+    },
+    "La Bastide-St-Laurent": {
+        "Langogne": 25,
+        "Mende": 68,
+        "Marvejols": 133,
+        "Al\u00e8s": 111,
+        "N\u00eemes": 114
+    },
+    "Langogne": {
+        "La Bastide-St-Laurent": 25,
+        "Mende": 90,
+        "Al\u00e8s": 136,
+        "N\u00eemes": 180
+    },
+    "Mende": {
+        "Langogne": 90,
+        "La Bastide-St-Laurent": 68,
+        "Clermont-Ferrand": 180,
+        "St-Ch\u00e9ly-d'Apcher": 84,
+        "Marvejols Place Chayla": 50,
+        "Al\u00e8s": 187,
+        "Marvejols": 48,
+        "N\u00eemes": 247
+    },
+    "Millau": {
+        "Marvejols Place Chayla": 75,
+        "Rodez": 85,
+        "Laissac-Foirail": 60,
+        "B\u00e9ziers": 117,
+        "St-Ch\u00e9ly-d'Apcher": 111
+    },
+    "Marvejols Place Chayla": {
+        "Millau": 75,
+        "Mende": 50
+    },
+    "Marvejols": {
+        "Le Puy-en-Velay": 135,
+        "La Bastide-St-Laurent": 133,
+        "Mende": 48,
+        "N\u00eemes": 297
+    },
+    "Carcassonne": {
+        "Quillan": 90,
+        "Limoux": 55,
+        "Castelnaudary": 59,
+        "Toulouse-Matabiau": 74,
+        "Narbonne": 36,
+        "N\u00eemes": 140,
+        "Perpignan": 91
+    },
+    "Quillan": {
+        "Carcassonne": 90,
+        "Limoux": 45
+    },
+    "Limoux": {
+        "Carcassonne": 55,
+        "Quillan": 45
+    },
+    "B\u00e9darieux": {
+        "B\u00e9ziers": 60
+    },
+    "B\u00e9ziers": {
+        "B\u00e9darieux": 60,
+        "Marseille-St-Charles": 171,
+        "St-Ch\u00e9ly-d'Apcher": 244,
+        "Millau": 117
+    },
+    "Gu\u00e9ret": {
+        "Montlu\u00e7on-Ville": 66,
+        "Limoges-B\u00e9n\u00e9dictins": 111,
+        "Felletin-Gare": 52,
+        "Bordeaux-St-Jean": 208
+    },
+    "Tulle": {
+        "Ussel": 89,
+        "Egletons": 40,
+        "Condat-le-Lardin": 85,
+        "Brive-la-Gaillarde": 44,
+        "Bordeaux-St-Jean": 193
+    },
+    "Egletons": {
+        "Tulle": 40,
+        "Meymac": 25,
+        "Brive-la-Gaillarde": 63
+    },
+    "Meymac": {
+        "Egletons": 25
+    },
+    "Bort-les-Orgues": {
+        "Ussel": 35
+    },
+    "Nancy-Ville": {
+        "Mirecourt": 74,
+        "Damblain Eglise": 150,
+        "Contrex\u00e9ville": 116,
+        "Martigny-les-B-Thiebaut": 133,
+        "Vittel": 92,
+        "Mirecourt (Lyc\u00e9e Agric)": 71,
+        "Neufch\u00e2teau": 62,
+        "Neufchateau-Lp": 88,
+        "Metz-Ville": 105,
+        "Luxembourg": 92,
+        "Thionville": 65,
+        "Bettembourg": 79,
+        "Lun\u00e9ville": 71,
+        "Epinal": 79,
+        "Longwy": 172,
+        "Pont-St-Vincent": 60,
+        "Bar-le-Duc": 88,
+        "Remiremont": 160,
+        "Baroncourt": 109,
+        "St-Di\u00e9-des-Vosges": 121,
+        "Revigny": 144,
+        "Liverdun": 25,
+        "Verdun": 108,
+        "Dijon-Ville": 190,
+        "Conflans-Jarny": 51,
+        "Epernay": 123,
+        "Strasbourg": 89,
+        "Toul": 23,
+        "Paris-Est": 199
+    },
+    "Mirecourt": {
+        "Nancy-Ville": 74,
+        "Contrex\u00e9ville": 39,
+        "Vittel": 26,
+        "Charmes (Vosges)": 30,
+        "Epinal": 44
+    },
+    "Martigny-les-B-Thiebaut": {
+        "V\u00e9zelise Beauregard": 90,
+        "Nancy-Ville": 133
+    },
+    "V\u00e9zelise Beauregard": {
+        "Martigny-les-B-Thiebaut": 90
+    },
+    "Damblain Eglise": {
+        "Nancy-Ville": 150
+    },
+    "Contrex\u00e9ville": {
+        "Nancy-Ville": 116,
+        "Mirecourt": 39,
+        "Epinal": 60
+    },
+    "Vittel": {
+        "Mirecourt": 26,
+        "Nancy-Ville": 92,
+        "Charmes (Vosges)": 60,
+        "Neufch\u00e2teau": 45,
+        "Culmont-Chalindrey": 49,
+        "Paris-Est": 230
+    },
+    "Mirecourt (Lyc\u00e9e Agric)": {
+        "Nancy-Ville": 71,
+        "Charmes (Vosges)": 33
+    },
+    "Bitche-Quartier-Driant": {
+        "Bening": 71,
+        "Sarreguemines": 56
+    },
+    "Charmes (Vosges)": {
+        "Vittel": 60,
+        "Mirecourt": 30,
+        "Mirecourt (Lyc\u00e9e Agric)": 33,
+        "Epinal": 40
+    },
+    "Igney (Centre)": {
+        "Sarrebourg-LP-Messmer": 45,
+        "Sarrebourg": 39
+    },
+    "Sarrebourg-LP-Messmer": {
+        "Igney (Centre)": 45,
+        "Loudrefing": 54,
+        "St-Jean-de-Bassel-Eglis": 31,
+        "F\u00e9n\u00e9trange (Gendarm.)": 30
+    },
+    "Sarrebourg": {
+        "Igney (Centre)": 39,
+        "Morhange": 94,
+        "Loudrefing": 34,
+        "St-Jean-de-Bassel-Eglis": 35,
+        "Sarreguemines": 85,
+        "St-Louis-57-Inclin\u00e9": 27,
+        "Lutzelbourg": 50,
+        "Strasbourg": 59,
+        "Metz-Ville": 62,
+        "Paris-Est": 270
+    },
+    "Longuyon": {
+        "Longwy": 32,
+        "Montm\u00e9dy": 39,
+        "Vezin-Carrefour": 33,
+        "Thionville": 39,
+        "Charleville-M\u00e9zi\u00e8res": 60
+    },
+    "Longwy": {
+        "Longuyon": 32,
+        "Metz-Ville": 55,
+        "Luxembourg": 35,
+        "Rodange": 16,
+        "Nancy-Ville": 172,
+        "Conflans-Jarny": 86,
+        "Sedan": 108,
+        "Charleville-M\u00e9zi\u00e8res": 151,
+        "Thionville": 55
+    },
+    "Montm\u00e9dy": {
+        "Longuyon": 39
+    },
+    "Vezin-Carrefour": {
+        "Longuyon": 33,
+        "Longuyon (Coll\u00e8ge)": 23
+    },
+    "Morhange": {
+        "Sarrebourg": 94,
+        "R\u00e9milly": 48
+    },
+    "Loudrefing": {
+        "Sarrebourg": 34,
+        "Sarrebourg-LP-Messmer": 54,
+        "Sarrebourg (Place Math)": 50
+    },
+    "R\u00e9milly": {
+        "Morhange": 48
+    },
+    "Longuyon (Coll\u00e8ge)": {
+        "Vezin-Carrefour": 23
+    },
+    "St-Jean-de-Bassel-Eglis": {
+        "Sarrebourg": 35,
+        "Sarrebourg (Place Math)": 24,
+        "Sarrebourg-LP-Messmer": 31
+    },
+    "Neufch\u00e2teau": {
+        "Nancy-Ville": 62,
+        "Toul": 45,
+        "Epinal": 109,
+        "Vittel": 45,
+        "Dijon-Ville": 120
+    },
+    "F\u00e9n\u00e9trange (Gendarm.)": {
+        "Sarrebourg-H\u00f4pital": 42,
+        "Sarrebourg-LP-Messmer": 30,
+        "Sarrebourg-Abri-Phalsbo": 33
+    },
+    "Sarrebourg-H\u00f4pital": {
+        "F\u00e9n\u00e9trange (Gendarm.)": 42
+    },
+    "Sarrebourg (Place Math)": {
+        "St-Jean-de-Bassel-Eglis": 24,
+        "Loudrefing": 50,
+        "Sarreguemines": 116
+    },
+    "Toul": {
+        "Neufch\u00e2teau": 45,
+        "Neufchateau-Lp": 59,
+        "Allamps-Esat": 30,
+        "Bar-le-Duc": 77,
+        "Lun\u00e9ville": 68,
+        "Nancy-Ville": 23
+    },
+    "Neufchateau-Lp": {
+        "Toul": 59,
+        "Nancy-Ville": 88
+    },
+    "Allamps-Esat": {
+        "Toul": 30
+    },
+    "Creutzwald G.R.": {
+        "Thionville": 110
+    },
+    "Thionville": {
+        "Creutzwald G.R.": 110,
+        "Bouzonville": 67,
+        "K\u00e9dange (Eglise)": 22,
+        "Hombourg (Chapelle)": 26,
+        "Perl Gare DB": 39,
+        "Audun-le-Roman": 40,
+        "Luxembourg": 25,
+        "Nancy-Ville": 65,
+        "Metz-Ville": 27,
+        "Longuyon": 39,
+        "Longwy": 55,
+        "Charleville-M\u00e9zi\u00e8res": 96
+    },
+    "Laveline-d-Bruy. Mairie": {
+        "St-Di\u00e9-des-Vosges": 64,
+        "Epinal": 52
+    },
+    "Epinal": {
+        "St-Di\u00e9-des-Vosges": 65,
+        "Bruy\u00e8res (Vosges)": 43,
+        "Laveline-d-Bruy. Mairie": 52,
+        "Saint-L\u00e9onard Centre": 94,
+        "Corcieux Le Conti": 81,
+        "Bruy\u00e8res Chanzy Gare": 35,
+        "Arches": 20,
+        "Charmes (Vosges)": 40,
+        "Neufch\u00e2teau": 109,
+        "Mirecourt": 44,
+        "Contrex\u00e9ville": 60,
+        "Nancy-Ville": 79,
+        "Remiremont": 37,
+        "Metz-Ville": 120,
+        "Belfort-Ville": 92
+    },
+    "Bruy\u00e8res (Vosges)": {
+        "Epinal": 43,
+        "St-Di\u00e9-des-Vosges": 48,
+        "Saint-L\u00e9onard Centre": 39,
+        "Lun\u00e9ville": 80
+    },
+    "Bouzonville": {
+        "Thionville": 67
+    },
+    "K\u00e9dange (Eglise)": {
+        "Thionville": 22
+    },
+    "Hombourg (Chapelle)": {
+        "Thionville": 26
+    },
+    "Saint-L\u00e9onard Centre": {
+        "Epinal": 94,
+        "Bruy\u00e8res (Vosges)": 39
+    },
+    "Corcieux Le Conti": {
+        "Epinal": 81
+    },
+    "Arches": {
+        "St-Di\u00e9-des-Vosges": 85,
+        "Epinal": 20
+    },
+    "Bruy\u00e8res Chanzy Gare": {
+        "Epinal": 35,
+        "St-Di\u00e9-des-Vosges": 48
+    },
+    "Perl Gare DB": {
+        "Thionville": 39
+    },
+    "Sarre-Union": {
+        "Sarreguemines": 52,
+        "Herbitzheim R. Hambach": 25,
+        "Herbitzheim Mairie": 23,
+        "Keskastel": 11,
+        "Saverne": 45,
+        "Diemeringen": 20
+    },
+    "Herbitzheim R. Hambach": {
+        "Sarre-Union": 25
+    },
+    "Sarralbe Centre": {
+        "Sarreguemines": 33,
+        "Diemeringen": 36
+    },
+    "Herbitzheim Mairie": {
+        "Sarre-Union": 23
+    },
+    "Sarrebourg-Abri-Phalsbo": {
+        "F\u00e9n\u00e9trange (Gendarm.)": 33,
+        "Berthelming-Mairie": 17
+    },
+    "Berthelming-Mairie": {
+        "Sarrebourg-Abri-Phalsbo": 17
+    },
+    "Sarralbe": {
+        "Saverne": 64
+    },
+    "Keskastel": {
+        "Sarre-Union": 11
+    },
+    "Bar-le-Duc": {
+        "Revigny": 21,
+        "Epernay": 155,
+        "St-Dizier": 35,
+        "Ch\u00e2lons-en-Champagne": 110,
+        "Metz-Ville": 138,
+        "Nancy-Ville": 88,
+        "Toul": 77,
+        "Lun\u00e9ville": 98,
+        "Paris-Est": 150,
+        "Ch\u00e2teau-Thierry": 95,
+        "Strasbourg": 158
+    },
+    "Revigny": {
+        "Bar-le-Duc": 21,
+        "Nancy-Ville": 144,
+        "Lun\u00e9ville": 108
+    },
+    "Conflans-Jarny": {
+        "Pagny-sur-Moselle": 45,
+        "Metz-Ville": 40,
+        "Verdun": 45,
+        "Longwy": 86,
+        "Hagondange": 64,
+        "Nancy-Ville": 51
+    },
+    "Pagny-sur-Moselle": {
+        "Conflans-Jarny": 45
+    },
+    "Figeac": {
+        "Gramat": 52,
+        "Aurillac": 80,
+        "Capdenac": 20,
+        "Tessonni\u00e8res": 160
+    },
+    "Gramat": {
+        "Figeac": 52
+    },
+    "Mazamet": {
+        "Toulouse-Matabiau": 133,
+        "St-Sulpice (Tarn)": 103
+    },
+    "Toulouse-Matabiau": {
+        "Mazamet": 133,
+        "Pau": 253,
+        "Ax-les-Thermes": 145,
+        "Albi-Ville": 90,
+        "Foix": 139,
+        "Port-Bou": 220,
+        "Narbonne": 218,
+        "Castelnaudary": 83,
+        "Aurillac": 244,
+        "Auch": 122,
+        "L'Isle-Jourdain (Gers)": 72,
+        "Rodez": 137,
+        "Carmaux": 76,
+        "Colomiers": 22,
+        "Carcassonne": 74,
+        "Capdenac": 137,
+        "Tessonni\u00e8res": 53,
+        "Pamiers": 57,
+        "Latour-de-Carol-Enveitg": 174,
+        "Brive-la-Gaillarde": 147,
+        "Cahors": 74,
+        "Montauban-Ville-Bourbon": 43,
+        "Agen": 81,
+        "St-Sulpice (Tarn)": 24,
+        "Muret": 19,
+        "Boussens": 58,
+        "Montr\u00e9jeau-Gourdan-Pol.": 86,
+        "Tarbes": 109,
+        "N\u00eemes": 210,
+        "Montpellier-Saint-Roch": 176,
+        "Perpignan": 154,
+        "Cerb\u00e8re": 199
+    },
+    "Muret": {
+        "Pau": 218,
+        "Tarbes": 182,
+        "Boussens": 93,
+        "Montr\u00e9jeau-Gourdan-Pol.": 138,
+        "Toulouse-Matabiau": 19
+    },
+    "Pau": {
+        "Muret": 218,
+        "Toulouse-Matabiau": 253,
+        "Bayonne": 145,
+        "Dax": 110,
+        "Bedous": 86,
+        "Oloron-Ste-Marie": 52,
+        "Bidos": 58,
+        "Boussens": 183,
+        "Tarbes": 93,
+        "Bordeaux-St-Jean": 132
+    },
+    "Agen": {
+        "Castelsarrasin": 56,
+        "Bordeaux-St-Jean": 174,
+        "P\u00e9rigueux": 212,
+        "Monsempron-Libos": 65,
+        "Montauban-Ville-Bourbon": 106,
+        "Limoges-B\u00e9n\u00e9dictins": 216,
+        "Marmande": 36,
+        "Langon": 69,
+        "Toulouse-Matabiau": 81
+    },
+    "Castelsarrasin": {
+        "Agen": 56
+    },
+    "Longages-No\u00e9": {
+        "St-Sulpice-sur-L\u00e8ze": 11
+    },
+    "St-Sulpice-sur-L\u00e8ze": {
+        "Longages-No\u00e9": 11
+    },
+    "Montr\u00e9jeau-Gourdan-Pol.": {
+        "Luchon-Richelieu": 56,
+        "Luchon": 50,
+        "Boussens": 55,
+        "Muret": 138,
+        "Toulouse-Matabiau": 86
+    },
+    "Luchon-Richelieu": {
+        "Montr\u00e9jeau-Gourdan-Pol.": 56
+    },
+    "Ax-les-Thermes": {
+        "Toulouse-Matabiau": 145,
+        "Foix": 47,
+        "Pamiers": 83,
+        "Latour de Carol": 49
+    },
+    "Foix": {
+        "Ax-les-Thermes": 47,
+        "Pamiers": 33,
+        "Toulouse-Matabiau": 139,
+        "Latour-de-Carol-Enveitg": 105
+    },
+    "Pamiers": {
+        "Ax-les-Thermes": 83,
+        "Foix": 33,
+        "Toulouse-Matabiau": 57
+    },
+    "Luchon": {
+        "Montr\u00e9jeau-Gourdan-Pol.": 50
+    },
+    "Latour de Carol": {
+        "Ax-les-Thermes": 49
+    },
+    "Souillac": {
+        "St-Denis-pr\u00e8s-Martel": 27
+    },
+    "Albi-Ville": {
+        "Toulouse-Matabiau": 90
+    },
+    "Comines (France)": {
+        "Lille Flandres": 54
+    },
+    "Wambrechies": {
+        "Lille Flandres": 30
+    },
+    "Abbeville": {
+        "Boulogne Ville": 104,
+        "Rue": 40,
+        "Amiens": 56,
+        "Albert": 80
+    },
+    "Rue": {
+        "Abbeville": 40
+    },
+    "Lens": {
+        "Lille Flandres": 80,
+        "Arras": 42,
+        "Douai": 31,
+        "Hazebrouck": 42,
+        "B\u00e9thune": 17
+    },
+    "Avesnes": {
+        "Hirson-Ecoles": 55
+    },
+    "Hirson-Ecoles": {
+        "Avesnes": 55
+    },
+    "Arras": {
+        "Douai": 40,
+        "Amiens": 104,
+        "St Pol sur Ternoise": 63,
+        "Lens": 42,
+        "Lille Flandres": 99,
+        "Albert": 62,
+        "Calais Fr\u00e9thun": 67,
+        "Hazebrouck": 58,
+        "Dunkerque": 93,
+        "B\u00e9thune": 36,
+        "Calais Ville": 123
+    },
+    "Douai": {
+        "Arras": 40,
+        "Lille Flandres": 118,
+        "Albert": 119,
+        "Amiens": 164,
+        "Cambrai Ville": 34,
+        "Valenciennes": 38,
+        "Lens": 31,
+        "St Quentin": 93
+    },
+    "Hazebrouck": {
+        "Lille Flandres": 77,
+        "Calais Ville": 109,
+        "Dunkerque": 36,
+        "Arras": 58,
+        "Lens": 42
+    },
+    "Busigny": {
+        "St Quentin": 60,
+        "Aulnoye Aymeries": 82,
+        "Maubeuge": 36
+    },
+    "Calais Fr\u00e9thun": {
+        "Calais Ville": 15,
+        "Boulogne Ville": 30,
+        "Rang du Fl. Verton Ber.": 96,
+        "Arras": 67,
+        "Lille Europe": 29
+    },
+    "Coutances": {
+        "Lison": 54,
+        "Granville": 36,
+        "Pontorson-Mt-St-Michel": 85,
+        "Caen": 75
+    },
+    "Lison": {
+        "Coutances": 54,
+        "Granville": 84
+    },
+    "Pontorson-Mt-St-Michel": {
+        "Coutances": 85
+    },
+    "Vire-Centre": {
+        "Granville": 75
+    },
+    "Flers": {
+        "Argentan": 53
+    },
+    "Bagnoles- Orne Egl.Mad.": {
+        "Briouze": 40,
+        "Argentan": 60
+    },
+    "Briouze": {
+        "Bagnoles- Orne Egl.Mad.": 40
+    },
+    "Alen\u00e7on": {
+        "Surdon": 34,
+        "Caen": 71,
+        "Le Mans": 53,
+        "Tours": 145,
+        "Ch\u00e2teau-du-Loir": 106
+    },
+    "Surdon": {
+        "Alen\u00e7on": 34,
+        "L'Aigle": 58
+    },
+    "L'Aigle": {
+        "Surdon": 58,
+        "Dreux": 79
+    },
+    "Lisieux": {
+        "Trouville-Deauville": 50,
+        "Evreux": 52,
+        "Caen": 33
+    },
+    "Dives-Cabourg": {
+        "Trouville-Deauville": 35
+    },
+    "Evreux": {
+        "Serquigny": 50,
+        "Mantes-la-Jolie": 84,
+        "Paris-St-Lazare": 69,
+        "Lisieux": 52
+    },
+    "Serquigny": {
+        "Evreux": 50,
+        "Paris-St-Lazare": 105
+    },
+    "Villedieu (Gare)": {
+        "Le Mont St Michel": 45
+    },
+    "Le Mont St Michel": {
+        "Villedieu (Gare)": 45
+    },
+    "Rennes": {
+        "Granville": 110,
+        "Caen": 170,
+        "Foug\u00e8res": 70,
+        "Vitr\u00e9": 60,
+        "St-Brieuc": 115,
+        "Montauban-de-Bretagne": 50,
+        "Messac-Guipry": 75,
+        "Nantes": 100,
+        "Vannes": 150,
+        "Redon": 105,
+        "Retiers": 42,
+        "Janz\u00e9": 36,
+        "Dol": 33,
+        "Montreuil-sur-Ille": 30,
+        "St-Malo": 55,
+        "La Brohini\u00e8re": 32,
+        "Brest": 139,
+        "Quimper": 141,
+        "Laval": 55,
+        "Le Mans": 103,
+        "Le Croisic": 222
+    },
+    "Br\u00e9aut\u00e9-Beuzeville": {
+        "F\u00e9camp": 30
+    },
+    "F\u00e9camp": {
+        "Br\u00e9aut\u00e9-Beuzeville": 30,
+        "Le Havre": 46
+    },
+    "Mantes-la-Jolie": {
+        "Rouen-Rive-Droite": 125,
+        "Evreux": 84,
+        "Vernon-Giverny": 17,
+        "Bueil": 15
+    },
+    "Pont-Audemer-Gare-SNCF": {
+        "Rouen-Gare-Routi\u00e8re": 65,
+        "Bourg-Achard Champ de F": 35
+    },
+    "Rouen-Gare-Routi\u00e8re": {
+        "Pont-Audemer-Gare-SNCF": 65,
+        "Routot-Place-de-mairie": 50
+    },
+    "Routot-Place-de-mairie": {
+        "Rouen-Gare-Routi\u00e8re": 50
+    },
+    "Bourg-Achard Champ de F": {
+        "Pont-Audemer-Gare-SNCF": 35
+    },
+    "Nantes": {
+        "St-Gilles-Croix-de-Vie": 104,
+        "Cholet": 85,
+        "Rennes": 100,
+        "Le Mans": 94,
+        "Angers-St-Laud": 43,
+        "Laval": 101,
+        "St-Nazaire": 51,
+        "Le Croisic": 74,
+        "Redon": 58,
+        "Quimper": 174,
+        "Brest": 203,
+        "Savenay": 34,
+        "Saumur": 86,
+        "La Roche-sur-Yon": 55,
+        "Les Sables-d'Olonne": 87,
+        "Ste-Pazanne": 32,
+        "Pornic": 60,
+        "Ancenis": 28,
+        "Suc\u00e9-Sur-Erdre": 27,
+        "Nort-sur-Erdre": 40,
+        "Ch\u00e2teaubriant-TT": 67,
+        "Clisson": 29,
+        "Orl\u00e9ans": 170,
+        "Tours": 93
+    },
+    "St-Gilles-Croix-de-Vie": {
+        "Nantes": 104
+    },
+    "Cholet": {
+        "Nantes": 85,
+        "Clisson": 60,
+        "Angers-St-Laud": 100,
+        "Saumur": 85
+    },
+    "Clisson": {
+        "Cholet": 60,
+        "Nantes": 29
+    },
+    "Albert": {
+        "Amiens": 46,
+        "Douai": 119,
+        "Arras": 62,
+        "Abbeville": 80
+    },
+    "Beauvais-Gare-SNCF": {
+        "Creil": 70,
+        "Persan-Beaumont": 90,
+        "Paris Gare du Nord": 73,
+        "Abancourt": 48
+    },
+    "Creil": {
+        "Beauvais-Gare-SNCF": 70,
+        "Laon": 171,
+        "Laon-Gare-Routi\u00e8re-Poma": 200,
+        "St-Just-SNCF": 56,
+        "Amiens": 95,
+        "Paris Gare du Nord": 21,
+        "Abancourt": 103,
+        "Compi\u00e8gne": 37,
+        "St Quentin": 104
+    },
+    "Laon-Gare-Routi\u00e8re-Poma": {
+        "Hirson": 80,
+        "Tergnier": 67,
+        "Creil": 200
+    },
+    "Rib\u00e9court": {
+        "Compi\u00e8gne": 28
+    },
+    "Tergnier": {
+        "Compi\u00e8gne": 94,
+        "Laon-Gare-Routi\u00e8re-Poma": 67,
+        "Amiens": 159,
+        "St Quentin": 28,
+        "Aulnoye Aymeries": 71,
+        "Paris Gare du Nord": 88,
+        "Laon": 26
+    },
+    "Chatellerault": {
+        "Poitiers": 44
+    },
+    "Poitiers": {
+        "Chatellerault": 44,
+        "Limoges-B\u00e9n\u00e9dictins": 205,
+        "Angoul\u00eame": 158,
+        "Tours": 74,
+        "Niort": 59,
+        "La Rochelle-Ville": 100,
+        "Le Dorat": 60
+    },
+    "Mauz\u00e9": {
+        "Niort": 40
+    },
+    "Niort": {
+        "Mauz\u00e9": 40,
+        "Priss\u00e9-la-Charri\u00e8re": 49,
+        "Saintes": 95,
+        "Royan": 139,
+        "Poitiers": 59,
+        "La Rochelle-Ville": 44
+    },
+    "Priss\u00e9-la-Charri\u00e8re": {
+        "Niort": 49
+    },
+    "Bressuire": {
+        "Saumur": 87,
+        "Thouars": 37,
+        "Tours": 103
+    },
+    "Saumur": {
+        "Bressuire": 87,
+        "La Roche-sur-Yon": 177,
+        "Angers-St-Laud": 95,
+        "Nantes": 86,
+        "Cholet": 85,
+        "Les Sables-d'Olonne": 158,
+        "Tours": 51,
+        "Thouars": 30
+    },
+    "Thouars": {
+        "Bressuire": 37,
+        "Tours": 78,
+        "Angers-St-Laud": 68,
+        "Saumur": 30
+    },
+    "La Roche-sur-Yon": {
+        "Saumur": 177,
+        "La Rochelle-Ville": 120,
+        "Nantes": 55,
+        "Chantonnay": 31,
+        "Tours": 199
+    },
+    "Lyon-Part-Dieu-Gare-Rou": {
+        "Chamb\u00e9ry-Chal.-les-Eaux": 90,
+        "Annecy": 112,
+        "Grenoble-Gare-Routi\u00e8re": 119,
+        "Saint-Etienne-Chtx GR": 71,
+        "Roanne-Gare-Routi\u00e8re": 115,
+        "Bonneville": 145,
+        "Oyonnax": 90,
+        "Morez Lyc\u00e9e": 195,
+        "Chamonix-Mont-Blanc": 240,
+        "Saint-Claude": 135,
+        "Bourgoin-Jallieu": 51,
+        "M\u00e2con-Ville": 75,
+        "Bourg-en-Bresse Gare R": 81,
+        "Amb\u00e9rieu-en-Bugey": 63
+    },
+    "Valence-TGV": {
+        "Grenoble-Gare-Routi\u00e8re": 60,
+        "Veynes-D\u00e9voluy": 185,
+        "Luc-en-Diois": 125
+    },
+    "Grenoble-Gare-Routi\u00e8re": {
+        "Valence-TGV": 60,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 70,
+        "Valence-Gare-Routi\u00e8re": 100,
+        "Lyon-Part-Dieu-Gare-Rou": 119,
+        "Evian-les-Bains": 210,
+        "Modane": 130,
+        "Annonay-Gare-Route": 170,
+        "St-Gervais-L-B-Le-Fayet": 190,
+        "Annemasse": 180,
+        "Mont\u00e9limar-G-Routi\u00e8re": 127,
+        "Mo\u00fbtiers-Salins-Brides": 105,
+        "Aubenas-Pl.-de-la-Paix": 198,
+        "Privas-Cours-du-Palais": 130,
+        "Chamonix-Mont-Blanc": 220,
+        "Bourg-St-Maurice": 160,
+        "Thonon-les-Bains": 200,
+        "Gap": 127,
+        "Clelles-Mairie": 81,
+        "Vif": 51,
+        "Clelles-Mens": 73
+    },
+    "Valence-Gare-Routi\u00e8re": {
+        "Grenoble-Gare-Routi\u00e8re": 100,
+        "Die": 75,
+        "Veynes-D\u00e9voluy": 165,
+        "Luc-en-Diois": 105,
+        "Saint-Etienne-Chtx GR": 110,
+        "Privas-Cours-du-Palais": 50
+    },
+    "St-Andr\u00e9-le-Gaz": {
+        "Lyon-Perrache-Gare-Rout": 110,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 71,
+        "Grenoble U.-Gi\u00e8res": 69,
+        "Grenoble": 62,
+        "Lyon-Perrache": 56
+    },
+    "Lyon-Perrache-Gare-Rout": {
+        "St-Andr\u00e9-le-Gaz": 110,
+        "Vienne-Gare-Routi\u00e8re": 53,
+        "Villefranche-sur-Sa\u00f4ne": 60,
+        "Roanne-Gare-Routi\u00e8re": 142
+    },
+    "Lyon-Gorge-de-Loup": {
+        "Lozanne": 37
+    },
+    "Lyon-St-Paul-Quai-Bondy": {
+        "Lozanne": 48,
+        "Sain-Bel": 60
+    },
+    "Roanne-Gare-Routi\u00e8re": {
+        "Lyon-Part-Dieu-Gare-Rou": 115,
+        "Saint-Etienne-Chtx GR": 119,
+        "Lyon-Perrache-Gare-Rout": 142
+    },
+    "Grandris-Centre": {
+        "Lozanne": 42
+    },
+    "Lamure-sur-Azergues": {
+        "Lozanne": 46
+    },
+    "Poule-Mairie": {
+        "Lozanne": 60
+    },
+    "Bois-d'Oingt-Centre": {
+        "Lozanne": 23
+    },
+    "Die": {
+        "Valence-Gare-Routi\u00e8re": 75,
+        "Romans-Bourg-de-P\u00e9age": 83
+    },
+    "Luc-en-Diois": {
+        "Valence-Gare-Routi\u00e8re": 105,
+        "Valence-TGV": 125
+    },
+    "Annonay-Gare-Route": {
+        "Grenoble-Gare-Routi\u00e8re": 170,
+        "St-Martin-d'H\u00e8res": 160
+    },
+    "Privas-Cours-du-Palais": {
+        "Valence-Gare-Routi\u00e8re": 50,
+        "Grenoble-Gare-Routi\u00e8re": 130,
+        "St-Martin-d'H\u00e8res": 145
+    },
+    "Mont\u00e9limar-G-Routi\u00e8re": {
+        "Grenoble-Gare-Routi\u00e8re": 127,
+        "St-Martin-d'H\u00e8res": 120
+    },
+    "Mo\u00fbtiers-Salins-Brides": {
+        "Grenoble-Gare-Routi\u00e8re": 105,
+        "St-Pierre-d'Albigny": 50,
+        "Albertville": 45,
+        "Bourg-St-Maurice": 37,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 80
+    },
+    "Bonneville": {
+        "Lyon-Part-Dieu-Gare-Rou": 145,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 130
+    },
+    "Aubenas-Pl.-de-la-Paix": {
+        "Grenoble-Gare-Routi\u00e8re": 198,
+        "St-Martin-d'H\u00e8res": 185
+    },
+    "Bourg-en-Bresse Gare R": {
+        "Chamb\u00e9ry-Chal.-les-Eaux": 170,
+        "Lyon-Part-Dieu-Gare-Rou": 81,
+        "M\u00e2con-Loch\u00e9-TGV": 42,
+        "M\u00e2con-Ville": 62,
+        "Amb\u00e9rieu-en-Bugey": 40
+    },
+    "Oyonnax": {
+        "Lyon-Part-Dieu-Gare-Rou": 90,
+        "Bourg-en-Bresse": 53,
+        "Lyon-Perrache": 130
+    },
+    "Morez Lyc\u00e9e": {
+        "Lyon-Part-Dieu-Gare-Rou": 195
+    },
+    "Chamberry-Jacob": {
+        "St-Gervais-L-B-Le-Fayet": 165
+    },
+    "St-Martin-d'H\u00e8res": {
+        "Aubenas-Pl.-de-la-Paix": 185,
+        "Mont\u00e9limar-G-Routi\u00e8re": 120,
+        "Privas-Cours-du-Palais": 145,
+        "Annonay-Gare-Route": 160
+    },
+    "Pont-de-Beauvoisin": {
+        "Chamb\u00e9ry-Chal.-les-Eaux": 48
+    },
+    "St-Brieuc": {
+        "Dinan": 60,
+        "Rennes": 115,
+        "Lannion": 65
+    },
+    "Lamballe": {
+        "Dinan": 73
+    },
+    "Franois": {
+        "St-Vit": 14
+    },
+    "St-Vit": {
+        "Franois": 14
+    },
+    "Auxonne": {
+        "Villers-les-Pots": 10
+    },
+    "Villers-les-Pots": {
+        "Auxonne": 10
+    },
+    "Neuilly-l\u00e8s-Dijon": {
+        "Dijon-Ville": 25
+    },
+    "Bellegarde-s-V. Gare": {
+        "St-Gervais-L-B-Le-Fayet": 135,
+        "Evian-les-Bains": 115,
+        "Chamonix-Mont-Blanc": 185,
+        "Annemasse": 71,
+        "Gen\u00e8ve": 28,
+        "La Roche-sur-Foron": 65
+    },
+    "Amb\u00e9rieu-en-Bugey": {
+        "St-Rambert-en-Bugey": 15,
+        "Virieu-le-Grand-Belley": 52,
+        "Lyon-Part-Dieu-Gare-Rou": 63,
+        "Bourg-en-Bresse Gare R": 40,
+        "M\u00e2con-Ville": 54,
+        "Bourg-en-Bresse": 23,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 73,
+        "St-Etienne-Ch\u00e2teaucreux": 97,
+        "Givors-Ville": 64,
+        "Lyon-Part-Dieu": 41
+    },
+    "St-Rambert-en-Bugey": {
+        "Amb\u00e9rieu-en-Bugey": 15
+    },
+    "Virieu-le-Grand-Belley": {
+        "Amb\u00e9rieu-en-Bugey": 52
+    },
+    "Bo\u00ebn": {
+        "Noir\u00e9table": 26,
+        "Saint-Etienne-Chtx GR": 92,
+        "Montbrison": 18,
+        "St-Etienne-Ch\u00e2teaucreux": 53
+    },
+    "Noir\u00e9table": {
+        "Bo\u00ebn": 26,
+        "Montbrison": 44,
+        "Saint-Etienne-Chtx GR": 108
+    },
+    "Montbrison": {
+        "Noir\u00e9table": 44,
+        "Bo\u00ebn": 18,
+        "Saint-Etienne-Chtx GR": 60,
+        "St-Etienne-Ch\u00e2teaucreux": 40
+    },
+    "M\u00e2con-Loch\u00e9-TGV": {
+        "Bourg-en-Bresse Gare R": 42
+    },
+    "La Tour-du-Pin": {
+        "Chamb\u00e9ry-Chal.-les-Eaux": 86,
+        "Rives": 55
+    },
+    "Clelles-Mens": {
+        "Gap": 80,
+        "Grenoble-Gare-Routi\u00e8re": 73,
+        "Veynes-D\u00e9voluy": 56,
+        "Grenoble": 71
+    },
+    "Clelles-Mairie": {
+        "Grenoble-Gare-Routi\u00e8re": 81
+    },
+    "Vif": {
+        "Grenoble-Gare-Routi\u00e8re": 51
+    },
+    "Sain-Bel": {
+        "Lyon-St-Paul-la-Feuil\u00e9e": 60,
+        "Lyon-St-Paul-Quai-Bondy": 60,
+        "Lyon-St-Paul": 42
+    },
+    "Lyon-St-Paul-la-Feuil\u00e9e": {
+        "Sain-Bel": 60
+    },
+    "Vienne-Gare-Routi\u00e8re": {
+        "Lyon-Perrache-Gare-Rout": 53
+    },
+    "Argentine": {
+        "St-Pierre-d'Albigny": 28
+    },
+    "St-Pierre-d'Albigny": {
+        "Argentine": 28,
+        "Mo\u00fbtiers-Salins-Brides": 50,
+        "Epierre-St-L\u00e9ger": 36,
+        "St-Jean-de-Maurienne-A.": 70
+    },
+    "St-Priest": {
+        "St-Pierre-de-Chandieu-R": 21
+    },
+    "St-Pierre-de-Chandieu-R": {
+        "St-Priest": 21
+    },
+    "Villefranche-sur-Sa\u00f4ne": {
+        "Lyon-Perrache-Gare-Rout": 60,
+        "Vienne": 74,
+        "Lyon-Perrache": 36
+    },
+    "Rives": {
+        "La Tour-du-Pin": 55,
+        "Grenoble U.-Gi\u00e8res": 43,
+        "Grenoble": 30,
+        "Chamb\u00e9ry-Chal.-les-Eaux": 90
+    },
+    "Epierre-St-L\u00e9ger": {
+        "Chamb\u00e9ry-Chal.-les-Eaux": 82,
+        "Montm\u00e9lian": 52,
+        "St-Pierre-d'Albigny": 36
+    },
+    "Culoz": {
+        "Chamb\u00e9ry-Chal.-les-Eaux": 65
+    },
+    "Feurs": {
+        "Saint-Etienne-Chtx GR": 60
+    },
+    "Albens": {
+        "Annecy": 45
+    },
+    "Rumilly": {
+        "Annecy": 25
+    },
+    "S\u00e9r\u00e9zin": {
+        "Ternay-Barbi\u00e8res": 13,
+        "Communay-Stade": 15
+    },
+    "Ternay-Barbi\u00e8res": {
+        "S\u00e9r\u00e9zin": 13
+    },
+    "Communay-Stade": {
+        "S\u00e9r\u00e9zin": 15
+    },
+    "Montm\u00e9lian": {
+        "Epierre-St-L\u00e9ger": 52
+    },
+    "St-Jean-de-Maurienne-A.": {
+        "St-Pierre-d'Albigny": 70,
+        "Aiton-Salle-Polyvalente": 58
+    },
+    "Aiton-Salle-Polyvalente": {
+        "St-Jean-de-Maurienne-A.": 58
+    },
+    "Chinon": {
+        "Tours": 82
+    },
+    "Chinon-Lyc\u00e9e-Rabelais": {
+        "Tours": 75
+    },
+    "St Christophe / Nais C.": {
+        "Tours": 60
+    },
+    "Ch\u00e2teau-du-Loir": {
+        "Tours": 75,
+        "Le Mans": 50,
+        "Alen\u00e7on": 106
+    },
+    "Drou\u00e9 (Centre)": {
+        "Courtalain-St-Pellerin": 10,
+        "Courtalain-Centre": 10,
+        "Brou": 36,
+        "Chartres": 92
+    },
+    "Courtalain-St-Pellerin": {
+        "Drou\u00e9 (Centre)": 10,
+        "Chartres": 90
+    },
+    "Courtalain-Centre": {
+        "Drou\u00e9 (Centre)": 10
+    },
+    "Chartres-Gare-Routi\u00e8re": {
+        "Brou": 55,
+        "Tours": 159,
+        "Vend\u00f4me": 84,
+        "Ch\u00e2teaudun": 56
+    },
+    "Brou": {
+        "Chartres-Gare-Routi\u00e8re": 55,
+        "Drou\u00e9 (Centre)": 36,
+        "Chartres": 50
+    },
+    "Vend\u00f4me": {
+        "Mondoubleau-Rue-Leroy": 60,
+        "Chartres-Gare-Routi\u00e8re": 84,
+        "Ch\u00e2teaudun": 55,
+        "Tours": 65,
+        "Paris-Austerlitz": 139,
+        "Paris-Gare-de-Lyon": 132,
+        "Paris-Bercy": 149
+    },
+    "Mondoubleau-Rue-Leroy": {
+        "Vend\u00f4me": 60
+    },
+    "Aubigny-sur-Nere-Mail": {
+        "Gien": 44
+    },
+    "Gien": {
+        "Aubigny-sur-Nere-Mail": 44,
+        "Montargis-OT": 49
+    },
+    "Montargis-OT": {
+        "Gien": 49
+    },
+    "Cosne-sur-Loire": {
+        "Sancerre-Porte-Cesar": 27,
+        "Nevers-Le-Banlay": 118,
+        "Aubrais-(les)": 135,
+        "Nevers": 48,
+        "Decize": 89
+    },
+    "Sancerre-Porte-Cesar": {
+        "Cosne-sur-Loire": 27
+    },
+    "Bourges-Gare-Routi\u00e8re": {
+        "nan": 65,
+        "St-Amand-Montrond-Orval": 76
+    },
+    "nan": {
+        "Bourges-Gare-Routi\u00e8re": 65
+    },
+    "Ch\u00e2teauroux Gare Rout.": {
+        "Bourges": 106,
+        "Issoudun-Jardin": 40,
+        "Poitiers-Gare-Routi\u00e8re": 135,
+        "Argenton-sur-Creuse": 45,
+        "Eguzon": 80,
+        "Issoudun-Place-de-la-G.": 36,
+        "Buzan\u00e7ais": 30,
+        "Tours": 150,
+        "Chatillon-Mail": 90,
+        "Loches": 101
+    },
+    "Issoudun-Place-de-la-G.": {
+        "Bourges": 71,
+        "Vierzon": 50,
+        "Ch\u00e2teauroux Gare Rout.": 36
+    },
+    "Issoudun-Jardin": {
+        "Ch\u00e2teauroux Gare Rout.": 40
+    },
+    "Issoudun": {
+        "Vierzon": 56
+    },
+    "Poitiers-Gare-Routi\u00e8re": {
+        "Ch\u00e2teauroux Gare Rout.": 135,
+        "Le-Blanc-Pl-du-Bateau": 68
+    },
+    "Le-Blanc-Pl-du-Bateau": {
+        "Poitiers-Gare-Routi\u00e8re": 68
+    },
+    "Nouan-le-Fuzelier": {
+        "Romorantin-BA-G.R.": 55
+    },
+    "Romorantin-BA-G.R.": {
+        "Nouan-le-Fuzelier": 55,
+        "Chaumont-sur-Tharonne": 31,
+        "Lamotte-Beuvron": 40,
+        "Thesee": 60,
+        "St-Aignan-Lep": 55,
+        "St-Aignan-Pl-Wilson": 53,
+        "Vierzon": 43,
+        "Vierzon-M\u00e9diath\u00e8que": 48
+    },
+    "Chaumont-sur-Tharonne": {
+        "Romorantin-BA-G.R.": 31
+    },
+    "Lamotte-Beuvron": {
+        "Romorantin-BA-G.R.": 40,
+        "Romorantin-Lyc\u00e9e-de-F": 35
+    },
+    "Romorantin-Lyc\u00e9e-de-F": {
+        "Lamotte-Beuvron": 35
+    },
+    "Ch\u00e2teauroux-Ly-B-Pascal": {
+        "Eguzon": 60,
+        "Argenton-sur-Creuse": 60,
+        "Buzan\u00e7ais": 59
+    },
+    "Eguzon": {
+        "Ch\u00e2teauroux-Ly-B-Pascal": 60,
+        "Ch\u00e2teauroux Gare Rout.": 80
+    },
+    "Argenton-sur-Creuse": {
+        "Ch\u00e2teauroux Gare Rout.": 45,
+        "Ch\u00e2teauroux-Ly-B-Pascal": 60,
+        "Ch\u00e2teauroux-Lyc\u00e9e-Agric": 55,
+        "Vierzon": 130,
+        "Orl\u00e9ans": 117,
+        "Limoges-B\u00e9n\u00e9dictins": 74
+    },
+    "Ch\u00e2teauroux-Lyc\u00e9e-Agric": {
+        "Argenton-sur-Creuse": 55
+    },
+    "Thesee": {
+        "Romorantin-BA-G.R.": 60
+    },
+    "St-Aignan-Lep": {
+        "Romorantin-BA-G.R.": 55
+    },
+    "St-Aignan-Pl-Wilson": {
+        "Romorantin-BA-G.R.": 53
+    },
+    "Loches": {
+        "Tours": 58,
+        "Clion-sur-Indre": 40,
+        "Ch\u00e2teauroux Gare Rout.": 101,
+        "Montbazon": 65,
+        "Cormery": 29,
+        "TOURS LYCEE GRANDMONT": 55,
+        "Esvres": 45,
+        "Truyes-Pl-Du-Souvenir": 40
+    },
+    "Buzan\u00e7ais": {
+        "Ch\u00e2teauroux Gare Rout.": 30,
+        "Ch\u00e2teauroux-Ly-B-Pascal": 59
+    },
+    "Chatillon-Mail": {
+        "Ch\u00e2teauroux-Charmilles": 100,
+        "Ch\u00e2teauroux Gare Rout.": 90,
+        "Ch\u00e2teauroux-L-Giraudoux": 93,
+        "Tours": 95
+    },
+    "Ch\u00e2teauroux-Charmilles": {
+        "Chatillon-Mail": 100
+    },
+    "Clion-sur-Indre": {
+        "Loches": 40
+    },
+    "Cormery": {
+        "La Douzill\u00e8re": 47,
+        "Chambourg-Chopin": 25,
+        "Loches": 29,
+        "Tours": 43
+    },
+    "La Douzill\u00e8re": {
+        "Cormery": 47,
+        "Veign\u00e9": 15,
+        "Esvres": 20
+    },
+    "Montbazon": {
+        "Loches": 65
+    },
+    "Chambourg-Chopin": {
+        "Cormery": 25
+    },
+    "Loches-Lycee-St-Denis": {
+        "Truyes-St-Blaise": 40
+    },
+    "Truyes-St-Blaise": {
+        "Loches-Lycee-St-Denis": 40
+    },
+    "TOURS LYCEE GRANDMONT": {
+        "Loches": 55
+    },
+    "Esvres": {
+        "Loches": 45,
+        "La Douzill\u00e8re": 20
+    },
+    "Reignac-Bourg-Du-Fau": {
+        "Tours": 74
+    },
+    "Truyes-Pl-Du-Souvenir": {
+        "Loches": 40,
+        "Loches-LEP": 25
+    },
+    "Veign\u00e9": {
+        "La Douzill\u00e8re": 15
+    },
+    "Loches-LEP": {
+        "Truyes-Pl-Du-Souvenir": 25,
+        "Tours": 80
+    },
+    "Ch\u00e2teauroux-L-Giraudoux": {
+        "Chatillon-Mail": 93
+    },
+    "Vierzon-M\u00e9diath\u00e8que": {
+        "Romorantin-BA-G.R.": 48
+    },
+    "Limeray": {
+        "Blois-Chambord": 35
+    },
+    "Ch\u00e2teaudun": {
+        "Dourdan": 90,
+        "Vend\u00f4me": 55,
+        "Chartres-Gare-Routi\u00e8re": 56,
+        "Tours": 111,
+        "Paris-Austerlitz": 95,
+        "Paris-Gare-de-Lyon": 97,
+        "Voves": 21
+    },
+    "Dourdan": {
+        "Ch\u00e2teaudun": 90,
+        "Ch\u00e2teaudun-LEP-Paulsen": 102
+    },
+    "Ch\u00e2teaudun-LEP-Paulsen": {
+        "Dourdan": 102
+    },
+    "Ch\u00e2teau-Renault": {
+        "Vend\u00f4me-Villiers-s-Loir": 47
+    },
+    "Vend\u00f4me-Villiers-s-Loir": {
+        "Ch\u00e2teau-Renault": 47
+    },
+    "Lun\u00e9ville": {
+        "Rambervillers (11 Nov)": 54,
+        "Moyen": 41,
+        "Rambervillers": 52,
+        "Bruy\u00e8res (Vosges)": 80,
+        "Nancy-Ville": 71,
+        "St-Di\u00e9-des-Vosges": 41,
+        "Bar-le-Duc": 98,
+        "Revigny": 108,
+        "Epernay": 165,
+        "Toul": 68,
+        "Strasbourg": 67,
+        "Metz-Ville": 73
+    },
+    "Rambervillers (11 Nov)": {
+        "Lun\u00e9ville": 54,
+        "Luneville-LP": 72,
+        "Lun\u00e9ville (Cit\u00e9 Scolai)": 71
+    },
+    "Moyen": {
+        "Lun\u00e9ville": 41
+    },
+    "Luneville-LP": {
+        "Rambervillers (11 Nov)": 72
+    },
+    "Lun\u00e9ville (Cit\u00e9 Scolai)": {
+        "Rambervillers": 60,
+        "Rambervillers (11 Nov)": 71
+    },
+    "Rambervillers": {
+        "Lun\u00e9ville (Cit\u00e9 Scolai)": 60,
+        "Lun\u00e9ville": 52
+    },
+    "Remiremont": {
+        "G\u00e9rardmer La Mauselaine": 45,
+        "Bussang (Gare SNCF)": 54,
+        "Bresse-Claudel (la)": 57,
+        "La-Bresse (Pl Champtel)": 63,
+        "La Bresse Le Lispach": 83,
+        "Nancy-Ville": 160,
+        "Epinal": 37,
+        "Metz-Ville": 135
+    },
+    "G\u00e9rardmer La Mauselaine": {
+        "Remiremont": 45
+    },
+    "Bussang (Gare SNCF)": {
+        "Remiremont": 54
+    },
+    "Bresse-Claudel (la)": {
+        "Remiremont": 57
+    },
+    "La-Bresse (Pl Champtel)": {
+        "Remiremont": 63
+    },
+    "La Bresse Le Lispach": {
+        "Remiremont": 83
+    },
+    "Audun-le-Roman": {
+        "Thionville": 40
+    },
+    "St-Louis-57-Inclin\u00e9": {
+        "Sarrebourg": 27
+    },
+    "Marle-sur-Serre": {
+        "Lugny": 5
+    },
+    "Lugny": {
+        "Marle-sur-Serre": 5
+    },
+    "Barenton\u00c2\u00a0Cel": {
+        "Verneuil-sur-Serre": 5
+    },
+    "Verneuil-sur-Serre": {
+        "Barenton\u00c2\u00a0Cel": 5,
+        "Barenton-sur-Serre": 5
+    },
+    "Barenton-sur-Serre": {
+        "Verneuil-sur-Serre": 5
+    },
+    "WOERTH RHEIN": {
+        "Strasbourg": 66,
+        "Lauterbourg": 15
+    },
+    "Neustadt (Weinstr) Hbf": {
+        "Wissembourg": 62
+    },
+    "WINDEN PFALZ": {
+        "Wissembourg": 16
+    },
+    "Landau-Pfalz-Hbf": {
+        "Wissembourg": 28
+    },
+    "Foug\u00e8res": {
+        "Rennes": 70
+    },
+    "Ventimiglia-Stazione": {
+        "Nice-Ville": 53,
+        "Grasse": 127,
+        "Cannes-la-Bocca": 107,
+        "Les Arcs-Draguignan": 138,
+        "Cannes": 101,
+        "Menton": 16,
+        "Monaco-Monte-Carlo": 30
+    },
+    "Grasse": {
+        "Nice-Ville": 71,
+        "Ventimiglia-Stazione": 127,
+        "Menton": 113,
+        "Monaco-Monte-Carlo": 99,
+        "Cannes": 50,
+        "Antibes": 41
+    },
+    "Menton": {
+        "Grasse": 113,
+        "Nice-Ville": 39,
+        "Cannes-la-Bocca": 90,
+        "Les Arcs-Draguignan": 118,
+        "Ventimiglia-Stazione": 16,
+        "Cannes": 69,
+        "Marseille-St-Charles": 205
+    },
+    "Cannes-la-Bocca": {
+        "Ventimiglia-Stazione": 107,
+        "Menton": 90,
+        "Monaco-Monte-Carlo": 73
+    },
+    "Monaco-Monte-Carlo": {
+        "Cannes-la-Bocca": 73,
+        "Grasse": 99,
+        "Nice-Ville": 24,
+        "Cannes": 70,
+        "Ventimiglia-Stazione": 30
+    },
+    "Cannes": {
+        "Ventimiglia-Stazione": 101,
+        "Monaco-Monte-Carlo": 70,
+        "Grasse": 50,
+        "Menton": 69,
+        "Les Arcs-Draguignan": 55,
+        "St-Rapha\u00ebl-Valescure": 38
+    },
+    "Saarbr\u00fccken /Sarrebruck": {
+        "Strasbourg": 102,
+        "Sarreguemines": 29,
+        "Forbach": 10,
+        "Metz-Ville": 60,
+        "Mommenheim": 154,
+        "Bening": 53,
+        "Diemeringen": 75
+    },
+    "Trier-Hbf (Tr\u00e8ves)": {
+        "Metz-Ville": 96
+    },
+    "Luxembourg": {
+        "Longwy": 35,
+        "Rodange": 27,
+        "Nancy-Ville": 92,
+        "Thionville": 25,
+        "Metz-Ville": 49,
+        "Bettembourg": 20
+    },
+    "Rodange": {
+        "Luxembourg": 27,
+        "Longwy": 16
+    },
+    "Perpignan": {
+        "Port-Bou": 59,
+        "Cerb\u00e8re": 107,
+        "Villefranche-Vernet-l.B": 64,
+        "Narbonne": 46,
+        "Montpellier-Saint-Roch": 130,
+        "Toulouse-Matabiau": 154,
+        "Carcassonne": 91,
+        "N\u00eemes": 160,
+        "Avignon-Centre": 196
+    },
+    "Port-Bou": {
+        "Perpignan": 59,
+        "Avignon-Centre": 259,
+        "Narbonne": 102,
+        "N\u00eemes": 209,
+        "Toulouse-Matabiau": 220,
+        "Montpellier-Saint-Roch": 171
+    },
+    "Narbonne": {
+        "Port-Bou": 102,
+        "Toulouse-Matabiau": 218,
+        "Castelnaudary": 134,
+        "Perpignan": 46,
+        "Lunel": 100,
+        "Montpellier-Saint-Roch": 71,
+        "Cerb\u00e8re": 87,
+        "Carcassonne": 36,
+        "Avignon-Centre": 144,
+        "N\u00eemes": 98,
+        "Marseille-St-Charles": 188
+    },
+    "Montpellier-Saint-Roch": {
+        "Port-Bou": 171,
+        "Narbonne": 71,
+        "Perpignan": 130,
+        "Toulouse-Matabiau": 176,
+        "N\u00eemes": 43,
+        "Avignon-Centre": 76,
+        "S\u00e8te": 23,
+        "Lunel": 20,
+        "Marseille-St-Charles": 119,
+        "Cerb\u00e8re": 154,
+        "St-Ch\u00e9ly-d'Apcher": 297
+    },
+    "Offenburg": {
+        "Strasbourg": 32,
+        "Kehl": 22
+    },
+    "Kehl": {
+        "Offenburg": 22,
+        "Strasbourg": 25
+    },
+    "Mullheim-Baden-Bf": {
+        "Mulhouse": 23
+    },
+    "Freiburg-Breisgau": {
+        "Mulhouse": 45
+    },
+    "Bettembourg": {
+        "Nancy-Ville": 79,
+        "Metz-Ville": 36,
+        "Luxembourg": 20
+    },
+    "Munster": {
+        "Colmar": 36
+    },
+    "Thann-Saint-Jacques": {
+        "Kruth": 28,
+        "Wesserling": 19,
+        "Mulhouse-Gare-Centrale": 46,
+        "Mulhouse": 32
+    },
+    "Mutzig-Passage-A-Niveau": {
+        "Molsheim": 8
+    },
+    "Erstein": {
+        "Strasbourg": 26,
+        "Mulhouse": 53
+    },
+    "Bayonne": {
+        "Pau": 145,
+        "Puyo\u00f4": 70,
+        "St-Jean-Pied-de-Port": 81,
+        "Cambo-les-Bains": 38,
+        "Morcenx": 105,
+        "Dax": 44,
+        "Hendaye": 37,
+        "Tarbes": 145
+    },
+    "Puyo\u00f4": {
+        "Bayonne": 70
+    },
+    "Mont-de-Marsan": {
+        "Morcenx": 45,
+        "Bordeaux-St-Jean": 185
+    },
+    "Morcenx": {
+        "Mont-de-Marsan": 45,
+        "Bayonne": 105,
+        "Bordeaux-St-Jean": 60
+    },
+    "Bordeaux-St-Jean": {
+        "Mont-de-Marsan": 185,
+        "Lesparre": 157,
+        "Le-Verdon": 200,
+        "Dax": 170,
+        "Langon": 87,
+        "Agen": 174,
+        "Saintes": 99,
+        "La-Rochelle-Pt-Dauphine": 164,
+        "La Rochelle-Ville": 162,
+        "Angoul\u00eame": 89,
+        "Libourne": 35,
+        "Coutras": 47,
+        "St-Mariens-St-Yzan": 43,
+        "Brive-la-Gaillarde": 143,
+        "P\u00e9rigueux": 82,
+        "Condat-le-Lardin": 121,
+        "Tulle": 193,
+        "Limoges-B\u00e9n\u00e9dictins": 145,
+        "Bergerac": 76,
+        "Sarlat": 144,
+        "Le Buisson": 110,
+        "Morcenx": 60,
+        "Pauillac": 59,
+        "Macau": 41,
+        "Arcachon": 52,
+        "Biganos-Facture": 29,
+        "Hendaye": 178,
+        "Marmande": 67,
+        "Pau": 132,
+        "Tarbes": 188,
+        "Lourdes": 174,
+        "Montlu\u00e7on-Ville": 259,
+        "Gu\u00e9ret": 208,
+        "Ussel": 262
+    },
+    "Lesparre": {
+        "Pauillac": 25,
+        "Bordeaux-St-Jean": 157,
+        "Pessac": 72
+    },
+    "Pauillac": {
+        "Lesparre": 25,
+        "Bordeaux-St-Jean": 59
+    },
+    "Le-Verdon": {
+        "Bordeaux-St-Jean": 200
+    },
+    "Dax": {
+        "Lourdes": 170,
+        "Pau": 110,
+        "Tarbes": 205,
+        "Hendaye": 140,
+        "Bordeaux-St-Jean": 170,
+        "Bayonne": 44
+    },
+    "Lourdes": {
+        "Dax": 170,
+        "Tarbes": 35,
+        "Bordeaux-St-Jean": 174
+    },
+    "Tarbes": {
+        "Dax": 205,
+        "Muret": 182,
+        "Pau": 93,
+        "Lourdes": 35,
+        "Bayonne": 145,
+        "Bordeaux-St-Jean": 188,
+        "Toulouse-Matabiau": 109
+    },
+    "Arcachon": {
+        "Biganos-Facture": 47,
+        "Bordeaux-St-Jean": 52
+    },
+    "Biganos-Facture": {
+        "Arcachon": 47,
+        "Bordeaux-St-Jean": 29
+    },
+    "P\u00e9rigueux": {
+        "Brive-la-Gaillarde": 105,
+        "Agen": 212,
+        "Limoges-B\u00e9n\u00e9dictins": 147,
+        "Bordeaux-St-Jean": 82,
+        "Condat-le-Lardin": 34,
+        "Mussidan": 30,
+        "Le Buisson": 53,
+        "Monsempron-Libos": 104,
+        "Ussel": 169
+    },
+    "Condat-le-Lardin": {
+        "Tulle": 85,
+        "Brive-la-Gaillarde": 44,
+        "Bordeaux-St-Jean": 121,
+        "P\u00e9rigueux": 34
+    },
+    "Bedous": {
+        "Pau": 86,
+        "Oloron-Ste-Marie": 35
+    },
+    "Oloron-Ste-Marie": {
+        "Pau": 52,
+        "Bedous": 35
+    },
+    "Bidos": {
+        "Pau": 58
+    },
+    "St-Jean-Pied-de-Port": {
+        "Bayonne": 81
+    },
+    "Cambo-les-Bains": {
+        "Bayonne": 38
+    },
+    "Hendaye": {
+        "Dax": 140,
+        "Bordeaux-St-Jean": 178,
+        "Bayonne": 37
+    },
+    "Bergerac": {
+        "Libourne": 104,
+        "Sarlat": 94,
+        "Bordeaux-St-Jean": 76
+    },
+    "Libourne": {
+        "Bergerac": 104,
+        "St-Emilion": 19,
+        "Bordeaux-St-Jean": 35
+    },
+    "St-Emilion": {
+        "Libourne": 19
+    },
+    "Sarlat": {
+        "Bergerac": 94,
+        "Bordeaux-St-Jean": 144
+    },
+    "Langon": {
+        "Bordeaux-St-Jean": 87,
+        "Agen": 69
+    },
+    "Monsempron-Libos": {
+        "Agen": 65,
+        "P\u00e9rigueux": 104
+    },
+    "Commentry": {
+        "Montlu\u00e7on-Ville": 25,
+        "Vallon-en-Sully": 47,
+        "St-Amand-Montrond-Orval": 98,
+        "Bourges": 121
+    },
+    "Firminy": {
+        "Le Puy-en-Velay": 129,
+        "Lyon-Perrache": 82,
+        "St-Etienne-Ch\u00e2teaucreux": 22
+    },
+    "Vorey": {
+        "Le Puy-en-Velay": 41
+    },
+    "Tonnerre": {
+        "Laroche-Migennes": 69
+    },
+    "Montereau": {
+        "Laroche-Migennes": 148,
+        "Paris-Gare-de-Lyon": 57
+    },
+    "Is-sur-Tille": {
+        "Dijon-Ville": 65,
+        "Dijon-Porte-Neuve": 32,
+        "Les Laumes-Al\u00e9sia": 76
+    },
+    "Dijon-Porte-Neuve": {
+        "Is-sur-Tille": 32
+    },
+    "Les Laumes-Al\u00e9sia": {
+        "Dijon-Ville": 107,
+        "Is-sur-Tille": 76
+    },
+    "Chagny": {
+        "Montchanin": 57
+    },
+    "Nevers-Le-Banlay": {
+        "Cosne-sur-Loire": 118,
+        "Nevers": 13
+    },
+    "Vesoul": {
+        "Belfort-Ville": 115
+    },
+    "Besan\u00e7on-Franche-Comt\u00e9": {
+        "Besan\u00e7on-Viotte": 23
+    },
+    "Vitr\u00e9": {
+        "Rennes": 60
+    },
+    "Montauban-de-Bretagne": {
+        "Rennes": 50
+    },
+    "Messac-Guipry": {
+        "Rennes": 75,
+        "Vannes": 115
+    },
+    "Vannes": {
+        "Rennes": 150,
+        "Messac-Guipry": 115,
+        "Lorient": 80,
+        "Quimper": 86
+    },
+    "Redon": {
+        "Rennes": 105,
+        "Besl\u00e9": 35,
+        "Lorient": 140,
+        "Nantes": 58
+    },
+    "Besl\u00e9": {
+        "Redon": 35
+    },
+    "Quimper": {
+        "Lorient": 95,
+        "Brest": 130,
+        "Landerneau": 95,
+        "Vannes": 86,
+        "Rennes": 141,
+        "Nantes": 174
+    },
+    "Rosporden": {
+        "Lorient": 65
+    },
+    "Brest": {
+        "Morlaix": 85,
+        "Quimper": 130,
+        "La Forest": 35,
+        "Landerneau": 45,
+        "Lannion": 91,
+        "Rennes": 139,
+        "Nantes": 203
+    },
+    "Morlaix": {
+        "Brest": 85
+    },
+    "Landerneau": {
+        "Quimper": 95,
+        "Brest": 45
+    },
+    "La Forest": {
+        "Brest": 35
+    },
+    "Lannion": {
+        "St-Brieuc": 65,
+        "Guingamp": 55,
+        "Plouaret-Tr\u00e9gor": 16,
+        "Brest": 91
+    },
+    "Guingamp": {
+        "Lannion": 55,
+        "Carhaix": 75,
+        "Callac": 41,
+        "Paimpol": 47
+    },
+    "Carhaix": {
+        "Guingamp": 75,
+        "Callac": 26
+    },
+    "Port-de-Piles": {
+        "Tours": 85
+    },
+    "Ch\u00e2teauroux": {
+        "Vierzon": 90,
+        "Orl\u00e9ans": 95,
+        "Limoges-B\u00e9n\u00e9dictins": 86
+    },
+    "Toury": {
+        "Aubrais-(les)": 45
+    },
+    "Port-Boulet": {
+        "Tours": 77
+    },
+    "Ch\u00e2teau-Gaillard": {
+        "Aubrais-(les)": 45
+    },
+    "La Verri\u00e8re": {
+        "Chartres": 108
+    },
+    "Versailles-Chantiers": {
+        "Chartres": 110
+    },
+    "Givet": {
+        "Charleville-M\u00e9zi\u00e8res": 107
+    },
+    "Nouzonville": {
+        "Charleville-M\u00e9zi\u00e8res": 20
+    },
+    "Sedan": {
+        "Reims": 163,
+        "Charleville-M\u00e9zi\u00e8res": 43,
+        "Rethel": 113,
+        "Longwy": 108,
+        "Champagne-Ardenne": 105
+    },
+    "Rethel": {
+        "Sedan": 113
+    },
+    "Laon": {
+        "Reims": 110,
+        "Creil": 171,
+        "Hirson": 51,
+        "Amiens": 84,
+        "Tergnier": 26,
+        "Aulnoye Aymeries": 111,
+        "Paris Gare du Nord": 90,
+        "Cr\u00e9py-en-Valois": 69
+    },
+    "Ch\u00e2teau-Thierry": {
+        "Ch\u00e2lons-en-Champagne": 105,
+        "Reims": 66,
+        "Paris-Est": 53,
+        "Bar-le-Duc": 95,
+        "St-Dizier": 85
+    },
+    "Dormans": {
+        "Epernay": 30
+    },
+    "Epernay": {
+        "Dormans": 30,
+        "Bar-le-Duc": 155,
+        "Nancy-Ville": 123,
+        "Lun\u00e9ville": 165,
+        "Metz-Ville": 117,
+        "Paris-Est": 84,
+        "Reims": 35
+    },
+    "Culmont-Chalindrey": {
+        "Troyes": 161,
+        "Vittel": 49,
+        "Paris-Est": 188,
+        "Chaumont": 33,
+        "Dijon-Ville": 46,
+        "Reims": 171,
+        "St-Dizier": 89
+    },
+    "Cerb\u00e8re": {
+        "Perpignan": 107,
+        "Narbonne": 87,
+        "Toulouse-Matabiau": 199,
+        "N\u00eemes": 197,
+        "Avignon-Centre": 238,
+        "Montpellier-Saint-Roch": 154
+    },
+    "Le Grau-du-Roi": {
+        "Vauvert": 44,
+        "N\u00eemes": 93
+    },
+    "Vauvert": {
+        "Le Grau-du-Roi": 44,
+        "N\u00eemes": 24
+    },
+    "Castelnaudary": {
+        "Carcassonne": 59,
+        "Narbonne": 134,
+        "Toulouse-Matabiau": 83
+    },
+    "G\u00e9nolhac": {
+        "Al\u00e8s": 57,
+        "N\u00eemes": 77
+    },
+    "Limoges-B\u00e9n\u00e9dictins": {
+        "Gu\u00e9ret": 111,
+        "Le Dorat": 70,
+        "Poitiers": 205,
+        "Saillat-Chassenon": 91,
+        "P\u00e9rigueux": 147,
+        "Nexon": 33,
+        "Brive-la-Gaillarde": 174,
+        "Ussel": 192,
+        "Orl\u00e9ans": 203,
+        "Vierzon": 129,
+        "Argenton-sur-Creuse": 74,
+        "Bordeaux-St-Jean": 145,
+        "Agen": 216,
+        "St-Junien": 38,
+        "St-Yrieix-la-Perche": 39,
+        "Eymoutiers-Vassiviere": 45,
+        "Montlu\u00e7on-Ville": 131,
+        "La Souterraine": 47,
+        "Ch\u00e2teauroux": 86
+    },
+    "Le Dorat": {
+        "Limoges-B\u00e9n\u00e9dictins": 70,
+        "Poitiers": 60
+    },
+    "Saillat-Chassenon": {
+        "Limoges-B\u00e9n\u00e9dictins": 91
+    },
+    "St-Yrieix-la-Perche": {
+        "Pompadour": 47,
+        "Limoges-B\u00e9n\u00e9dictins": 39
+    },
+    "Pompadour": {
+        "St-Yrieix-la-Perche": 47,
+        "Nexon": 83,
+        "Objat": 31
+    },
+    "Nexon": {
+        "Pompadour": 83,
+        "Limoges-B\u00e9n\u00e9dictins": 33
+    },
+    "Objat": {
+        "Pompadour": 31,
+        "Brive-la-Gaillarde": 46
+    },
+    "Pont-St-Vincent": {
+        "Nancy-Ville": 60
+    },
+    "Baroncourt": {
+        "Nancy-Ville": 109
+    },
+    "Hagondange": {
+        "Conflans-Jarny": 64,
+        "Verdun": 113
+    },
+    "Liverdun": {
+        "Nancy-Ville": 25
+    },
+    "Rodez": {
+        "Millau": 85,
+        "Capdenac": 86,
+        "Toulouse-Matabiau": 137,
+        "Brive-la-Gaillarde": 145
+    },
+    "Laissac-Foirail": {
+        "Millau": 60
+    },
+    "St-Sulpice (Tarn)": {
+        "Mazamet": 103,
+        "Castres": 60,
+        "Toulouse-Matabiau": 24
+    },
+    "Castres": {
+        "St-Sulpice (Tarn)": 60
+    },
+    "Tessonni\u00e8res": {
+        "Figeac": 160,
+        "Toulouse-Matabiau": 53
+    },
+    "Auch": {
+        "L'Isle-Jourdain (Gers)": 51,
+        "Toulouse-Matabiau": 122,
+        "Colomiers": 94
+    },
+    "L'Isle-Jourdain (Gers)": {
+        "Auch": 51,
+        "Toulouse-Matabiau": 72,
+        "Colomiers": 48,
+        "Saint-Cyprien-Ar\u00e8nes": 33
+    },
+    "Colomiers": {
+        "Auch": 94,
+        "L'Isle-Jourdain (Gers)": 48,
+        "Toulouse-Matabiau": 22,
+        "Saint-Cyprien-Ar\u00e8nes": 13
+    },
+    "Montauban-Ville-Bourbon": {
+        "Brive-la-Gaillarde": 198,
+        "Cahors": 78,
+        "Agen": 106,
+        "Toulouse-Matabiau": 43
+    },
+    "Cahors": {
+        "Montauban-Ville-Bourbon": 78,
+        "Toulouse-Matabiau": 74,
+        "Brive-la-Gaillarde": 66
+    },
+    "Boussens": {
+        "Pau": 183,
+        "Muret": 93,
+        "Montr\u00e9jeau-Gourdan-Pol.": 55,
+        "Toulouse-Matabiau": 58
+    },
+    "Rang du Fl. Verton Ber.": {
+        "Calais Fr\u00e9thun": 96,
+        "Calais Ville": 68,
+        "Lille Europe": 94
+    },
+    "Mouscron / Moeskroen": {
+        "Lille Flandres": 49
+    },
+    "Valenciennes": {
+        "Cambrai Ville": 95,
+        "Lille Flandres": 127,
+        "Jeumont": 128,
+        "Aulnoye Aymeries": 29,
+        "Maubeuge": 42,
+        "Hirson": 90,
+        "Douai": 38
+    },
+    "Jeumont": {
+        "Aulnoye Aymeries": 50,
+        "Maubeuge": 15,
+        "Valenciennes": 128,
+        "Lille Flandres": 81
+    },
+    "Charleroi Sud": {
+        "Maubeuge": 60
+    },
+    "St Pol sur Ternoise": {
+        "Arras": 63
+    },
+    "Dunkerque": {
+        "Lille Flandres": 150,
+        "Lille Europe": 31,
+        "Amiens": 104,
+        "Calais Ville": 50,
+        "Hazebrouck": 36,
+        "Arras": 93
+    },
+    "La Rochelle-Ville": {
+        "La Roche-sur-Yon": 120,
+        "Saintes": 98,
+        "St-Mariens-St-Yzan": 184,
+        "La-Rochelle-Pt-Dauphine": 9,
+        "Poitiers": 100,
+        "Niort": 44,
+        "Rochefort": 30,
+        "Angoul\u00eame": 126,
+        "Bordeaux-St-Jean": 162
+    },
+    "Angers-St-Laud": {
+        "Sabl\u00e9-sur-Sarthe": 83,
+        "Saumur": 95,
+        "Cholet": 100,
+        "Nantes": 43,
+        "Le Mans": 66,
+        "Tours": 78,
+        "Thouars": 68,
+        "Chartres": 163
+    },
+    "Sabl\u00e9-sur-Sarthe": {
+        "Angers-St-Laud": 83,
+        "Le Mans": 22
+    },
+    "Connerr\u00e9-Beill\u00e9": {
+        "Le Mans": 50
+    },
+    "Laval": {
+        "Le Mans": 135,
+        "Rennes": 55,
+        "Nantes": 101
+    },
+    "Persan-Beaumont": {
+        "Beauvais-Gare-SNCF": 90,
+        "Paris Gare du Nord": 63
+    },
+    "St-Just-SNCF": {
+        "Creil": 56,
+        "Amiens": 87,
+        "Paris Gare du Nord": 64
+    },
+    "Abancourt": {
+        "Le Tr\u00e9port-Mers-Les-B": 83,
+        "Creil": 103,
+        "Beauvais-Gare-SNCF": 48,
+        "Amiens": 35
+    },
+    "Le Tr\u00e9port-Mers-Les-B": {
+        "Abancourt": 83
+    },
+    "Angoul\u00eame": {
+        "Poitiers": 158,
+        "Saintes": 98,
+        "Royan": 145,
+        "La-Rochelle-Pt-Dauphine": 138,
+        "La Rochelle-Ville": 126,
+        "Bordeaux-St-Jean": 89,
+        "Coutras": 55
+    },
+    "Saintes": {
+        "La Rochelle-Ville": 98,
+        "La-Rochelle-Pt-Dauphine": 133,
+        "Niort": 95,
+        "Angoul\u00eame": 98,
+        "Bordeaux-St-Jean": 99,
+        "Royan": 26
+    },
+    "La-Rochelle-Pt-Dauphine": {
+        "Rochefort": 64,
+        "La Rochelle-Ville": 9,
+        "Saintes": 133,
+        "Angoul\u00eame": 138,
+        "Bordeaux-St-Jean": 164
+    },
+    "Rochefort": {
+        "La-Rochelle-Pt-Dauphine": 64,
+        "La Rochelle-Ville": 30
+    },
+    "St-Mariens-St-Yzan": {
+        "La Rochelle-Ville": 184,
+        "Bordeaux-St-Jean": 43
+    },
+    "Royan": {
+        "Niort": 139,
+        "Angoul\u00eame": 145,
+        "Saintes": 26
+    },
+    "Toulon": {
+        "Marseille-St-Charles": 125,
+        "Hy\u00e8res": 21,
+        "Les Arcs-Draguignan": 60,
+        "Carnoules": 31
+    },
+    "St-Rapha\u00ebl-Valescure": {
+        "Les Arcs-Draguignan": 30,
+        "Cannes": 38
+    },
+    "Sospel": {
+        "Nice-Ville": 65
+    },
+    "Touet-de-l'Escar\u00e8ne": {
+        "Nice-Ville": 65
+    },
+    "Miramas": {
+        "Avignon-Centre": 100,
+        "Marseille-St-Charles": 33
+    },
+    "Aix-Gare-Routi\u00e8re": {
+        "Marseille-St-Charles": 55,
+        "Gardanne": 20
+    },
+    "Gardanne": {
+        "Aix-Gare-Routi\u00e8re": 20,
+        "Marseille-St-Charles": 36
+    },
+    "Sisteron": {
+        "Marseille-St-Charles": 175
+    },
+    "Martigues": {
+        "Marseille-St-Charles": 70
+    },
+    "Chedde": {
+        "St-Gervais-L-B-Le-Fayet": 10
+    },
+    "Krimmeri-Meinau": {
+        "Strasbourg": 7,
+        "Sarreguemines": 92
+    },
+    "Obernai": {
+        "Strasbourg": 31
+    },
+    "Lutterbach Tram-train": {
+        "Mulhouse-Gare-Centrale": 19
+    },
+    "Mulhouse-Gare-Centrale": {
+        "Lutterbach Tram-train": 19,
+        "Thann-Saint-Jacques": 46,
+        "Thann": 41
+    },
+    "Willer-sur-Thur": {
+        "Mulhouse": 36
+    },
+    "Paris-Est": {
+        "Vittel": 230,
+        "Bar-le-Duc": 150,
+        "Ch\u00e2teau-Thierry": 53,
+        "Ch\u00e2lons-en-Champagne": 101,
+        "St-Dizier": 140,
+        "Epernay": 84,
+        "Strasbourg": 359,
+        "Sarrebourg": 270,
+        "Nancy-Ville": 199,
+        "Troyes": 90,
+        "Culmont-Chalindrey": 188,
+        "Chaumont": 145,
+        "Mulhouse": 294,
+        "Belfort-Ville": 247,
+        "Dijon-Ville": 223
+    },
+    "Champagne-Ardenne": {
+        "Charleville-M\u00e9zi\u00e8res": 71,
+        "Reims": 12,
+        "Sedan": 105
+    },
+    "Longueville (S.-et-M.)": {
+        "Mulhouse": 234
+    },
+    "B\u00e9thune": {
+        "Lille Flandres": 39,
+        "Arras": 36,
+        "Lens": 17
+    },
+    "Etaples Le Touquet": {
+        "Calais Ville": 62
+    },
+    "Tourcoing": {
+        "Lille Flandres": 14
+    },
+    "Lille Europe": {
+        "Boulogne Ville": 72,
+        "Calais Ville": 49,
+        "Rang du Fl. Verton Ber.": 94,
+        "Calais Fr\u00e9thun": 29,
+        "Dunkerque": 31
+    },
+    "St Omer": {
+        "Lille Flandres": 50
+    },
+    "Clermont-de-l'Oise": {
+        "Paris Gare du Nord": 50
+    },
+    "Cr\u00e9py-en-Valois": {
+        "Laon": 69
+    },
+    "Vernon-Giverny": {
+        "Paris-St-Lazare": 60,
+        "Mantes-la-Jolie": 17
+    },
+    "Oissel": {
+        "Paris-St-Lazare": 94
+    },
+    "Montivilliers": {
+        "Le Havre": 15
+    },
+    "Rolleville": {
+        "Le Havre": 26
+    },
+    "Elbeuf-St-Aubin": {
+        "Yvetot": 63
+    },
+    "Yvetot": {
+        "Elbeuf-St-Aubin": 63,
+        "Rouen-Rive-Droite": 34
+    },
+    "Bueil": {
+        "Mantes-la-Jolie": 15
+    },
+    "St-L\u00f4": {
+        "Caen": 51
+    },
+    "Montreuil-sur-Ille": {
+        "Rennes": 30
+    },
+    "St-Malo": {
+        "Rennes": 55
+    },
+    "Plouaret-Tr\u00e9gor": {
+        "Lannion": 16
+    },
+    "Callac": {
+        "Carhaix": 26,
+        "Guingamp": 41
+    },
+    "Paimpol": {
+        "Guingamp": 47
+    },
+    "La Brohini\u00e8re": {
+        "Rennes": 32
+    },
+    "Le Croisic": {
+        "Le Mans": 177,
+        "Rennes": 222,
+        "Nantes": 74,
+        "Orl\u00e9ans": 258,
+        "Tours": 190
+    },
+    "St-Nazaire": {
+        "Nantes": 51
+    },
+    "Savenay": {
+        "Nantes": 34
+    },
+    "Les Sables-d'Olonne": {
+        "Nantes": 87,
+        "Saumur": 158
+    },
+    "Chantonnay": {
+        "La Roche-sur-Yon": 31
+    },
+    "Ste-Pazanne": {
+        "Nantes": 32
+    },
+    "Pornic": {
+        "Nantes": 60
+    },
+    "Ancenis": {
+        "Nantes": 28
+    },
+    "Suc\u00e9-Sur-Erdre": {
+        "Nantes": 27
+    },
+    "Nort-sur-Erdre": {
+        "Nantes": 40
+    },
+    "Ch\u00e2teaubriant-TT": {
+        "Nantes": 67
+    },
+    "Reignac": {
+        "Tours": 45
+    },
+    "Voves": {
+        "Ch\u00e2teaudun": 21,
+        "Tours": 137,
+        "Chartres": 23
+    },
+    "Bl\u00e9r\u00e9-la-Croix": {
+        "Tours": 28
+    },
+    "St-Aignan-Noyers": {
+        "Tours": 57
+    },
+    "Vallon-en-Sully": {
+        "Montlu\u00e7on-Ville": 31,
+        "Commentry": 47
+    },
+    "Coutras": {
+        "Angoul\u00eame": 55,
+        "Bordeaux-St-Jean": 47
+    },
+    "Mussidan": {
+        "P\u00e9rigueux": 30
+    },
+    "Le Buisson": {
+        "Bordeaux-St-Jean": 110,
+        "P\u00e9rigueux": 53
+    },
+    "Pessac": {
+        "Lesparre": 72,
+        "Macau": 34
+    },
+    "Macau": {
+        "Bordeaux-St-Jean": 41,
+        "Pessac": 34
+    },
+    "Marmande": {
+        "Agen": 36,
+        "Bordeaux-St-Jean": 67
+    },
+    "St-Junien": {
+        "Limoges-B\u00e9n\u00e9dictins": 38
+    },
+    "Eymoutiers-Vassiviere": {
+        "Limoges-B\u00e9n\u00e9dictins": 45
+    },
+    "Felletin-Gare": {
+        "Gu\u00e9ret": 52
+    },
+    "La Souterraine": {
+        "Limoges-B\u00e9n\u00e9dictins": 47
+    },
+    "Carmaux": {
+        "Toulouse-Matabiau": 76
+    },
+    "Saint-Cyprien-Ar\u00e8nes": {
+        "L'Isle-Jourdain (Gers)": 33,
+        "Colomiers": 13
+    },
+    "Durtol-Nohanent": {
+        "Clermont-Ferrand": 13
+    },
+    "St-Germain-des-Foss\u00e9s": {
+        "Clermont-Ferrand": 40,
+        "Vic-le-Comte": 66,
+        "Issoire": 88
+    },
+    "Le Lioran": {
+        "Clermont-Ferrand": 111
+    },
+    "Lunel": {
+        "Narbonne": 100,
+        "S\u00e8te": 54,
+        "Montpellier-Saint-Roch": 20
+    },
+    "S\u00e8te": {
+        "Avignon-Centre": 109,
+        "N\u00eemes": 66,
+        "Lunel": 54,
+        "Montpellier-Saint-Roch": 23
+    },
+    "Orange": {
+        "Avignon-Centre": 26
+    },
+    "Avignon-TGV": {
+        "Avignon-Centre": 5,
+        "Carpentras": 41,
+        "Marseille-St-Charles": 133
+    },
+    "Carpentras": {
+        "Avignon-Centre": 28,
+        "Avignon-TGV": 41
+    },
+    "Cavaillon": {
+        "Marseille-St-Charles": 70
+    },
+    "Manosque-Gr\u00e9oux": {
+        "Aix-en-Provence": 45,
+        "Marseille-St-Charles": 95
+    },
+    "Aubagne": {
+        "Marseille-St-Charles": 31,
+        "Marseille-Blancarde": 22
+    },
+    "Marseille-Blancarde": {
+        "Aubagne": 22
+    },
+    "Antibes": {
+        "Grasse": 41
+    },
+    "Hy\u00e8res": {
+        "Marseille-St-Charles": 84,
+        "Toulon": 21
+    },
+    "Carnoules": {
+        "Toulon": 31
+    },
+    "Grenoble U.-Gi\u00e8res": {
+        "Valence-Ville": 97,
+        "St-Marcellin": 53,
+        "Rives": 43,
+        "St-Andr\u00e9-le-Gaz": 69
+    },
+    "St-Marcellin": {
+        "Grenoble U.-Gi\u00e8res": 53,
+        "Valence-Ville": 39,
+        "Grenoble": 40
+    },
+    "Pierrelatte": {
+        "M\u00e2con-Ville": 189
+    },
+    "St-Etienne-Ch\u00e2teaucreux": {
+        "Firminy": 22,
+        "Lyon-Perrache": 55,
+        "Amb\u00e9rieu-en-Bugey": 97,
+        "Lyon-Part-Dieu": 46,
+        "Roanne": 73,
+        "Montbrison": 40,
+        "Bo\u00ebn": 53,
+        "Le Puy-en-Velay": 113,
+        "Bas-Monistrol": 55
+    },
+    "Givors-Ville": {
+        "Lyon-Perrache": 25,
+        "Amb\u00e9rieu-en-Bugey": 64,
+        "Lyon-Part-Dieu": 17
+    },
+    "Roanne": {
+        "Lyon-Perrache": 89,
+        "St-Etienne-Ch\u00e2teaucreux": 73
+    },
+    "Vienne": {
+        "Lyon-Perrache": 34,
+        "Villefranche-sur-Sa\u00f4ne": 74,
+        "M\u00e2con-Ville": 98
+    },
+    "Sathonay-Rillieux": {
+        "Lyon-Perrache": 19
+    },
+    "Bas-Monistrol": {
+        "St-Etienne-Ch\u00e2teaucreux": 55
+    },
+    "Lyon-St-Paul": {
+        "Sain-Bel": 42,
+        "L'Arbresle": 37,
+        "Brignais": 25
+    },
+    "L'Arbresle": {
+        "Lyon-St-Paul": 37
+    },
+    "Tassin": {
+        "Lozanne": 25
+    },
+    "Brignais": {
+        "Lyon-St-Paul": 25
+    },
+    "Chalon-sur-Sa\u00f4ne": {
+        "Dijon-Ville": 43,
+        "M\u00e2con-Ville": 39,
+        "Montchanin": 39
+    },
+    "Montb\u00e9liard-Ville": {
+        "Belfort-Ville": 15
+    }
+}
