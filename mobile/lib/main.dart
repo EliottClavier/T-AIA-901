@@ -1,27 +1,38 @@
 import 'package:flutter/material.dart';
-import 'VoiceRecognitionPage.dart';
-import 'ItinaryPage.dart';
-import 'model/ItinaryResponse.dart';
+import 'package:flutter/services.dart';
+import 'package:mobile/exception/CommonException.dart';
+import 'package:mobile/exception/CommonExceptionHandler.dart';
+import 'package:mobile/screens/SplashScreen.dart';
+import 'package:mobile/utils/AppColors.dart';
+import 'services/NavigationService.dart';
 
-void main() => runApp(MyApp());
+void main(){
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: AppColors.backgroundColor,
+    systemNavigationBarColor: AppColors.backgroundColor,
+  ));
+
+  FlutterError.onError = (error) {
+    if (error.exception is CommonException) {
+      CommonExceptionHandler.handleException(error.exception as CommonException);
+    } else {
+      FlutterError.presentError(error);
+    }
+  };
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    ItinaryResponse itinaryResponse = ItinaryResponse(
-      sentenceID: "12345",
-      departure: "Paris",
-      destination: "Marseille",
-      steps: ["Lyon", "Avignon"],
-    );
-
     return MaterialApp(
-      title: 'Voice Recognition App',
+      navigatorKey: NavigationService.navigatorKey,
+      title: 'Travelling optimiser',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ItinaryPage(itinaryResponse: itinaryResponse),
+      home: SplashScreen()
     );
   }
 }
