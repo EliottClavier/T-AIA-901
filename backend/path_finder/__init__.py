@@ -1,3 +1,5 @@
+from .path_finder import PathFinder
+
 from flask import Blueprint
 
 # Initialisation du Blueprint
