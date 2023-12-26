@@ -6,13 +6,13 @@ import pandas as pd
 
 class PathFinder:
 
-    TIME_TABLE_PATH = os.path.join(os.path.dirname(__file__), "data/timetables.csv")
+    TIME_TABLE_PATH = os.path.join(os.path.dirname(__file__), "data/timetables_formatted.csv")
     GRAPH_PATH = os.path.join(os.path.dirname(__file__), "data/graph.json")
 
     @staticmethod
-    def check_data_exists() -> dict:
+    def check_data_exists() -> None:
         if not os.path.exists(PathFinder.TIME_TABLE_PATH):
-            raise FileNotFoundError("timetables.csv is missing")
+            raise FileNotFoundError("timetables_formatted.csv is missing")
 
         if not os.path.exists(PathFinder.GRAPH_PATH):
             PathFinder.generate_graph()
@@ -22,36 +22,19 @@ class PathFinder:
         # Load the timetable csv
         df = pd.read_csv(PathFinder.TIME_TABLE_PATH, sep="\t", encoding="utf-8")
 
-        # Create two new columns "gare_a" and "gare_b"
-        cols = ["gare_a", "gare_b"]
-        for col in cols:
-            df[col] = ""
-
-        # Split the "trajet" column into two columns "gare_a" and "gare_b"
-        for index, row in df.iterrows():
-            sp = row["trajet"].split(" - ")
-            if len(sp) > 2:
-                sp = [sp[0], sp[-1]]
-            df.at[index, "gare_a"] = sp[0]
-            df.at[index, "gare_b"] = sp[1]
-
-        # Remove "Gare de " from the station names
-        for col in cols:
-            df[col] = df[col].str.replace("Gare de ", "")
-
         # Build the graph
         graph = {}
 
         for index, row in df.iterrows():
             # We add the stations to the graph if they are not already in it and add a key for the other station
             # with the duration as value
-            if row["gare_a"] not in graph:
-                graph[row["gare_a"]] = {}
-            graph[row["gare_a"]][row["gare_b"]] = row["duree"]
+            if row["gare_a_city"] not in graph:
+                graph[row["gare_a_city"]] = {}
+            graph[row["gare_a_city"]][row["gare_b_city"]] = row["duree"]
 
-            if row["gare_b"] not in graph:
-                graph[row["gare_b"]] = {}
-            graph[row["gare_b"]][row["gare_a"]] = row["duree"]
+            if row["gare_b_city"] not in graph:
+                graph[row["gare_b_city"]] = {}
+            graph[row["gare_b_city"]][row["gare_a_city"]] = row["duree"]
 
         try:
             # Save the graph
@@ -96,6 +79,7 @@ class PathFinder:
                         duration_between_stations.append(graph[current_station][previous])
                     current_station = previous_station[current_station]
                 path.reverse()
+                duration_between_stations.reverse()
                 return {
                     "path": path,
                     "duration_between_stations": duration_between_stations,
@@ -129,12 +113,17 @@ class PathFinder:
 
     @staticmethod
     def minutes_to_hours(minutes: int) -> str:
-        return f"{minutes // 60}h{minutes % 60}"
+        hours = str(minutes // 60).zfill(2)
+        test = str(minutes % 60).zfill(2)
+        return f"{hours}h{test}"
 
     @staticmethod
     def get_shortest_path(trip: list) -> str:
         try:
             PathFinder.check_data_exists()
+
+            # Uppercase each word in the trip
+            trip = [station.upper() for station in trip]
 
             # We want to send trip order by pair
             # ex: ["Nantes", "Lyon", "Paris"] -> [["Nantes", "Lyon"], ["Lyon", "Paris"]]
@@ -153,7 +142,9 @@ class PathFinder:
                     if i == 0:
                         final_string += station
                     else:
-                        final_string += f" -> {PathFinder.minutes_to_hours(v['duration_between_stations'][i])} -> {station}"
+                        final_string += f" -> {station}"
+                    if v["duration_between_stations"][i] is not None:
+                        final_string += f" -> {PathFinder.minutes_to_hours(v['duration_between_stations'][i])}"
                 print(final_string)
                 print(f"Total duration: {PathFinder.minutes_to_hours(v['total_duration'])}")
                 print("#" * 150 + "\n")
@@ -162,3 +153,7 @@ class PathFinder:
         except Exception as e:
             print(e)
             return str(e)
+
+
+if __name__ == "__main__":
+    PathFinder().check_data_exists()
