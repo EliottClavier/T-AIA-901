@@ -96,6 +96,7 @@ class DatasetGenerator:
             {"text": f"Trouve-moi un itinéraire pour aller à {departure} depuis {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
             {"text": f"Je cherche à me déplacer vers {departure} depuis {arrival}. Peux-tu m'aider ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
             {"text": f"Comment puis-je rejoindre {departure} à partir de {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
+            {"text": f"J'aimerais aller à {arrival} en partant de {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
         ]
 
         wrong_sentences = [
