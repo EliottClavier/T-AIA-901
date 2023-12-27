@@ -1,2 +1,2 @@
-models/**/checkpoints-[0-9]*/**
 __pycache__/**
+models
