@@ -1,4 +1,6 @@
 import os
+import re
+
 import pandas as pd
 import numpy as np
 
@@ -8,96 +10,120 @@ class DatasetGenerator:
     cities = []
     random_sentences = []
 
+    correct_sentences = [
+        "Je veux aller de {departure} à {arrival}.",
+        "J'aimerais me rendre de {departure} à {arrival}.",
+        "Je prévois un voyage de {departure} à {arrival}.",
+        "Je cherche un moyen d'aller de {departure} à {arrival}.",
+        "Mon trajet va de {departure} à {arrival}.",
+        "Je suis en train de planifier un déplacement de {departure} à {arrival}.",
+        "Le voyage de {departure} à {arrival} est ce que je recherche.",
+        "Trouver un moyen d'atteindre {arrival} depuis {departure} est mon objectif.",
+        "Serait-il possible de me rendre de {departure} à {arrival}, s'il vous plaît ?",
+        "Je souhaiterais me déplacer de {departure} à {arrival}, si c'est réalisable.",
+        "Pourriez-vous m'indiquer comment aller de {departure} à {arrival}, je vous prie ?",
+        "Allez de {departure} à {arrival}.",
+        "Dirigez-vous vers {arrival} en partant de {departure}.",
+        "Trouve un moyen d'atteindre {arrival} depuis {departure}.",
+        "Rendez-vous à {arrival} depuis {departure}.",
+        "Partez pour {arrival} en partant de {departure}.",
+        "{departure} à {arrival}.",
+        "De {departure} à {arrival}.",
+        "De {departure} vers {arrival}.",
+        "Depuis {departure} vers {arrival}.",
+        "Trouve-moi le chemin de {departure} à {arrival}.",
+        "Comment puis-je me rendre de {departure} à {arrival} ?",
+        "Indique-moi le trajet de {departure} à {arrival}.",
+        "Pourrais-tu m'aider à rejoindre {arrival} depuis {departure} ?",
+        "Je souhaite aller de {departure} à {arrival}, s'il te plaît.",
+        "Peux-tu me guider de {departure} vers {arrival} ?",
+        "Trouve le meilleur itinéraire de {departure} à {arrival}.",
+        "Montre-moi le chemin pour passer de {departure} à {arrival}.",
+        "Pourrais-tu me donner les indications pour aller de {departure} à {arrival} ?",
+        "Je voudrais savoir comment me rendre de {departure} à {arrival}.",
+        "Y a-t-il un moyen d'aller de {departure} à {arrival} ?",
+        "Je recherche un itinéraire de {departure} à {arrival}.",
+        "Peux-tu me diriger vers {arrival} depuis {departure} ?",
+        "Je désire aller de {departure} à {arrival}. Comment faire ?",
+        "Pourrais-tu m'aider à planifier le trajet de {departure} vers {arrival} ?",
+        "Comment puis-je me rendre de {departure} à {arrival} le plus rapidement ?",
+        "J'aimerais connaître le chemin pour aller de {departure} à {arrival}.",
+        "Trouve-moi un moyen de transport de {departure} jusqu'à {arrival}.",
+        "Pourrais-tu me donner les indications pour rejoindre {arrival} depuis {departure} ?",
+        "Je cherche à me déplacer de {departure} à {arrival}. Comment procéder ?",
+        "Indique-moi le trajet le plus simple de {departure} vers {arrival}.",
+        "Je voudrais savoir comment me rendre de {departure} à {arrival}, s'il te plaît.",
+        "Peux-tu m'aider à trouver mon chemin de {departure} à {arrival} ?",
+        "Montre-moi le chemin pour me rendre de {departure} à {arrival}.",
+        "Je souhaite aller à {arrival} en partant de {departure}. Comment faire ?",
+        "Comment atteindre {arrival} à partir de {departure} ?",
+        "Pourrais-tu me guider vers {arrival} depuis {departure} ?",
+        "Trouve-moi un itinéraire pour aller de {departure} à {arrival}.",
+        "Je cherche à me déplacer de {departure} vers {arrival}. Peux-tu m'aider ?",
+        "Comment puis-je rejoindre {arrival} depuis {departure} ?",
+        "Je souhaite me rendre de {arrival} jusqu'à {departure}.",
+        "Trouve-moi un itinéraire de {arrival} vers {departure}.",
+        "Comment puis-je aller à {departure} en venant de {arrival} ?",
+        "Peux-tu me guider de {arrival} jusqu'à {departure} ?",
+        "Je cherche le chemin pour aller à {departure} depuis {arrival}.",
+        "Montre-moi le trajet pour aller à {departure} en partant de {arrival}.",
+        "Pourrais-tu m'indiquer comment aller de {arrival} à {departure} ?",
+        "Je voudrais savoir comment me rendre à {departure} depuis {arrival}.",
+        "Y a-t-il un moyen d'atteindre {departure} depuis {arrival} ?",
+        "Je recherche un itinéraire pour aller à {departure} en partant de {arrival}.",
+        "Indique-moi le chemin depuis {arrival} jusqu'à {departure}.",
+        "Je souhaite me déplacer vers {departure} à partir de {arrival}.",
+        "Pourrais-tu me diriger de {arrival} vers {departure} ?",
+        "Comment puis-je me rendre à {departure} en partant de {arrival} ?",
+        "Je désire aller à {departure} depuis {arrival}. Peux-tu aider ?",
+        "Peux-tu m'aider à planifier le trajet depuis {arrival} jusqu'à {departure} ?",
+        "Comment atteindre {departure} en partant de {arrival} le plus rapidement ?",
+        "J'aimerais connaître le chemin pour aller à {departure} depuis {arrival}.",
+        "Trouve-moi un moyen de transport de {arrival} vers {departure}.",
+        "Je cherche à me déplacer vers {departure} depuis {arrival}. Comment procéder ?",
+        "Indique-moi le trajet le plus simple depuis {arrival} vers {departure}.",
+        "Je voudrais savoir comment me rendre à {departure} depuis {arrival}, s'il te plaît.",
+        "Peux-tu m'aider à trouver mon chemin de {arrival} à {departure} ?",
+        "Montre-moi le chemin pour aller à {departure} à partir de {arrival}.",
+        "Je souhaite aller à {departure} en partant de {arrival}. Comment faire ?",
+        "Comment atteindre {departure} depuis {arrival} ?",
+        "Pourrais-tu me guider vers {departure} depuis {arrival} ?",
+        "Trouve-moi un itinéraire pour aller à {departure} depuis {arrival}.",
+        "Je cherche à me déplacer vers {departure} depuis {arrival}. Peux-tu m'aider ?",
+        "Comment puis-je rejoindre {departure} à partir de {arrival} ?",
+        "J'aimerais aller à {arrival} en partant de {departure}."
+    ]
+
     def __init__(self):
         self.load_cities()
         self.load_random_sentences()
 
+    def load_cities(self):
+        path = os.path.join(os.path.abspath(__file__), "..", "..", "backend", "path_finder", "data", "graph.json")
+        df = pd.read_json(path)
+        self.cities = list(df.keys())
+
+    def load_random_sentences(self):
+        # Dataset from https://www.kaggle.com/datasets/basilb2s/language-detection?resource=download
+        path = os.path.join(os.path.abspath(__file__), "..", "data", "random_sentences.csv")
+        df = pd.read_csv(path, sep=",")
+        df["Language"] = df["Language"].apply(lambda x: 0 if x == "French" else 1)
+
+        # create a list of sentences, with column Text to key text, and NOT_FRENCH to key Language
+        # also set NOT_TRIP to 1, UNKNOWN to 0 and CORRECT to 0
+        self.random_sentences = ((df[["Text", "Language"]]
+                                  .rename(columns={"Text": "text", "Language": "NOT_FRENCH"}))
+                                 .assign(NOT_TRIP=1, UNKNOWN=0, CORRECT=0).to_dict(orient="records"))
+
     @staticmethod
-    def fill_sentence(departure: str, arrival: str) -> list:
-        correct_sentences = [
-            # French templates
-            {"text": f"Je veux aller de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"J'aimerais me rendre de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je prévois un voyage de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je cherche un moyen d'aller de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Mon trajet va de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je suis en train de planifier un déplacement de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Le voyage de {departure} à {arrival} est ce que je recherche.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Trouver un moyen d'atteindre {arrival} depuis {departure} est mon objectif.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Serait-il possible de me rendre de {departure} à {arrival}, s'il vous plaît ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je souhaiterais me déplacer de {departure} à {arrival}, si c'est réalisable.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Pourriez-vous m'indiquer comment aller de {departure} à {arrival}, je vous prie ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Allez de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Dirigez-vous vers {arrival} en partant de {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Trouve un moyen d'atteindre {arrival} depuis {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Rendez-vous à {arrival} depuis {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Partez pour {arrival} en partant de {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"{departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"De {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"De {departure} vers {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Depuis {departure} vers {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Trouve-moi le chemin de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Comment puis-je me rendre de {departure} à {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Indique-moi le trajet de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Pourrais-tu m'aider à rejoindre {arrival} depuis {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je souhaite aller de {departure} à {arrival}, s'il te plaît.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Peux-tu me guider de {departure} vers {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Trouve le meilleur itinéraire de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Montre-moi le chemin pour passer de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Pourrais-tu me donner les indications pour aller de {departure} à {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je voudrais savoir comment me rendre de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Y a-t-il un moyen d'aller de {departure} à {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je recherche un itinéraire de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Peux-tu me diriger vers {arrival} depuis {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je désire aller de {departure} à {arrival}. Comment faire ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Pourrais-tu m'aider à planifier le trajet de {departure} vers {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Comment puis-je me rendre de {departure} à {arrival} le plus rapidement ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"J'aimerais connaître le chemin pour aller de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Trouve-moi un moyen de transport de {departure} jusqu'à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Pourrais-tu me donner les indications pour rejoindre {arrival} depuis {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je cherche à me déplacer de {departure} à {arrival}. Comment procéder ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Indique-moi le trajet le plus simple de {departure} vers {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 1},
-            {"text": f"Je voudrais savoir comment me rendre de {departure} à {arrival}, s'il te plaît.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Peux-tu m'aider à trouver mon chemin de {departure} à {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Montre-moi le chemin pour me rendre de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je souhaite aller à {arrival} en partant de {departure}. Comment faire ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Comment atteindre {arrival} à partir de {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Pourrais-tu me guider vers {arrival} depuis {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Trouve-moi un itinéraire pour aller de {departure} à {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je cherche à me déplacer de {departure} vers {arrival}. Peux-tu m'aider ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Comment puis-je rejoindre {arrival} depuis {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je souhaite me rendre de {arrival} jusqu'à {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Trouve-moi un itinéraire de {arrival} vers {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Comment puis-je aller à {departure} en venant de {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Peux-tu me guider de {arrival} jusqu'à {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je cherche le chemin pour aller à {departure} depuis {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Montre-moi le trajet pour aller à {departure} en partant de {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Pourrais-tu m'indiquer comment aller de {arrival} à {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je voudrais savoir comment me rendre à {departure} depuis {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Y a-t-il un moyen d'atteindre {departure} depuis {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je recherche un itinéraire pour aller à {departure} en partant de {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Indique-moi le chemin depuis {arrival} jusqu'à {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je souhaite me déplacer vers {departure} à partir de {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Pourrais-tu me diriger de {arrival} vers {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Comment puis-je me rendre à {departure} en partant de {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je désire aller à {departure} depuis {arrival}. Peux-tu aider ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Peux-tu m'aider à planifier le trajet depuis {arrival} jusqu'à {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Comment atteindre {departure} en partant de {arrival} le plus rapidement ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"J'aimerais connaître le chemin pour aller à {departure} depuis {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Trouve-moi un moyen de transport de {arrival} vers {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je cherche à me déplacer vers {departure} depuis {arrival}. Comment procéder ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Indique-moi le trajet le plus simple depuis {arrival} vers {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je voudrais savoir comment me rendre à {departure} depuis {arrival}, s'il te plaît.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Peux-tu m'aider à trouver mon chemin de {arrival} à {departure} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Montre-moi le chemin pour aller à {departure} à partir de {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je souhaite aller à {departure} en partant de {arrival}. Comment faire ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Comment atteindre {departure} depuis {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Pourrais-tu me guider vers {departure} depuis {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Trouve-moi un itinéraire pour aller à {departure} depuis {arrival}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Je cherche à me déplacer vers {departure} depuis {arrival}. Peux-tu m'aider ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"Comment puis-je rejoindre {departure} à partir de {arrival} ?", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-            {"text": f"J'aimerais aller à {arrival} en partant de {departure}.", "CORRECT": 1, "NOT_FRENCH": 0, "NOT_TRIP": 0, "UNKNOWN": 0},
-        ]
+    def fill_text_classification_sentences_templates(departure: str, arrival: str) -> list:
+        correct_sentences = [{
+            "text": sentence.format(departure=departure, arrival=arrival),
+            "CORRECT": 1,
+            "NOT_FRENCH": 0,
+            "NOT_TRIP": 0,
+            "UNKNOWN": 0
+        } for sentence in DatasetGenerator.correct_sentences]
 
         wrong_sentences = [
             # English equivalents
@@ -189,25 +215,8 @@ class DatasetGenerator:
             np.random.choice(wrong_sentences, len(correct_sentences) - len(unclassified_sentences)).tolist()
         )
 
-    def load_cities(self):
-        path = os.path.join(os.path.abspath(__file__), "..", "..", "backend", "path_finder", "data", "graph.json")
-        df = pd.read_json(path)
-        self.cities = list(df.keys())
-
-    def load_random_sentences(self):
-        # Dataset from https://www.kaggle.com/datasets/basilb2s/language-detection?resource=download
-        path = os.path.join(os.path.abspath(__file__), "..", "data", "random_sentences.csv")
-        df = pd.read_csv(path, sep=",")
-        df["Language"] = df["Language"].apply(lambda x: 0 if x == "French" else 1)
-
-        # create a list of sentences, with column Text to key text, and NOT_FRENCH to key Language
-        # also set NOT_TRIP to 1, UNKNOWN to 0 and CORRECT to 0
-        self.random_sentences = ((df[["Text", "Language"]]
-                                 .rename(columns={"Text": "text", "Language": "NOT_FRENCH"}))
-                                 .assign(NOT_TRIP=1, UNKNOWN=0, CORRECT=0).to_dict(orient="records"))
-
     @staticmethod
-    def generate_unknown_sentences(number: int) -> list:
+    def generate_text_classification_unknown_sentences(number: int) -> list:
         length = np.random.randint(16, 128)
 
         sentences = []
@@ -227,11 +236,11 @@ class DatasetGenerator:
 
         return sentences
 
-    def get_batch_sentences(self, departure: str, arrival: str) -> list:
+    def get_text_classification_batch_sentences(self, departure: str, arrival: str) -> list:
         data = []
 
-        data.extend(self.fill_sentence(departure.title(), arrival.title()))
-        data.extend(self.fill_sentence(departure.lower(), arrival.lower()))
+        data.extend(self.fill_text_classification_sentences_templates(departure.title(), arrival.title()))
+        data.extend(self.fill_text_classification_sentences_templates(departure.lower(), arrival.lower()))
 
         length = int(len(data) / 4)
 
@@ -239,7 +248,7 @@ class DatasetGenerator:
         data.extend(np.random.choice(self.random_sentences, length))
 
         # Generate unknown sentences
-        data.extend(self.generate_unknown_sentences(length))
+        data.extend(self.generate_text_classification_unknown_sentences(length))
         return data
 
     def generate_text_classification_dataset(self, regenerate=False):
@@ -252,17 +261,97 @@ class DatasetGenerator:
 
         for departure in self.cities:
             arrival = np.random.choice(self.cities)
-            dataset.extend(self.get_batch_sentences(departure, arrival))
+            dataset.extend(self.get_text_classification_batch_sentences(departure, arrival))
 
             for special_char in ["-"]:
                 if special_char in departure:
-                    dataset.extend(self.get_batch_sentences(departure.replace(special_char, " "), arrival))
+                    dataset.extend(self.get_text_classification_batch_sentences(departure.replace(special_char, " "), arrival))
 
         df = pd.DataFrame(dataset)
         df.to_csv("data/dataset_text_classification.csv", index=False, sep=";")
+        print(f"Dataset generated with {len(dataset)} sentences.")
+
+    def flatten_list(self, nested_list):
+        flattened_list = []
+        for i in nested_list:
+            if isinstance(i, list):
+                flattened_list.extend(self.flatten_list(i))
+            else:
+                flattened_list.append(i)
+        return flattened_list
+
+    @staticmethod
+    def split_sentence_token_classification(sentence):
+        regex = r'[\w|?]+\S?'
+        formatted_sentence = [s for s in re.findall(regex, sentence) if s]
+        return formatted_sentence
+
+    def generate_ner_tags_from_correct_sentence(self, steps: dict) -> list:
+        data = []
+
+        for sentence in self.correct_sentences:
+
+            alt_sentence = sentence.replace("{", "").replace("}", "")
+            formatted_sentence = self.split_sentence_token_classification(alt_sentence)
+
+            tags_sentence = ["O"] * (len(formatted_sentence))
+
+            for i, word in enumerate(formatted_sentence):
+                for substr in ["departure", "arrival"]:
+                    if substr in word:
+                        formatted_step = self.split_sentence_token_classification(steps[substr])
+                        tags_sentence[i] = ["B-LOC"] + ["I-LOC"] * (len(formatted_step) - 1)
+
+            # remove 2D list inside list
+            tags_sentence = self.flatten_list(tags_sentence)
+
+            final_sentence = sentence.format(departure=steps["departure"], arrival=steps["arrival"])
+            formatted_final_sentence = self.split_sentence_token_classification(final_sentence)
+
+            if formatted_final_sentence[-1][-1] == ".":
+                formatted_final_sentence[-1] = formatted_final_sentence[-1][:-1]
+                tags_sentence[-1] = tags_sentence[-1][:-1]
+
+                formatted_final_sentence.append(".")
+                tags_sentence.append("O")
+
+            data.append({
+                "text": final_sentence,
+                "tokens": formatted_final_sentence,
+                "ner_tags": tags_sentence,
+            })
+
+        return data
+
+    def generate_token_classification_dataset(self, regenerate=False):
+        print("Generating token classification dataset...")
+        if os.path.exists("./data/dataset_token_classification.csv") and not regenerate:
+            print("File already exists, skipping generation.")
+            return
+
+        dataset = []
+
+        for departure in self.cities:
+            steps = {"departure": departure, "arrival": np.random.choice(self.cities)}
+
+            for k, step in steps.items():
+                steps[k] = step.title()
+            dataset.extend(self.generate_ner_tags_from_correct_sentence(steps))
+
+            for k, step in steps.items():
+                steps[k] = step.lower()
+            dataset.extend(self.generate_ner_tags_from_correct_sentence(steps))
+
+            for k, step in steps.items():
+                steps[k] = step.replace("-", " ")
+            dataset.extend(self.generate_ner_tags_from_correct_sentence(steps))
+
+        df = pd.DataFrame(dataset)
+        df.to_csv("data/dataset_token_classification.csv", index=False, sep=";")
         print(f"Dataset generated with {len(dataset)} sentences.")
 
 
 if __name__ == "__main__":
     generator = DatasetGenerator()
     generator.generate_text_classification_dataset()
+    generator.generate_token_classification_dataset()
