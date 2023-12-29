@@ -9,6 +9,7 @@ class DatasetGenerator:
 
     cities = []
     random_sentences = []
+    random_sentences_french = []
 
     correct_sentences = [
         "Je veux aller de {departure} à {arrival}.",
@@ -94,6 +95,8 @@ class DatasetGenerator:
         "J'aimerais aller à {arrival} en partant de {departure}."
     ]
 
+    ner_labels = ["O", "B-LOC", "I-LOC"]
+
     def __init__(self):
         self.load_cities()
         self.load_random_sentences()
@@ -107,11 +110,21 @@ class DatasetGenerator:
         # Dataset from https://www.kaggle.com/datasets/basilb2s/language-detection?resource=download
         path = os.path.join(os.path.abspath(__file__), "..", "data", "random_sentences.csv")
         df = pd.read_csv(path, sep=",")
+
+        # Keep only languages French, English, Spanish, Italian, German, Portuguese
+        df = df[df["Language"].isin(["French", "English", "Spanish", "Italian", "German", "Portuguese"])]
+
         df["Language"] = df["Language"].apply(lambda x: 0 if x == "French" else 1)
 
         # create a list of sentences, with column Text to key text, and NOT_FRENCH to key Language
         # also set NOT_TRIP to 1, UNKNOWN to 0 and CORRECT to 0
         self.random_sentences = ((df[["Text", "Language"]]
+                                  .rename(columns={"Text": "text", "Language": "NOT_FRENCH"}))
+                                 .assign(NOT_TRIP=1, UNKNOWN=0, CORRECT=0).to_dict(orient="records"))
+
+        # keep only where Language is 0 (French)
+        df = df[df["Language"] == 0]
+        self.random_sentences_french = ((df[["Text", "Language"]]
                                   .rename(columns={"Text": "text", "Language": "NOT_FRENCH"}))
                                  .assign(NOT_TRIP=1, UNKNOWN=0, CORRECT=0).to_dict(orient="records"))
 
@@ -281,12 +294,26 @@ class DatasetGenerator:
         return flattened_list
 
     @staticmethod
-    def split_sentence_token_classification(sentence):
+    def split_sentence_token_classification(sentence: str) -> list:
         regex = r'[\w|?]+\S?'
         formatted_sentence = [s for s in re.findall(regex, sentence) if s]
         return formatted_sentence
 
-    def generate_ner_tags_from_correct_sentence(self, steps: dict) -> list:
+    @staticmethod
+    def manage_trailing_punctuation(sentence: list) -> tuple[list, bool]:
+        if sentence[-1][-1] in [".", "?", "!"]:
+            sentence[-1] = sentence[-1][:-1]
+            sentence.append(".")
+            return sentence, True
+        return sentence, False
+
+    @classmethod
+    def format_sentence_token_classification(cls, sentence: str) -> tuple[list, bool]:
+        formatted_sentence = cls.split_sentence_token_classification(sentence)
+        sentence, should_add_dot = cls.manage_trailing_punctuation(formatted_sentence)
+        return sentence, should_add_dot
+
+    def generate_ner_tags_from_correct_sentences(self, steps: dict) -> list:
         data = []
 
         for sentence in self.correct_sentences:
@@ -294,26 +321,22 @@ class DatasetGenerator:
             alt_sentence = sentence.replace("{", "").replace("}", "")
             formatted_sentence = self.split_sentence_token_classification(alt_sentence)
 
-            tags_sentence = ["O"] * (len(formatted_sentence))
+            tags_sentence = [self.ner_labels.index("O")] * (len(formatted_sentence))
 
             for i, word in enumerate(formatted_sentence):
                 for substr in ["departure", "arrival"]:
                     if substr in word:
                         formatted_step = self.split_sentence_token_classification(steps[substr])
-                        tags_sentence[i] = ["B-LOC"] + ["I-LOC"] * (len(formatted_step) - 1)
+                        tags_sentence[i] = [self.ner_labels.index("B-LOC")] + [self.ner_labels.index("I-LOC")] * (len(formatted_step) - 1)
 
             # remove 2D list inside list
             tags_sentence = self.flatten_list(tags_sentence)
 
             final_sentence = sentence.format(departure=steps["departure"], arrival=steps["arrival"])
-            formatted_final_sentence = self.split_sentence_token_classification(final_sentence)
 
-            if formatted_final_sentence[-1][-1] == ".":
-                formatted_final_sentence[-1] = formatted_final_sentence[-1][:-1]
-                tags_sentence[-1] = tags_sentence[-1][:-1]
-
-                formatted_final_sentence.append(".")
-                tags_sentence.append("O")
+            formatted_final_sentence, should_add_dot = self.format_sentence_token_classification(final_sentence)
+            if should_add_dot:
+                tags_sentence.append(self.ner_labels.index("O"))
 
             data.append({
                 "text": final_sentence,
@@ -322,6 +345,16 @@ class DatasetGenerator:
             })
 
         return data
+
+    def generate_ner_tags_from_random_sentence(self) -> list:
+        sentence = np.random.choice(self.random_sentences_french)["text"]
+        formatted_sentence, _ = self.format_sentence_token_classification(sentence)
+        tags_sentence = [self.ner_labels.index("O")] * (len(formatted_sentence))
+        return [{
+            "text": sentence,
+            "tokens": formatted_sentence,
+            "ner_tags": tags_sentence,
+        }]
 
     def generate_token_classification_dataset(self, regenerate=False):
         print("Generating token classification dataset...")
@@ -336,15 +369,18 @@ class DatasetGenerator:
 
             for k, step in steps.items():
                 steps[k] = step.title()
-            dataset.extend(self.generate_ner_tags_from_correct_sentence(steps))
+            dataset.extend(self.generate_ner_tags_from_correct_sentences(steps))
 
             for k, step in steps.items():
                 steps[k] = step.lower()
-            dataset.extend(self.generate_ner_tags_from_correct_sentence(steps))
+            dataset.extend(self.generate_ner_tags_from_correct_sentences(steps))
 
             for k, step in steps.items():
                 steps[k] = step.replace("-", " ")
-            dataset.extend(self.generate_ner_tags_from_correct_sentence(steps))
+            dataset.extend(self.generate_ner_tags_from_correct_sentences(steps))
+
+        for _ in range(len(dataset)):
+            dataset.extend(self.generate_ner_tags_from_random_sentence())
 
         df = pd.DataFrame(dataset)
         df.to_csv("data/dataset_token_classification.csv", index=False, sep=";")
