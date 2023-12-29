@@ -95,7 +95,8 @@ class DatasetGenerator:
         "J'aimerais aller à {arrival} en partant de {departure}."
     ]
 
-    ner_labels = ["O", "B-LOC", "I-LOC"]
+    #ner_labels = ["O", "B-LOC", "I-LOC"]
+    ner_labels = ["O", "B-DEP", "I-DEP", "B-ARR", "I-ARR"]
 
     def __init__(self):
         self.load_cities()
@@ -324,10 +325,21 @@ class DatasetGenerator:
             tags_sentence = [self.ner_labels.index("O")] * (len(formatted_sentence))
 
             for i, word in enumerate(formatted_sentence):
+
+                """
                 for substr in ["departure", "arrival"]:
                     if substr in word:
                         formatted_step = self.split_sentence_token_classification(steps[substr])
                         tags_sentence[i] = [self.ner_labels.index("B-LOC")] + [self.ner_labels.index("I-LOC")] * (len(formatted_step) - 1)
+                """
+
+                if "departure" in word:
+                    formatted_step = self.split_sentence_token_classification(steps["departure"])
+                    tags_sentence[i] = [self.ner_labels.index("B-DEP")] + [self.ner_labels.index("I-DEP")] * (len(formatted_step) - 1)
+
+                if "arrival" in word:
+                    formatted_step = self.split_sentence_token_classification(steps["arrival"])
+                    tags_sentence[i] = [self.ner_labels.index("B-ARR")] + [self.ner_labels.index("I-ARR")] * (len(formatted_step) - 1)
 
             # remove 2D list inside list
             tags_sentence = self.flatten_list(tags_sentence)
