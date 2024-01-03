@@ -369,10 +369,16 @@ class DatasetGenerator:
         }]
 
     def generate_token_classification_dataset(self, regenerate=False):
+        path = "./data/token_classification/"
+
         print("Generating token classification dataset...")
-        if os.path.exists("./data/dataset_token_classification.csv") and not regenerate:
-            print("File already exists, skipping generation.")
+        if os.path.exists(path) and not regenerate:
+            print("Folder already exists, skipping generation.")
             return
+        else:
+            os.makedirs(path, exist_ok=True)
+            for file in os.listdir(path):
+                os.remove(os.path.join(path, file))
 
         dataset = []
 
@@ -395,7 +401,14 @@ class DatasetGenerator:
             dataset.extend(self.generate_ner_tags_from_random_sentence())
 
         df = pd.DataFrame(dataset)
-        df.to_csv("data/dataset_token_classification.csv", index=False, sep=";")
+
+        # Shuffle dataset since random sentences at the end weight more in file size
+        df = df.sample(frac=1).reset_index(drop=True)
+
+        number_files = 3
+        for id, df_i in enumerate(np.array_split(df, number_files)):
+            df_i.to_csv(f"{path}dataset_token_classification_{id + 1}.csv", index=False, sep=";")
+
         print(f"Dataset generated with {len(dataset)} sentences.")
 
 
