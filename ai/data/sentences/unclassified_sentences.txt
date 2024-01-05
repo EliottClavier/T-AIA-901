@@ -1,0 +1,11 @@
+Je veux aller de {departure} à {arrival} ou {arrival}.
+Je veux me rendre de {departure} à {arrival} ou {departure}.
+Je veux me rendre à {arrival} ou {departure}.
+Je veux me diriger vers {arrival} depuis {departure} ou {arrival}.
+Je veux aller à {arrival} depuis {departure} ou pourquoi pas {arrival}.
+{departure} à {departure}.
+{departure} vers {departure}.
+{arrival} à {arrival}.
+{arrival} vers {arrival}.
+J'aimerais aller à {departure} en partant de {departure}.
+J'aimerais aller à {arrival} en partant de {arrival}.

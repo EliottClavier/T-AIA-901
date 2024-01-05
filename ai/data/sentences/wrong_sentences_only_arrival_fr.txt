@@ -1,0 +1,10 @@
+Je veux arriver à {departure}.
+Mon trajet se termine à {departure}.
+Dirigez-vous vers {departure} depuis une autre ville.
+Je cherche un moyen d'arriver à {departure}.
+Trouve un moyen d'atteindre {departure}.
+Rendez-vous à {departure}, c'est ma destination.
+Arrivez à {departure}, c'est là que je veux aller.
+L'arrivée à {departure} est prévue.
+Je suis en train de planifier une arrivée à {departure}.
+Allons vers {departure}, c'est là où je souhaite être.
