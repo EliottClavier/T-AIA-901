@@ -1,10 +1,10 @@
-I want to arrive at {departure}.
-My journey ends at {departure}.
-Head towards {departure} from another city.
-I'm looking for a way to arrive at {departure}.
-Find a way to reach {departure}.
-Meet at {departure}, it's my destination.
-Arrive at {departure}, that's where I want to go.
-The arrival at {departure} is scheduled.
-I'm planning an arrival at {departure}.
-Let's head towards {departure}, that's where I want to be.
+I want to arrive at {arrival}.
+My journey ends at {arrival}.
+Head towards {arrival} from another city.
+I'm looking for a way to arrive at {arrival}.
+Find a way to reach {arrival}.
+Meet at {arrival}, it's my destination.
+Arrive at {arrival}, that's where I want to go.
+The arrival at {arrival} is scheduled.
+I'm planning an arrival at {arrival}.
+Let's head towards {arrival}, that's where I want to be.
