@@ -1,4 +1,5 @@
 Je veux aller de {departure} à {arrival}.
+Je veux aller à {arrival} depuis {departure}.
 J'aimerais me rendre de {departure} à {arrival}.
 Je prévois un voyage de {departure} à {arrival}.
 Je cherche un moyen d'aller de {departure} à {arrival}.
@@ -80,3 +81,7 @@ Comment puis-je rejoindre {departure} à partir de {arrival} ?
 J'aimerais aller à {arrival} en partant de {departure}.
 Comment me rendre à {arrival} depuis {departure} ?
 Comment me rendre de {departure} à {arrival} ?
+Je pars de {departure} pour aller à {arrival}.
+Je pars de {departure} vers {arrival}.
+Je pars de {departure} en direction de {arrival}.
+Je vais à {arrival} en partant de {departure}.

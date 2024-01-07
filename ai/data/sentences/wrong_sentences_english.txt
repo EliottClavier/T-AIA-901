@@ -15,3 +15,10 @@ Find a way to reach {arrival} from {departure}.
 Go to {arrival} from {departure}.
 Depart for {arrival} from {departure}.
 {departure} to {arrival}.
+I'd like to go from {departure} to {arrival}.
+Show me the way to {arrival} from {departure}.
+Compute a route from {departure} to {arrival}.
+What is the best way to go from {departure} to {arrival}?
+How can I go to {arrival} from {departure}?
+What is the best way to reach {arrival} from {departure}?
+What can I do to go from {departure} to {arrival}?

@@ -7,3 +7,5 @@ Je veux me diriger vers {arrival} depuis {departure} ou {arrival}.
 {arrival} à {dup_arrival}.
 {arrival} vers {dup_arrival}.
 J'aimerais aller à {departure} en partant de {dup_departure}.
+Je pars de {dup_departure} pour aller à {departure}.
+Je vais à {departure} en partant de {dup_departure}.

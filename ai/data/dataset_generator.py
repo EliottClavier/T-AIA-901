@@ -8,7 +8,6 @@ import numpy as np
 
 class DatasetGenerator:
 
-    cities = []
     departures = []
     arrivals = []
 
@@ -45,17 +44,11 @@ class DatasetGenerator:
 
     def __init__(self):
         self.load_cities()
-        print(len(self.cities), "cities loaded.")
-
-        np.random.shuffle(self.cities)
-        self.departures = self.cities[:int(len(self.cities) / 2)]
-        self.arrivals = self.cities[int(len(self.cities) / 2):]
+        print(len(self.departures), "departures loaded.")
+        print(len(self.arrivals), "arrivals loaded.")
 
         if len(self.departures) != len(self.arrivals):
             raise Exception("Departures and arrivals are not the same length.")
-
-        print(len(self.departures), "departures loaded.")
-        print(len(self.arrivals), "arrivals loaded.")
 
         self.load_french_national_names()
         print(len(self.names), "names loaded.")
@@ -93,6 +86,10 @@ class DatasetGenerator:
         path = os.path.join(os.path.abspath(__file__), "..", "..", "..", "backend", "path_finder", "data", "graph.json")
         df = pd.read_json(path)
         self.cities = list(df.keys())
+
+        np.random.shuffle(self.cities)
+        self.departures = self.cities[:int(len(self.cities) / 2)]
+        self.arrivals = self.cities[int(len(self.cities) / 2):]
 
     def load_random_sentences(self):
         df_temp = []
@@ -415,7 +412,7 @@ class DatasetGenerator:
         # Shuffle dataset since random sentences at the end weight more in file size
         df = df.sample(frac=1).reset_index(drop=True)
 
-        number_files = 5
+        number_files = 4
         for id, df_i in enumerate(np.array_split(df, number_files)):
             df_i.to_csv(f"{path}dataset_text_classification_{id + 1}.csv", index=False, sep=";")
 
@@ -466,7 +463,7 @@ class DatasetGenerator:
         # Shuffle dataset since random sentences at the end weight more in file size
         df = df.sample(frac=1).reset_index(drop=True)
 
-        number_files = 5
+        number_files = 4
         for id, df_i in enumerate(np.array_split(df, number_files)):
             df_i.to_csv(f"{path}dataset_token_classification_{id + 1}.csv", index=False, sep=";")
 
