@@ -20,3 +20,5 @@ Dirige-moi de {departure} à {arrival} pour rencontrer {name}.
 Planifie un déplacement efficace vers {arrival} en partant de {departure} pour trouver {name}.
 Crée un itinéraire précis de {departure} à {arrival}, pour rencontrer {name}.
 Indique le meilleur chemin de {departure} vers {arrival}, pour retrouver {name}.
+Recherche un itinéraire de {departure} à {arrival} où habite {name}.
+Aller à {arrival} en partant de {departure} là où habite {name}.

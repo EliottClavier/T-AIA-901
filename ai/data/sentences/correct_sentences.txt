@@ -85,3 +85,5 @@ Je pars de {departure} pour aller à {arrival}.
 Je pars de {departure} vers {arrival}.
 Je pars de {departure} en direction de {arrival}.
 Je vais à {arrival} en partant de {departure}.
+Recherche le chemin entre {departure} et {arrival}.
+Recherche le trajet le plus court vers {arrival} à partir de {departure}.

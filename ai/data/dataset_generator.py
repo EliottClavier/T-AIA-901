@@ -467,7 +467,7 @@ class DatasetGenerator:
         for id, df_i in enumerate(np.array_split(df, number_files)):
             df_i.to_csv(f"{path}dataset_token_classification_{id + 1}.csv", index=False, sep=";")
 
-        print(f"Dataset generated with {len(dataset)} sentences.")
+        print(f"Dataset generated with {len(df)} sentences.")
 
 
 if __name__ == "__main__":
