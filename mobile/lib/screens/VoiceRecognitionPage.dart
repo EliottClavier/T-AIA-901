@@ -197,13 +197,13 @@ class _VoiceRecognitionPageState extends State<VoiceRecognitionPage> {
 
   TextField _getTextInput() {
     return TextField(
-      keyboardType: TextInputType.text,
+      maxLines: null,
+      keyboardType: TextInputType.multiline,
       style: TextStyle(
         fontFamily: 'SofiaSans',
         fontWeight: FontWeight.bold,
         color: AppColors.whiteColor,
       ),
-      maxLines: 1,
       onChanged: (value) {
         setState(() {
           _text = value;
