@@ -1,0 +1,24 @@
+I want to go from {departure} to {arrival}.
+I would like to travel from {departure} to {arrival}.
+I am planning a trip from {departure} to {arrival}.
+I am looking for a way to go from {departure} to {arrival}.
+My journey goes from {departure} to {arrival}.
+I am in the process of planning a trip from {departure} to {arrival}.
+The journey from {departure} to {arrival} is what I'm looking for.
+Finding a way to reach {arrival} from {departure} is my goal.
+Would it be possible for me to go from {departure} to {arrival}, please?
+I would like to travel from {departure} to {arrival}, if it's possible.
+Could you tell me how to get from {departure} to {arrival}, please?
+Go from {departure} to {arrival}.
+Head towards {arrival} from {departure}.
+Find a way to reach {arrival} from {departure}.
+Go to {arrival} from {departure}.
+Depart for {arrival} from {departure}.
+{departure} to {arrival}.
+I'd like to go from {departure} to {arrival}.
+Show me the way to {arrival} from {departure}.
+Compute a route from {departure} to {arrival}.
+What is the best way to go from {departure} to {arrival}?
+How can I go to {arrival} from {departure}?
+What is the best way to reach {arrival} from {departure}?
+What can I do to go from {departure} to {arrival}?
