@@ -1,15 +1,26 @@
-import os
+from . import pathfinder_bp
 
-from flask import jsonify
-from . import pathfinder_bp  # Import du Blueprint initialisé dans __init__.py
-from .path_finder import PathFinder
+from flask import request
+
+from .process_pathfinder import process_pathfinder
+from nlp import process_nlp
+from utils import split_request_data
 
 
-@pathfinder_bp.route('/')
+@pathfinder_bp.route('/', methods=['POST'])
 def pathfinder_route():
+    sentences = split_request_data(request.data)
+    results_nlp = process_nlp(sentences)
 
-    trip_order = ["Nantes", "Lyon"]
+    sentences = results_nlp.split('\n')
+    results_pathfinder = process_pathfinder(sentences)
 
-    result = PathFinder.get_shortest_path(trip_order)
+    return results_pathfinder, 200, {'Content-Type': 'text/plain'}
 
-    return jsonify({"result": result})
+
+@pathfinder_bp.route('/partial/', methods=['POST'])
+def pathfinder_partial_route():
+    sentences = split_request_data(request.data)
+    results_pathfinder = process_pathfinder(sentences)
+
+    return results_pathfinder, 200, {'Content-Type': 'text/plain'}

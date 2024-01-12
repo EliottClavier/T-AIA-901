@@ -1,3 +1,5 @@
+from .process_classification import *
+
 from flask import Blueprint
 
 # Initialisation du Blueprint

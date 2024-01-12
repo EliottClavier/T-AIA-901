@@ -1,4 +1,5 @@
 from .path_finder import PathFinder
+from .process_pathfinder import *
 
 from flask import Blueprint
 
