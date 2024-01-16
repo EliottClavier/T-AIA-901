@@ -53,7 +53,6 @@ class PathFinder:
 
     @staticmethod
     def generate_response_dict(path: list = None, duration_between_stations: list = None, total_duration: int = 0) -> dict:
-        print(path)
         response_dict = {
             "path": path if path else [],
             "duration_between_stations": duration_between_stations if duration_between_stations else [],
