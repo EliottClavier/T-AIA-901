@@ -9,6 +9,7 @@ class PathFinder:
 
     TIME_TABLE_PATH = os.path.join(os.path.dirname(__file__), "data/timetables_formatted.csv")
     GRAPH_PATH = os.path.join(os.path.dirname(__file__), "data/graph.json")
+    STATIONS_CITIES_PATH = os.path.join(os.path.dirname(__file__), "data/stations_cities.csv")
 
     @staticmethod
     def check_data_exists() -> None:
@@ -43,6 +44,30 @@ class PathFinder:
                 json.dump(graph, f, indent=4)
         except IOError:
             raise IOError("Unable to write the graph to file")
+
+    @staticmethod
+    def generate_station_city_csv() -> None:
+        # Load the timetable csv
+        df = pd.read_csv(PathFinder.TIME_TABLE_PATH, sep="\t", encoding="utf-8")
+
+        # Isolate gare_a_city with gare_a and gare_b_city with gare_b into two different dataframes
+        df_a = df[["gare_a", "gare_a_city"]]
+        df_b = df[["gare_b", "gare_b_city"]]
+
+        # gare_a and gare_b must be uppercase
+        df_a["gare_a"] = df_a["gare_a"].str.upper()
+        df_b["gare_b"] = df_b["gare_b"].str.upper()
+
+        # Combine the two dataframes into one with columns gare and city
+        df_a.columns = ["gare", "city"]
+        df_b.columns = ["gare", "city"]
+        df_c = pd.concat([df_a, df_b])
+
+        # Remove duplicates
+        df_c = df_c.drop_duplicates()
+
+        # Save the dataframe to csv
+        df_c.to_csv(PathFinder.STATIONS_CITIES_PATH, sep=";", index=False)
 
     @staticmethod
     def get_graph() -> dict:
@@ -124,6 +149,16 @@ class PathFinder:
         return f"{hours}h{test}"
 
     @staticmethod
+    def check_alternative(city: str) -> str:
+        df = pd.read_csv(PathFinder.STATIONS_CITIES_PATH, sep=";", encoding="utf-8")
+
+        df = df[df["gare"].str.contains(city, na=False)]
+
+        if df.empty:
+            return city
+        return df["city"].iloc[0]
+
+    @staticmethod
     def get_shortest_path(trip: list) -> list:
         results = []
 
@@ -141,6 +176,10 @@ class PathFinder:
                 return [PathFinder.generate_response_dict(["UNKNOWN"])]
 
             for i, step in enumerate(trip_order):
+                for city in step:
+                    if city not in PathFinder.get_graph():
+                        step[step.index(city)] = PathFinder.check_alternative(city)
+
                 results.append(PathFinder.compute_shortest_path(PathFinder.get_graph(), step[0], step[1]))
 
             return results
