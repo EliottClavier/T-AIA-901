@@ -1,4 +1,5 @@
 import heapq
+import logging
 import os
 import json
 import pandas as pd
@@ -51,6 +52,15 @@ class PathFinder:
         return graph
 
     @staticmethod
+    def generate_response_dict(path: list = None, duration_between_stations: list = None, total_duration: int = 0) -> dict:
+        response_dict = {
+            "path": path if path else [],
+            "duration_between_stations": duration_between_stations if duration_between_stations else [],
+            "total_duration": total_duration
+        }
+        return response_dict
+
+    @staticmethod
     def compute_shortest_path(graph: dict, start: str, end: str) -> dict | None:
         # Set the distance to all stations to infinity
         distances = {station: float('inf') for station in graph}
@@ -80,11 +90,7 @@ class PathFinder:
                     current_station = previous_station[current_station]
                 path.reverse()
                 duration_between_stations.reverse()
-                return {
-                    "path": path,
-                    "duration_between_stations": duration_between_stations,
-                    "total_duration": distances[end]
-                }
+                return PathFinder.generate_response_dict(path, duration_between_stations, distances[end])
 
             # Skip if the current station is already visited
             if current_distance > distances[current_station]:
@@ -108,8 +114,8 @@ class PathFinder:
                     # the other station is 20, the neighbor's neighbors will be explored before the other station
                     heapq.heappush(priority_queue, (distance, neighbor))
 
-        # If no path is found, return None
-        return None
+        # If no path is found, return empty dict
+        return PathFinder.generate_response_dict(["UNKNOWN"])
 
     @staticmethod
     def minutes_to_hours(minutes: int) -> str:
@@ -118,7 +124,9 @@ class PathFinder:
         return f"{hours}h{test}"
 
     @staticmethod
-    def get_shortest_path(trip: list) -> str:
+    def get_shortest_path(trip: list) -> list:
+        results = []
+
         try:
             PathFinder.check_data_exists()
 
@@ -129,31 +137,13 @@ class PathFinder:
             # ex: ["Nantes", "Lyon", "Paris"] -> [["Nantes", "Lyon"], ["Lyon", "Paris"]]
             trip_order = [trip[i:i + 2] for i in range(len(trip) - 1)]
 
-            result = {}
+            if len(trip_order) == 0:
+                return [PathFinder.generate_response_dict(["UNKNOWN"])]
+
             for i, step in enumerate(trip_order):
-                result[f"{step[0]} - {step[1]}"] = PathFinder.compute_shortest_path(PathFinder.get_graph(), step[0], step[1])
+                results.append(PathFinder.compute_shortest_path(PathFinder.get_graph(), step[0], step[1]))
 
-            for k, v in result.items():
-                # Fill the header with "#" on both sides until 148 characters + 2 spaces
-                print("#" * ((148 - len(k)) // 2) + f" {k} " + "#" * ((148 - len(k)) // 2))
-
-                final_string = ""
-                for i, station in enumerate(v["path"]):
-                    if i == 0:
-                        final_string += station
-                    else:
-                        final_string += f" -> {station}"
-                    if v["duration_between_stations"][i] is not None:
-                        final_string += f" -> {PathFinder.minutes_to_hours(v['duration_between_stations'][i])}"
-                print(final_string)
-                print(f"Total duration: {PathFinder.minutes_to_hours(v['total_duration'])}")
-                print("#" * 150 + "\n")
-
-            return result
+            return results
         except Exception as e:
-            print(e)
-            return str(e)
-
-
-if __name__ == "__main__":
-    PathFinder().check_data_exists()
+            logging.error(f"{e} not found in the graph")
+            return results + [PathFinder.generate_response_dict(["UNKNOWN"])]
