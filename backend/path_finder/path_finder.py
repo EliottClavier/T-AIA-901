@@ -80,6 +80,8 @@ class PathFinder:
     def generate_response_dict(path: list = None, duration_between_stations: list = None, total_duration: int = 0) -> dict:
         response_dict = {
             "path": path if path else [],
+            "departure": path[0] if path else None,
+            "arrival": path[-1] if path else None,
             "duration_between_stations": duration_between_stations if duration_between_stations else [],
             "total_duration": total_duration
         }

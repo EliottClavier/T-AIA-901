@@ -11,11 +11,11 @@ class ItineraryService {
 
   late ItineraryResponse itineraryResponse;
 
-  late String NLP_API_URL;
+  late String API_URL;
 
   ItineraryService(){
     Config.getInstance().then((config) {
-      NLP_API_URL = config.getNlpApiUrl();
+      API_URL = config.getApiUrl();
     });
   }
 
@@ -26,7 +26,7 @@ class ItineraryService {
 
   sendItineraryRequest(String input) async {
     final response = await http.post(
-      Uri.parse(NLP_API_URL),
+      Uri.parse(API_URL),
       body: jsonEncode(input),
       headers: {
         'Content-Type': 'application/json',
