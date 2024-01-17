@@ -26,7 +26,7 @@
         "DREUIL-L\u00c8S-AMIENS": 74,
         "CAMBRAI": 155,
         "MAUBEUGE": 119,
-        "CIVRY": 100,
+        "ST QUENTIN": 100,
         "MANS (LE )": 135,
         "NOGENT-LE-ROTROU": 102,
         "CHARTRES": 70,
@@ -69,7 +69,7 @@
         "YVETOT": 34,
         "DIEPPE": 63,
         "NANTES": 170,
-        "CHAMBON-FEUGEROLLES (LE )": 258,
+        "LE CROISIC": 258,
         "BLOIS": 49,
         "SAINT-PIERRE-DES-CORPS": 58,
         "BOURGES": 73,
@@ -179,7 +179,7 @@
         "LYON": 366,
         "CH\u00c2TEAU-CHINON(CAMPAGNE)": 82,
         "CHINON-LYC\u00c9E-RABELAIS": 75,
-        "CIVRY": 60,
+        "ST CHRISTOPHE / NAIS C.": 60,
         "CH\u00c2TEAU-DU-LOIR": 75,
         "LOCHES": 58,
         "CHATEAUROUX": 150,
@@ -198,7 +198,7 @@
         "FLEURY-LES-AUBRAIS": 160,
         "MANS (LE )": 133,
         "ALENCON": 145,
-        "CHAMBON-FEUGEROLLES (LE )": 190,
+        "LE CROISIC": 190,
         "NANTES": 93,
         "ANGERS": 78,
         "SAUMUR": 51,
@@ -256,7 +256,7 @@
         "DOUAI": 164,
         "ROUEN": 186,
         "TERGNIER": 159,
-        "CIVRY": 93,
+        "ST QUENTIN": 93,
         "ST-JUST-SNCF": 87,
         "CREIL": 95,
         "GRANDE-SYNTHE": 104,
@@ -266,7 +266,7 @@
     },
     "CAMBRAI": {
         "PARIS": 155,
-        "CIVRY": 101,
+        "ST QUENTIN": 101,
         "VALENCIENNES": 95,
         "DOUAI": 34,
         "LILLE": 59
@@ -276,32 +276,30 @@
         "MARGNY-L\u00c8S-COMPI\u00c8GNE": 80,
         "NAMUR": 84,
         "AULNOYE-AYMERIES": 28,
-        "CIVRY": 116,
+        "ST QUENTIN": 116,
         "JEUMONT": 15,
         "CHARLEROI SUD": 60,
         "VALENCIENNES": 42,
         "BUSIGNY": 36,
         "LILLE": 72
     },
-    "CIVRY": {
+    "ST QUENTIN": {
         "PARIS": 100,
         "BUSIGNY": 60,
         "MARGNY-L\u00c8S-COMPI\u00c8GNE": 100,
-        "JOUE-LES-TOURS": 60,
         "CAMBRAI": 101,
         "MAUBEUGE": 116,
-        "ARRAS": 63,
         "DREUIL-L\u00c8S-AMIENS": 93,
         "TERGNIER": 28,
         "AULNOYE-AYMERIES": 48,
-        "LILLE": 50,
+        "LILLE": 107,
         "DOUAI": 93,
         "CREIL": 104
     },
     "MARGNY-L\u00c8S-COMPI\u00c8GNE": {
         "MAUBEUGE": 80,
         "RIB\u00c9COURT-DRESLINCOURT": 28,
-        "CIVRY": 100,
+        "ST QUENTIN": 100,
         "TERGNIER": 94,
         "PARIS": 56,
         "CREIL": 37,
@@ -318,7 +316,7 @@
         "CH\u00c2TEAU-DU-LOIR": 50,
         "ALENCON": 53,
         "NANTES": 94,
-        "CHAMBON-FEUGEROLLES (LE )": 177,
+        "LE CROISIC": 177,
         "ANGERS": 66,
         "SABLE-SUR-SARTHE": 22,
         "RENNES": 103
@@ -334,7 +332,7 @@
         "MARCHEZAIS": 50,
         "DROU\u00c9 (CENTRE)": 92,
         "NOGENT-LE-ROTROU": 91,
-        "LANTENAY": 108,
+        "VERRIERE (LA )": 108,
         "VERSAILLES": 110,
         "SAINT-PELLERIN": 90,
         "VOVES": 23,
@@ -452,7 +450,7 @@
         "GAP": 216,
         "AIX-EN-PROVENCE": 55,
         "NICE": 159,
-        "SAINT-GEORGES-DE-MONS": 83,
+        "LES ARCS": 83,
         "LYON": 246,
         "AVIGNON": 133,
         "TOULON": 125,
@@ -486,11 +484,8 @@
         "SOSPEL": 65,
         "TOU\u00cbT-DE-L'ESCAR\u00c8NE": 65
     },
-    "SAINT-GEORGES-DE-MONS": {
+    "LES ARCS": {
         "MARSEILLE": 83,
-        "VOLVIC": 39,
-        "CLERMONT-FERRAND": 69,
-        "PONTARLIER": 10,
         "VENTIMIGLIA-STAZIONE": 138,
         "MENTON": 118,
         "SAINT-RAPHAEL": 30,
@@ -564,7 +559,7 @@
         "ANNEMASSE": 60,
         "ALBENS": 45,
         "RUMILLY": 25,
-        "LANTENAY": 55,
+        "LA ROCHE-SUR-FORON": 55,
         "SAINT-GERVAIS-LES-BAINS": 97
     },
     "AVIGNON": {
@@ -645,42 +640,18 @@
         "BOURGOIN-JALLIEU": 119,
         "MO\u00dbTIERS": 45
     },
-    "LANTENAY": {
+    "LA CHAUX-DE-FONDS": {
         "MORTEAU": 29,
-        "BESANCON": 112,
-        "COPPET": 79,
-        "PUY-EN-VELAY (LE )": 47,
-        "SEDAN-PLACE-CALONNE": 59,
-        "LANGOGNE": 25,
-        "MENDE": 68,
-        "MARVEJOLS": 133,
-        "ANNEMASSE": 30,
-        "REMIREMONT": 83,
-        "CHARTRES": 108,
-        "ALES": 111,
-        "ROCHE-SUR-YON (LA )": 120,
-        "SAINTES": 98,
-        "SAINT-YZAN-DE-SOUDIAC": 184,
-        "LA-ROCHELLE-PORTE-DAUPHINE": 9,
-        "SAINT-GERVAIS-LES-BAINS": 108,
-        "ANNECY": 55,
-        "POITIERS": 100,
-        "BEAUVOIR-SUR-NIORT": 44,
-        "SAINT-BONNET-DE-ROCHEFORT": 30,
-        "ANGOULEME": 126,
-        "BORDEAUX": 162,
-        "LIMOGES": 47,
-        "MANDUEL": 114,
-        "BELLEGARDE-SUR-VALSERINE": 65
+        "BESANCON": 112
     },
     "MORTEAU": {
-        "LANTENAY": 29,
+        "LA CHAUX-DE-FONDS": 29,
         "BESANCON": 82,
-        "CHAMBON-FEUGEROLLES (LE )": 20,
+        "LE LOCLE": 20,
         "VALDAHON": 54
     },
     "BESANCON": {
-        "LANTENAY": 112,
+        "LA CHAUX-DE-FONDS": 112,
         "MORTEAU": 82,
         "MOUCHARD": 58,
         "DIJON": 164,
@@ -697,7 +668,7 @@
         "VALLORBE-CFF": 33,
         "FRASNE": 30,
         "DOMPIERRE-HALTE-ROUT.": 21,
-        "SAINT-GEORGES-DE-MONS": 10,
+        "LES GRANGES-NARBOZ": 10,
         "DOLE": 75
     },
     "VALLORBE-CFF": {
@@ -785,7 +756,7 @@
         "ANNEMASSE": 111,
         "CLUSES": 40,
         "LYON": 228,
-        "LANTENAY": 108,
+        "LA ROCHE-SUR-FORON": 108,
         "PASSY": 10,
         "ANNECY": 97
     },
@@ -810,7 +781,7 @@
         "HIRSON": 104,
         "VALENCIENNES": 29,
         "TERGNIER": 71,
-        "CIVRY": 48,
+        "ST QUENTIN": 48,
         "LILLE": 60,
         "CHIVRES-EN-LAONNOIS": 111
     },
@@ -841,12 +812,13 @@
         "HIRSON": 108,
         "CHARLEVILLE-MEZIERES": 146,
         "BETHUNE": 39,
-        "CIVRY": 50,
+        "ST QUENTIN": 107,
         "CAMBRAI": 59,
         "TOURCOING": 14,
         "BOULOGNE-SUR-MER": 72,
         "ARQUES": 75,
         "MOUGINS": 94,
+        "ST OMER": 50,
         "ROUEN": 168
     },
     "NAMUR": {
@@ -909,7 +881,7 @@
         "\u00c9VIAN-LES-BAINS": 60,
         "SAINT-GERVAIS-LES-BAINS": 111,
         "BELLEGARDE-SUR-VALSERINE": 71,
-        "LANTENAY": 30,
+        "LA ROCHE-SUR-FORON": 30,
         "ANNECY": 60
     },
     "COPPET": {
@@ -917,7 +889,7 @@
         "\u00c9VIAN-LES-BAINS": 94,
         "THONON-LES-BAINS": 85,
         "ANNECY": 117,
-        "LANTENAY": 79,
+        "LA ROCHE-SUR-FORON": 79,
         "SAINT-GERVAIS-LES-BAINS": 132,
         "CLUSES": 108
     },
@@ -949,6 +921,13 @@
         "CHAMBERY": 165,
         "GRENOBLE": 200,
         "\u00c9VIAN-LES-BAINS": 20
+    },
+    "LA ROCHE-SUR-FORON": {
+        "COPPET": 79,
+        "ANNEMASSE": 30,
+        "SAINT-GERVAIS-LES-BAINS": 108,
+        "ANNECY": 55,
+        "BELLEGARDE-SUR-VALSERINE": 65
     },
     "CLUSES": {
         "COPPET": 108,
@@ -1392,7 +1371,7 @@
         "VOLVIC": 39,
         "SAINT-GEORGES-DE-MONS": 69,
         "ST-GERVAIS-MAIRIE": 91,
-        "CHAMBON-FEUGEROLLES (LE )": 111,
+        "LE MONT DORE SKI": 98,
         "VERTAIZON": 32,
         "MAURIAC-LYC\u00c9E-CORTAT": 136,
         "MAURIAC": 133,
@@ -1411,6 +1390,7 @@
         "VIC-LE-COMTE": 21,
         "BRIOUDE": 67,
         "ISSOIRE": 40,
+        "LAVEISSI\u00c8RE": 111,
         "MANDUEL": 307,
         "DIJON": 260,
         "LYON": 171
@@ -1487,7 +1467,7 @@
         "MAZEYRAT-D'ALLIER": 53,
         "BOURNONCLE-SAINT-PIERRE": 81,
         "SAINT-ETIENNE": 113,
-        "LANTENAY": 47,
+        "LA CHAISE-DIEU": 47,
         "AMBERT": 107,
         "MARVEJOLS": 135,
         "FIRMINY": 129,
@@ -1522,6 +1502,10 @@
         "SAINT-\u00c9LOY-LES-MINES": 113,
         "PONTGIBAUD-VILLE": 22
     },
+    "SAINT-GEORGES-DE-MONS": {
+        "VOLVIC": 39,
+        "CLERMONT-FERRAND": 69
+    },
     "URCAY-HOTEL-DU-LYON-D'O": {
         "MONTLUCON": 44
     },
@@ -1550,18 +1534,8 @@
     "ST-GERVAIS-MAIRIE": {
         "CLERMONT-FERRAND": 91
     },
-    "CHAMBON-FEUGEROLLES (LE )": {
-        "CLERMONT-FERRAND": 111,
-        "MORTEAU": 20,
-        "VILLEDIEU-LES-PO\u00caLES": 45,
-        "LIMOGES": 70,
-        "ABANCOURT": 83,
-        "MANS (LE )": 177,
-        "RENNES": 222,
-        "NANTES": 74,
-        "ROUEN": 258,
-        "JOUE-LES-TOURS": 190,
-        "POITIERS": 60
+    "LE MONT DORE SKI": {
+        "CLERMONT-FERRAND": 98
     },
     "SAINT-FLOUR": {
         "BOURNONCLE-SAINT-PIERRE": 50,
@@ -1634,6 +1608,9 @@
     },
     "ST-GEORGE-D'AURAC-BOURG": {
         "LANGEAC": 12
+    },
+    "LA CHAISE-DIEU": {
+        "PUY-EN-VELAY (LE )": 47
     },
     "AMBERT": {
         "PUY-EN-VELAY (LE )": 107,
@@ -1812,8 +1789,11 @@
         "ROMORANTIN-LANTHENAY": 50,
         "VALEN\u00c7AY": 87
     },
+    "LA FERT\u00c9-SUR-CHIERS": {
+        "SEDAN-PLACE-CALONNE": 59
+    },
     "SEDAN-PLACE-CALONNE": {
-        "LANTENAY": 59
+        "LA FERT\u00c9-SUR-CHIERS": 59
     },
     "CHALONS-EN-CHAMPAGNE": {
         "VERDUN": 108,
@@ -1975,6 +1955,9 @@
     "LURE": {
         "CORBENAY": 37
     },
+    "LE LOCLE": {
+        "MORTEAU": 20
+    },
     "VALDAHON": {
         "MORTEAU": 54,
         "BESANCON": 43
@@ -2001,6 +1984,9 @@
     "DOMPIERRE-HALTE-ROUT.": {
         "PONTARLIER": 21
     },
+    "LES GRANGES-NARBOZ": {
+        "PONTARLIER": 10
+    },
     "JOUGNE": {
         "FRASNE": 56
     },
@@ -2025,7 +2011,7 @@
         "CLERMONT-FERRAND": 344,
         "BRIOUDE": 254,
         "G\u00c9NOLHAC": 57,
-        "LANTENAY": 111,
+        "LA BASTIDE-PUYLAURENT": 111,
         "MENDE": 187,
         "LANGOGNE": 136,
         "BOURNONCLE-SAINT-PIERRE": 263
@@ -2048,18 +2034,25 @@
         "NARBONNE": 98,
         "CERB\u00c8RE": 197,
         "G\u00c9NOLHAC": 77,
-        "LANTENAY": 114,
+        "LA BASTIDE-PUYLAURENT": 114,
         "VAUVERT": 24
     },
+    "LA BASTIDE-PUYLAURENT": {
+        "LANGOGNE": 25,
+        "MENDE": 68,
+        "MARVEJOLS": 133,
+        "ALES": 111,
+        "MANDUEL": 114
+    },
     "LANGOGNE": {
-        "LANTENAY": 25,
+        "LA BASTIDE-PUYLAURENT": 25,
         "MENDE": 90,
         "ALES": 136,
         "MANDUEL": 180
     },
     "MENDE": {
         "LANGOGNE": 90,
-        "LANTENAY": 68,
+        "LA BASTIDE-PUYLAURENT": 68,
         "CLERMONT-FERRAND": 180,
         "SAINT-CH\u00c9LY-D'APCHER": 84,
         "MARVEJOLS": 48,
@@ -2076,7 +2069,7 @@
     "MARVEJOLS": {
         "MILLAU": 75,
         "PUY-EN-VELAY (LE )": 135,
-        "LANTENAY": 133,
+        "LA BASTIDE-PUYLAURENT": 133,
         "MENDE": 48,
         "MANDUEL": 297
     },
@@ -2288,7 +2281,7 @@
         "BAR-LE-DUC": 77,
         "SAINT-PIERRE-D'AURILLAC": 244,
         "LE PARCQ": 122,
-        "L' ISLE-JOURDAIN": 72,
+        "L'ISLE-JOURDAIN (GERS)": 72,
         "LUNEVILLE": 68,
         "NANCY": 23,
         "RODEZ": 137,
@@ -2303,7 +2296,7 @@
         "CAHORS": 74,
         "MONTAUBAN": 43,
         "AGEN": 81,
-        "SAINT-SULPICE": 24,
+        "ST-SULPICE (TARN)": 24,
         "MURET": 19,
         "BOUSSENS": 58,
         "GOURDAN-POLIGNAN": 86,
@@ -2447,7 +2440,7 @@
     },
     "MAZAMET": {
         "TOULOUSE": 133,
-        "SAINT-SULPICE": 103
+        "ST-SULPICE (TARN)": 103
     },
     "MURET": {
         "DAMIATTE": 218,
@@ -2552,7 +2545,7 @@
     "ARRAS": {
         "DOUAI": 40,
         "DREUIL-L\u00c8S-AMIENS": 104,
-        "CIVRY": 63,
+        "ST POL SUR TERNOISE": 63,
         "LENS": 42,
         "LILLE": 99,
         "ALBERT": 62,
@@ -2569,7 +2562,7 @@
         "CAMBRAI": 34,
         "VALENCIENNES": 38,
         "LENS": 31,
-        "CIVRY": 93
+        "ST QUENTIN": 93
     },
     "HAZEBROUCK": {
         "LILLE": 77,
@@ -2579,7 +2572,7 @@
         "LENS": 42
     },
     "BUSIGNY": {
-        "CIVRY": 60,
+        "ST QUENTIN": 60,
         "AULNOYE-AYMERIES": 82,
         "MAUBEUGE": 36
     },
@@ -2643,7 +2636,10 @@
         "PARIS": 105
     },
     "VILLEDIEU-LES-PO\u00caLES": {
-        "CHAMBON-FEUGEROLLES (LE )": 45
+        "LE MONT ST MICHEL": 45
+    },
+    "LE MONT ST MICHEL": {
+        "VILLEDIEU-LES-PO\u00caLES": 45
     },
     "RENNES": {
         "GRANVILLE": 110,
@@ -2665,7 +2661,7 @@
         "QUIMPERLE": 141,
         "LAVAL-DE-C\u00c8RE": 55,
         "MANS (LE )": 103,
-        "CHAMBON-FEUGEROLLES (LE )": 222
+        "LE CROISIC": 222
     },
     "BR\u00c9AUT\u00c9": {
         "FECAMP": 30
@@ -2702,7 +2698,7 @@
         "ANGERS": 43,
         "LAVAL-DE-C\u00c8RE": 101,
         "SAINT-NAZAIRE": 51,
-        "CHAMBON-FEUGEROLLES (LE )": 74,
+        "LE CROISIC": 74,
         "ENSU\u00c8S-LA-REDONNE": 58,
         "QUIMPERLE": 174,
         "BREST": 203,
@@ -2754,7 +2750,7 @@
         "PARIS": 21,
         "ABANCOURT": 103,
         "MARGNY-L\u00c8S-COMPI\u00c8GNE": 37,
-        "CIVRY": 104
+        "ST QUENTIN": 104
     },
     "LAON-GARE-ROUTI\u00c8RE-POMA": {
         "HIRSON": 80,
@@ -2768,7 +2764,7 @@
         "MARGNY-L\u00c8S-COMPI\u00c8GNE": 94,
         "LAON-GARE-ROUTI\u00c8RE-POMA": 67,
         "DREUIL-L\u00c8S-AMIENS": 159,
-        "CIVRY": 28,
+        "ST QUENTIN": 28,
         "AULNOYE-AYMERIES": 71,
         "PARIS": 88,
         "CHIVRES-EN-LAONNOIS": 26
@@ -2782,8 +2778,8 @@
         "ANGOULEME": 158,
         "JOUE-LES-TOURS": 74,
         "BEAUVOIR-SUR-NIORT": 59,
-        "LANTENAY": 100,
-        "CHAMBON-FEUGEROLLES (LE )": 60
+        "ROCHELLE (LA )": 100,
+        "LE DORAT": 60
     },
     "MAUZENS-ET-MIREMONT": {
         "BEAUVOIR-SUR-NIORT": 40
@@ -2794,7 +2790,7 @@
         "SAINTES": 95,
         "ROYAN": 139,
         "POITIERS": 59,
-        "LANTENAY": 44
+        "ROCHELLE (LA )": 44
     },
     "PRISS\u00c9-LA-CHARRI\u00c8RE": {
         "BEAUVOIR-SUR-NIORT": 49
@@ -2822,7 +2818,7 @@
     },
     "ROCHE-SUR-YON (LA )": {
         "SAUMUR": 177,
-        "LANTENAY": 120,
+        "ROCHELLE (LA )": 120,
         "NANTES": 55,
         "CHANTONNAY": 31,
         "JOUE-LES-TOURS": 199
@@ -2938,7 +2934,7 @@
         "CHAMONIX-MONT-BLANC": 185,
         "ANNEMASSE": 71,
         "GEN\u00c8VE": 28,
-        "LANTENAY": 65
+        "LA ROCHE-SUR-FORON": 65
     },
     "AMBERIEU-EN-BUGEY": {
         "SAINT-RAMBERT-EN-BUGEY": 15,
@@ -3059,6 +3055,9 @@
     },
     "CHINON-LYC\u00c9E-RABELAIS": {
         "JOUE-LES-TOURS": 75
+    },
+    "ST CHRISTOPHE / NAIS C.": {
+        "JOUE-LES-TOURS": 60
     },
     "CH\u00c2TEAU-DU-LOIR": {
         "JOUE-LES-TOURS": 75,
@@ -3334,7 +3333,7 @@
         "BUSSANG": 54,
         "BRESSE-CLAUDEL (LA)": 57,
         "LA-BRESSE (PL CHAMPTEL)": 63,
-        "LANTENAY": 83,
+        "LA BRESSE LE LISPACH": 83,
         "NANCY": 160,
         "EPINAL": 37,
         "METZ": 135
@@ -3350,6 +3349,9 @@
     },
     "LA-BRESSE (PL CHAMPTEL)": {
         "REMIREMONT": 63
+    },
+    "LA BRESSE LE LISPACH": {
+        "REMIREMONT": 83
     },
     "AUDUN-LE-ROMAN": {
         "THIONVILLE": 40
@@ -3393,7 +3395,7 @@
         "NICE": 53,
         "GRASSE": 127,
         "CANNES": 101,
-        "SAINT-GEORGES-DE-MONS": 138,
+        "LES ARCS": 138,
         "MENTON": 16,
         "MONACO-MONTE-CARLO": 30
     },
@@ -3409,7 +3411,7 @@
         "GRASSE": 113,
         "NICE": 39,
         "CANNES": 69,
-        "SAINT-GEORGES-DE-MONS": 118,
+        "LES ARCS": 118,
         "VENTIMIGLIA-STAZIONE": 16,
         "MARSEILLE": 205
     },
@@ -3418,7 +3420,7 @@
         "MENTON": 69,
         "MONACO-MONTE-CARLO": 70,
         "GRASSE": 50,
-        "SAINT-GEORGES-DE-MONS": 55,
+        "LES ARCS": 55,
         "SAINT-RAPHAEL": 38
     },
     "MONACO-MONTE-CARLO": {
@@ -3562,7 +3564,7 @@
         "AGEN": 174,
         "SAINTES": 99,
         "LA-ROCHELLE-PORTE-DAUPHINE": 164,
-        "LANTENAY": 162,
+        "ROCHELLE (LA )": 162,
         "ANGOULEME": 89,
         "LIBOURNE": 35,
         "COUTRAS": 47,
@@ -3805,6 +3807,9 @@
     "SANTILLY": {
         "FLEURY-LES-AUBRAIS": 45
     },
+    "VERRIERE (LA )": {
+        "CHARTRES": 108
+    },
     "VERSAILLES": {
         "CHARTRES": 110
     },
@@ -3889,7 +3894,7 @@
     },
     "LIMOGES": {
         "GUERET": 111,
-        "CHAMBON-FEUGEROLLES (LE )": 70,
+        "LE DORAT": 70,
         "POITIERS": 205,
         "SAILLAT-SUR-VIENNE": 91,
         "PERIGUEUX": 147,
@@ -3905,8 +3910,12 @@
         "ST-YRIEIX-LA-PERCHE": 39,
         "EYMOUTIERS": 45,
         "MONTLUCON": 131,
-        "LANTENAY": 47,
+        "LA SOUTERRAINE": 47,
         "CHATEAUROUX": 86
+    },
+    "LE DORAT": {
+        "LIMOGES": 70,
+        "POITIERS": 60
     },
     "SAILLAT-SUR-VIENNE": {
         "LIMOGES": 91
@@ -3950,24 +3959,24 @@
     "LAISSAC-FOIRAIL": {
         "MILLAU": 60
     },
-    "SAINT-SULPICE": {
+    "ST-SULPICE (TARN)": {
         "MAZAMET": 103,
         "CASTRES": 60,
         "TOULOUSE": 24
     },
     "CASTRES": {
-        "SAINT-SULPICE": 60
+        "ST-SULPICE (TARN)": 60
     },
     "GAILLAC": {
         "FIGEAC": 160,
         "TOULOUSE": 53
     },
     "LE PARCQ": {
-        "L' ISLE-JOURDAIN": 51,
+        "L'ISLE-JOURDAIN (GERS)": 51,
         "TOULOUSE": 122,
         "COLOMIERS": 94
     },
-    "L' ISLE-JOURDAIN": {
+    "L'ISLE-JOURDAIN (GERS)": {
         "LE PARCQ": 51,
         "TOULOUSE": 72,
         "COLOMIERS": 48,
@@ -3975,7 +3984,7 @@
     },
     "COLOMIERS": {
         "LE PARCQ": 94,
-        "L' ISLE-JOURDAIN": 48,
+        "L'ISLE-JOURDAIN (GERS)": 48,
         "TOULOUSE": 22,
         "SAINT-CYPRIEN-AR\u00c8NES": 13
     },
@@ -4021,12 +4030,26 @@
     "CHARLEROI SUD": {
         "MAUBEUGE": 60
     },
+    "ST POL SUR TERNOISE": {
+        "ARRAS": 63
+    },
     "GRANDE-SYNTHE": {
         "LILLE": 31,
         "DREUIL-L\u00c8S-AMIENS": 104,
         "ARQUES": 50,
         "HAZEBROUCK": 36,
         "ARRAS": 93
+    },
+    "ROCHELLE (LA )": {
+        "ROCHE-SUR-YON (LA )": 120,
+        "SAINTES": 98,
+        "SAINT-YZAN-DE-SOUDIAC": 184,
+        "LA-ROCHELLE-PORTE-DAUPHINE": 9,
+        "POITIERS": 100,
+        "BEAUVOIR-SUR-NIORT": 44,
+        "SAINT-BONNET-DE-ROCHEFORT": 30,
+        "ANGOULEME": 126,
+        "BORDEAUX": 162
     },
     "ANGERS": {
         "SABLE-SUR-SARTHE": 83,
@@ -4060,22 +4083,25 @@
         "PARIS": 64
     },
     "ABANCOURT": {
-        "CHAMBON-FEUGEROLLES (LE )": 83,
+        "LE TR\u00c9PORT-MERS-LES-B": 83,
         "CREIL": 103,
         "BEAUVAIS": 48,
         "DREUIL-L\u00c8S-AMIENS": 35
+    },
+    "LE TR\u00c9PORT-MERS-LES-B": {
+        "ABANCOURT": 83
     },
     "ANGOULEME": {
         "POITIERS": 158,
         "SAINTES": 98,
         "ROYAN": 145,
         "LA-ROCHELLE-PORTE-DAUPHINE": 138,
-        "LANTENAY": 126,
+        "ROCHELLE (LA )": 126,
         "BORDEAUX": 89,
         "COUTRAS": 55
     },
     "SAINTES": {
-        "LANTENAY": 98,
+        "ROCHELLE (LA )": 98,
         "LA-ROCHELLE-PORTE-DAUPHINE": 133,
         "BEAUVOIR-SUR-NIORT": 95,
         "ANGOULEME": 98,
@@ -4084,17 +4110,17 @@
     },
     "LA-ROCHELLE-PORTE-DAUPHINE": {
         "SAINT-BONNET-DE-ROCHEFORT": 64,
-        "LANTENAY": 9,
+        "ROCHELLE (LA )": 9,
         "SAINTES": 133,
         "ANGOULEME": 138,
         "BORDEAUX": 164
     },
     "SAINT-BONNET-DE-ROCHEFORT": {
         "LA-ROCHELLE-PORTE-DAUPHINE": 64,
-        "LANTENAY": 30
+        "ROCHELLE (LA )": 30
     },
     "SAINT-YZAN-DE-SOUDIAC": {
-        "LANTENAY": 184,
+        "ROCHELLE (LA )": 184,
         "BORDEAUX": 43
     },
     "ROYAN": {
@@ -4105,11 +4131,11 @@
     "TOULON": {
         "MARSEILLE": 125,
         "GARDE (LA )": 21,
-        "SAINT-GEORGES-DE-MONS": 60,
+        "LES ARCS": 60,
         "CARNOULES": 31
     },
     "SAINT-RAPHAEL": {
-        "SAINT-GEORGES-DE-MONS": 30,
+        "LES ARCS": 30,
         "CANNES": 38
     },
     "SOSPEL": {
@@ -4180,6 +4206,9 @@
     "TOURCOING": {
         "LILLE": 14
     },
+    "ST OMER": {
+        "LILLE": 50
+    },
     "CLERMONT": {
         "PARIS": 50
     },
@@ -4227,6 +4256,13 @@
     },
     "PAIMPOL": {
         "GUINGAMP": 47
+    },
+    "LE CROISIC": {
+        "MANS (LE )": 177,
+        "RENNES": 222,
+        "NANTES": 74,
+        "ROUEN": 258,
+        "JOUE-LES-TOURS": 190
     },
     "SAINT-NAZAIRE": {
         "NANTES": 51
@@ -4306,11 +4342,14 @@
     "FELLETIN": {
         "GUERET": 52
     },
+    "LA SOUTERRAINE": {
+        "LIMOGES": 47
+    },
     "CARMAUX": {
         "TOULOUSE": 76
     },
     "SAINT-CYPRIEN-AR\u00c8NES": {
-        "L' ISLE-JOURDAIN": 33,
+        "L'ISLE-JOURDAIN (GERS)": 33,
         "COLOMIERS": 13
     },
     "DURTOL": {
@@ -4320,6 +4359,9 @@
         "CLERMONT-FERRAND": 40,
         "VIC-LE-COMTE": 66,
         "ISSOIRE": 88
+    },
+    "LAVEISSI\u00c8RE": {
+        "CLERMONT-FERRAND": 111
     },
     "LUNEL": {
         "NARBONNE": 100,

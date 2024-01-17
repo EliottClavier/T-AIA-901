@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/model/ItineraryResponse.dart';
+import 'package:mobile/services/ItineraryService.dart';
 import 'package:mobile/services/NavigationService.dart';
 import 'package:mobile/utils/AppColors.dart';
 import 'package:mobile/widgets/CustomText.dart';
@@ -8,23 +9,6 @@ import 'package:mobile/widgets/Wrapper.dart';
 import '../model/TripStep.dart';
 
 class LoadingPage extends StatelessWidget {
-
-  LoadingPage() {
-    Future.delayed(Duration(seconds: 3), () {
-      ItineraryResponse itineraryResponse = ItineraryResponse(
-        state: "CORRECT",
-        steps: [
-          TripStep(
-            path: ["BORDEAUX","MARMANDE","AGEN","MONSEMPRON-LIBOS","AULNOYE-AYMERIES","CIVRY","JOUE-LES-TOURS"],
-            departure: "BORDEAUX",
-            arrival: "JOUE-LES-TOURS",
-            duration_between_stations: [67,36,65,28,48,60,null]
-          )
-        ]
-      );
-      NavigationService.navigateToItineraryPage(itineraryResponse);
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
