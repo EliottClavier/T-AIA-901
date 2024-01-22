@@ -1,16 +1,67 @@
-# mobile
+# Mobile
 
-A new Flutter project.
+## Installation
 
-## Getting Started
+Afin de pouvoir lancer l'application mobile, il vous faudra installer [Android Studio](https://developer.android.com/studio) et [Flutter](https://flutter.dev/docs/get-started/install).
+Sur Android Studio, il vous faudra installer le SDK Android (API 29 minimum) et le plugin Dart et Flutter.
 
-This project is a starting point for a Flutter application.
+Pour vérifier l'installation de Flutter, exécutez la commande suivante :
 
-A few resources to get you started if this is your first Flutter project:
+```powershell
+flutter doctor
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Une fois l'installation de flutter validée, il faut installer les dépendances du projet, en exécutant la commande suivante dans le répertoire racine du projet :
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```powershell
+flutter pub get
+```
+
+## Lancement
+
+Selon l'environnement de développement, il est possible de lancer l'application mobile sur un émulateur ou un appareil physique.
+
+### Émulateur
+
+Pour lancer l'application sur un émulateur, il faut d'abord le créer. Pour cela, il faut ouvrir Android Studio et cliquer sur `Tools > AVD Manager`. Ensuite, il faut cliquer sur `Create Virtual Device...` et choisir un appareil. Il est conseillé de choisir un appareil avec une version d'Android récente (API 29 minimum).
+
+Une fois l'émulateur créé, il faut le lancer en cliquant sur `Tools > AVD Manager` puis sur le bouton `Play` à droite de l'émulateur.
+
+Avant de lancer l'application, il faut modifier le fichier `lib/config.json` et remplacer la valeur de `API_URL` par:
+```powershell
+http://10.0.2.2:PORT
+```
+
+
+Enfin, pour lancer l'application sur l'émulateur, il faut exécuter la commande suivante dans le répertoire racine du projet :
+
+```powershell
+flutter run
+```
+ou utiliser le bouton `Run` dans Android Studio.
+
+__Il est important de noter qu'il faut activer le micro de l'émulateur pour pouvoir utiliser la fonctionnalité de Text-To-Speech de l'application.__
+
+### Appareil physique
+
+Pour lancer l'application sur un appareil physique, il faut d'abord activer le mode développeur sur l'appareil. Pour cela, il faut suivre les instructions [suivantes](https://developer.android.com/studio/debug/dev-options).
+
+Avant de lancer l'application, il faut modifier le fichier `lib/config.json` et remplacer la valeur de `API_URL` par l'adresse IP de l'ordinateur sur lequel est lancé le backend. Pour connaître l'adresse IP de l'ordinateur, il faut exécuter la commande suivante dans un terminal :
+
+```powershell
+ipconfig
+```
+et récupérer la valeur de `Adresse IPv4`.
+
+La valeur de `API_URL` doit être de la forme suivante :
+```powershell
+http://IP:PORT
+```
+
+Ensuite, il faut connecter l'appareil à l'ordinateur et exécuter la commande suivante dans le répertoire racine du projet :
+
+```powershell
+flutter run
+```
+ou utiliser le bouton `Run` dans Android Studio.
+

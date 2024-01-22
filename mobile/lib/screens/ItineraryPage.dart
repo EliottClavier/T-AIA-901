@@ -95,7 +95,7 @@ class ItineraryPage extends StatelessWidget {
             ),
             SizedBox(height: 30.0),
             CustomText(
-              text: "Résume de votre voyage",
+              text: "Résumé de votre voyage",
               fontSize: 22.0,
             ),
             SizedBox(height: 30.0)
