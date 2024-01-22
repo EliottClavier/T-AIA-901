@@ -32,7 +32,8 @@ def process_pathfinder_detailed(sentence: str) -> dict:
     if len(sentence_split) > 1:
         if sentence_split[1] not in ["NOT_TRIP", "NOT_FRENCH", "UNKNOWN"]:
             trip_order = sentence_split[1:]
-            return format_detailed_path("CORRECT", PathFinder.get_shortest_path(trip_order))
+            pathfinder_result = PathFinder.get_shortest_path(trip_order, False)
+            return format_detailed_path("CORRECT" if pathfinder_result else "UNKNOWN", pathfinder_result)
         return format_detailed_path(sentence_split[1])
     return format_detailed_path("UNKNOWN")
 

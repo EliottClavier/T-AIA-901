@@ -32,5 +32,8 @@ def trip_details_route():
     sentence = results_nlp.split('\n')[0]
     results_pathfinder = process_pathfinder_detailed(sentence)
 
-    return results_pathfinder, 200, {'Content-Type': 'text/plain'}
+    code = 400
+    if results_pathfinder["state"] == "CORRECT":
+        code = 200
+    return results_pathfinder, code, {'Content-Type': 'text/plain'}
 

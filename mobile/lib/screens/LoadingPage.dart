@@ -1,23 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/model/ItineraryResponse.dart';
+import 'package:mobile/services/ItineraryService.dart';
 import 'package:mobile/services/NavigationService.dart';
 import 'package:mobile/utils/AppColors.dart';
 import 'package:mobile/widgets/CustomText.dart';
 import 'package:mobile/widgets/Wrapper.dart';
 
-class LoadingPage extends StatelessWidget {
+import '../model/TripStep.dart';
 
-  LoadingPage() {
-    Future.delayed(Duration(seconds: 3), () {
-      ItineraryResponse itineraryResponse = ItineraryResponse(
-        sentenceID: "12345",
-        departure: "Paris",
-        destination: "Marseille",
-        steps: ["Lyon", "Avignon"],
-      );
-      NavigationService.navigateToItineraryPage(itineraryResponse);
-    });
-  }
+class LoadingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

@@ -2,6 +2,8 @@ import heapq
 import logging
 import os
 import json
+from typing import Union
+
 import pandas as pd
 
 
@@ -73,13 +75,14 @@ class PathFinder:
     def get_graph() -> dict:
         with open(PathFinder.GRAPH_PATH, "r") as f:
             graph = json.load(f)
-
         return graph
 
     @staticmethod
     def generate_response_dict(path: list = None, duration_between_stations: list = None, total_duration: int = 0) -> dict:
         response_dict = {
             "path": path if path else [],
+            "departure": path[0] if path else None,
+            "arrival": path[-1] if path else None,
             "duration_between_stations": duration_between_stations if duration_between_stations else [],
             "total_duration": total_duration
         }
@@ -152,14 +155,14 @@ class PathFinder:
     def check_alternative(city: str) -> str:
         df = pd.read_csv(PathFinder.STATIONS_CITIES_PATH, sep=";", encoding="utf-8")
 
-        df = df[df["gare"].str.contains(city, na=False)]
+        df = df[df["gare"] == city]
 
         if df.empty:
             return city
         return df["city"].iloc[0]
 
     @staticmethod
-    def get_shortest_path(trip: list) -> list:
+    def get_shortest_path(trip: list, empty_object_when_error: bool = True) -> Union[list, None]:
         results = []
 
         try:
@@ -173,16 +176,29 @@ class PathFinder:
             trip_order = [trip[i:i + 2] for i in range(len(trip) - 1)]
 
             if len(trip_order) == 0:
-                return [PathFinder.generate_response_dict(["UNKNOWN"])]
+                return [PathFinder.generate_response_dict(["UNKNOWN"])] if empty_object_when_error else None
 
             for i, step in enumerate(trip_order):
                 for city in step:
+
+                    # If city name is not recognized based on graph's keys
                     if city not in PathFinder.get_graph():
-                        step[step.index(city)] = PathFinder.check_alternative(city)
+                        # We look for an alternative in the train_stations.csv
+                        if (alternative := PathFinder.check_alternative(city)) != city:
+                            step[step.index(city)] = alternative
+                        # If alternative is equal to the city name, we consider that we can't provide a path and
+                        # return None (can be managed as an error then)
+                        else:
+                            return [PathFinder.generate_response_dict(["UNKNOWN"])] if empty_object_when_error else None
 
                 results.append(PathFinder.compute_shortest_path(PathFinder.get_graph(), step[0], step[1]))
 
             return results
         except Exception as e:
             logging.error(f"{e} not found in the graph")
-            return results + [PathFinder.generate_response_dict(["UNKNOWN"])]
+            return [PathFinder.generate_response_dict(["UNKNOWN"])] if empty_object_when_error else None
+
+
+if __name__ == "__main__":
+    PathFinder.generate_graph()
+    PathFinder.generate_station_city_csv()
