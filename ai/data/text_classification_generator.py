@@ -76,6 +76,14 @@ class TextClassificationGenerator(DatasetGenerator):
                 for i, sentence in enumerate(self.correct_sentences_with_names)
             ])
 
+            correct_sentences.extend([
+                self.create_object_text_label(
+                    sentence, departure, arrival, "", "",
+                    1, 0, 0, 0
+                )
+                for sentence in self.correct_sentences_no_prefix
+            ])
+
             unclassified_sentences.extend([
                 self.create_object_text_label(
                     sentence, departure, arrival, prefix[0], "",

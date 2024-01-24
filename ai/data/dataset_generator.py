@@ -13,6 +13,7 @@ class DatasetGenerator:
 
     correct_sentences = []
     correct_sentences_with_names = []
+    correct_sentences_no_prefix = []
 
     wrong_sentences = {
         "english": [],
@@ -60,6 +61,9 @@ class DatasetGenerator:
 
         self.correct_sentences_with_names = self.load_txt_sentences("correct_sentences_with_names")
         print(len(self.correct_sentences_with_names), "correct sentences with names loaded.")
+
+        self.correct_sentences_no_prefix = self.load_txt_sentences("correct_sentences_no_prefix")
+        print(len(self.correct_sentences_no_prefix), "correct sentences without prefix loaded.")
 
         self.unclassified_sentences = self.load_txt_sentences("unclassified_sentences")
         print(len(self.unclassified_sentences), "unclassified sentences loaded.")

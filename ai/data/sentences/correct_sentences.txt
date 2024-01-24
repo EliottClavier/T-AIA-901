@@ -87,10 +87,6 @@ Recherche le chemin entre {departure} et {arrival}.
 Recherche le trajet le plus court vers {arrival} à partir de {departure}.
 Comment aller à {arrival} depuis {departure} ?
 Je souhaiterais aller à {arrival} depuis {departure}.
-Je voudrais un billet {departure} {arrival}.
-C'est quoi le trajet de {departure} à {arrival} ?
-Ca met combien de temps pour aller de {departure} à {arrival} ?
-Ca met combien de temps un {departure} {arrival} ?
 Recherche le chemin le plus court entre {departure} et {arrival}.
 Trouve un itinéraire de {departure} à {arrival}.
 Trouve un itinéraire pour aller de {departure} à {arrival}.

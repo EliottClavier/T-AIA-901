@@ -40,7 +40,7 @@ flutter run
 ```
 ou utiliser le bouton `Run` dans Android Studio.
 
-__Il est important de noter qu'il faut activer le micro de l'émulateur pour pouvoir utiliser la fonctionnalité de Text-To-Speech de l'application.__
+__Il est important de noter qu'il faut activer le micro de l'émulateur pour pouvoir utiliser la fonctionnalité de Speech-To-Text de l'application.__
 
 ### Appareil physique
 

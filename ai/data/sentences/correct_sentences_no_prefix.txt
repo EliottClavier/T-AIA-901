@@ -1,0 +1,4 @@
+Je voudrais un billet {departure} {arrival}.
+C'est quoi le trajet de {departure} à {arrival} ?
+Ca met combien de temps pour aller de {departure} à {arrival} ?
+Ca met combien de temps un {departure} {arrival} ?

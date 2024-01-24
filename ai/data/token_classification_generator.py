@@ -39,11 +39,18 @@ class TokenClassificationGenerator(DatasetGenerator):
         sentence, should_add_dot = cls.manage_trailing_punctuation(formatted_sentence)
         return sentence, should_add_dot
 
+    def prepare_sentence_common(self, final_sentences: list, sentence: str) -> None:
+        final_sentences.append(sentence.format(departure="{departure}", arrival="{arrival}", name="{name}"))
+        if sentence[-1] in ["."]:
+            final_sentences.append(sentence.format(departure="{departure}", arrival="{arrival}", name="{name}")[:-1])
+        elif sentence[-1] in ["?", "!"]:
+            final_sentences.append(sentence.format(departure="{departure}", arrival="{arrival}", name="{name}")[:-2])
+
     def prepare_sentences(self) -> list:
         final_sentences = []
 
         for sentence in self.correct_sentences + self.correct_sentences_with_names:
-            final_sentences.append(sentence.format(departure="{departure}", arrival="{arrival}", name="{name}"))
+            self.prepare_sentence_common(final_sentences, sentence)
 
             random_fr_prefix = np.random.choice(self.fr_prefixes)
 
@@ -53,10 +60,8 @@ class TokenClassificationGenerator(DatasetGenerator):
                 sentence.format(departure=random_fr_prefix + "{departure}", arrival=random_fr_prefix + "{arrival}", name="{name}")
             ]))
 
-            if sentence[-1] in ["."]:
-                final_sentences.append(sentence.format(departure="{departure}", arrival="{arrival}", name="{name}")[:-1])
-            elif sentence[-1] in ["?", "!"]:
-                final_sentences.append(sentence.format(departure="{departure}", arrival="{arrival}", name="{name}")[:-2])
+        for sentence in self.correct_sentences_no_prefix:
+            self.prepare_sentence_common(final_sentences, sentence)
 
         return final_sentences
 
