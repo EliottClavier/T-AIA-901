@@ -46,7 +46,11 @@ class DatasetGenerator:
         print(len(self.arrivals), "arrivals loaded.")
 
         if len(self.departures) != len(self.arrivals):
-            raise Exception("Departures and arrivals are not the same length.")
+            print("Departures and arrivals are not the same length.")
+            if len(self.departures) > len(self.arrivals):
+                self.departures = self.departures[:len(self.arrivals)]
+            else:
+                self.arrivals = self.arrivals[:len(self.departures)]
 
         self.load_french_national_names()
         print(len(self.names), "names loaded.")
@@ -70,19 +74,18 @@ class DatasetGenerator:
     @staticmethod
     def load_txt_sentences(filename: str) -> list:
         path = os.path.join(os.path.abspath(__file__), "..", "sentences", f"{filename}.txt")
-        sentences = []
-        with open(path, "r") as f:
+        with open(path, "r", encoding="utf-8") as f:
             sentences = f.read().splitlines()
         return [sentence for sentence in sentences if sentence]
 
     def load_french_national_names(self):
         path = os.path.join(os.path.abspath(__file__), "..", "sentences", "french_national_names.csv")
-        df = pd.read_csv(path, sep=",")
+        df = pd.read_csv(path, sep=",", encoding="utf-8")
         self.names = list(df["name"].unique())
 
     def load_cities(self):
         path = os.path.join(os.path.abspath(__file__), "..", "..", "..", "backend", "path_finder", "data", "graph.json")
-        df = pd.read_json(path)
+        df = pd.read_json(path, encoding="utf-8")
         cities = list(df.keys())
 
         np.random.shuffle(cities)
@@ -93,7 +96,7 @@ class DatasetGenerator:
         df_temp = []
         for file in os.listdir(os.path.join(os.path.abspath(__file__), "..", "sentences")):
             if file.endswith(".csv") and "random_sentences" in file:
-                df_temp.append(pd.read_csv(os.path.join(os.path.abspath(__file__), "..", "sentences", file), sep=";"))
+                df_temp.append(pd.read_csv(os.path.join(os.path.abspath(__file__), "..", "sentences", file), sep=";", encoding="utf-8"))
 
         df = pd.concat(df_temp, ignore_index=True)
 
@@ -111,3 +114,11 @@ class DatasetGenerator:
         # keep only where Language is 0 (French)
         df = df[df["Language"] == 0]
         self.random_sentences_french = ((df[["Text"]].rename(columns={"Text": "text"})).to_dict(orient="records"))
+
+    @staticmethod
+    def replace_de_with_d(sentence: str, steps: dict) -> str:
+        # Replace de with d' if city name starts with a vowel and previous word is "de"
+        for el in ["departure", "arrival"]:
+            if steps[el] and steps[el][0].title() in ["A", "E", "I", "O", "U", "Y"] and sentence.find("de {" + el + "}") != -1:
+                sentence = sentence.replace("de {" + el + "}", "d'{" + el + "}")
+        return sentence

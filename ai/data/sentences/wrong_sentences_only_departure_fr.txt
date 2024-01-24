@@ -8,3 +8,5 @@ Partez de {departure}, c'est le début de l'aventure.
 Le départ de {departure} est imminent.
 Je suis en train de planifier un départ de {departure}.
 Allons ailleurs que {departure}.
+Comment partir de {departure} ?
+Ca met combien de temps un {arrival} ?

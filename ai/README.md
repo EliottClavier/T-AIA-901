@@ -4,7 +4,7 @@ Les expérimentations IA sont divisées en deux parties :
 - [token-classification](token-classification) : NER avec des transformers
 
 ## Installation
-Dans le répertoire racine du projet, exécutez les commandes suivantes :
+Dans le répertoire racine du projet, exécutez la suite de commandes qui suit, en notant qu'il est recommandé d'utiliser [Python 3.11.5](https://www.python.org/downloads/release/python-3115/).
 
 Créer un environnement virtuel avec la commande suivante :
 ```powershell
@@ -23,6 +23,8 @@ Il vous faudra également installer __pytorch__ [selon votre configuration](http
 ```powershell
 pip install torch torchvision torchaudio
 ```
+
+__La version vérifiée de pytorch pour ce projet est la 2.1.2.__
 
 ## Lancement de Jupyter Notebook
 Dans le répertoire racine du projet, exécutez la commande suivante :

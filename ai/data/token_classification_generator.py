@@ -53,19 +53,21 @@ class TokenClassificationGenerator(DatasetGenerator):
                 sentence.format(departure=random_fr_prefix + "{departure}", arrival=random_fr_prefix + "{arrival}", name="{name}")
             ]))
 
+            if sentence[-1] in ["."]:
+                final_sentences.append(sentence.format(departure="{departure}", arrival="{arrival}", name="{name}")[:-1])
+            elif sentence[-1] in ["?", "!"]:
+                final_sentences.append(sentence.format(departure="{departure}", arrival="{arrival}", name="{name}")[:-2])
+
         return final_sentences
 
-    def generate_bert_ner_tags_from_correct_sentences(self, steps: dict, sentences: list) -> pd.DataFrame:
+    def generate_bert_ner_tags_from_correct_sentences(self, steps: dict, sentences: list, random_names: list[str]) -> pd.DataFrame:
         data = []
 
-        for sentence in sentences:
-
+        for x, sentence in enumerate(sentences):
             alt_sentence = sentence.replace("{", "").replace("}", "")
             formatted_sentence = self.split_sentence(alt_sentence)
 
             tags_sentence = [self.ner_labels.index("O")] * (len(formatted_sentence))
-
-            random_name = np.random.choice(self.names)
 
             for i, word in enumerate(formatted_sentence):
                 if "departure" in word:
@@ -77,15 +79,17 @@ class TokenClassificationGenerator(DatasetGenerator):
                     tags_sentence[i] = [self.ner_labels.index("B-ARR")] + [self.ner_labels.index("I-ARR")] * (len(formatted_step) - 1)
 
                 if "name" in word:
-                    formatted_name = self.split_sentence(random_name)
+                    formatted_name = self.split_sentence(random_names[x])
                     tags_sentence[i] = [self.ner_labels.index("O")] * len(formatted_name)
 
             # remove 2D list inside list
             tags_sentence = flatten_list(tags_sentence)
 
-            final_sentence = sentence.format(departure=steps["departure"], arrival=steps["arrival"], name=random_name)
+            final_sentence = self.replace_de_with_d(sentence, steps)
+            final_sentence = final_sentence.format(departure=steps["departure"], arrival=steps["arrival"], name=random_names[x])
 
             formatted_final_sentence, should_add_dot = self.format_sentence(final_sentence)
+
             if should_add_dot:
                 tags_sentence.append(self.ner_labels.index("O"))
 
@@ -97,12 +101,12 @@ class TokenClassificationGenerator(DatasetGenerator):
 
         return pd.DataFrame(data, columns=["text", "tokens", "ner_tags"])
 
-    def generate_spacy_ner_tags_from_correct_sentences(self, steps: dict, sentences: list) -> pd.DataFrame:
+    def generate_spacy_ner_tags_from_correct_sentences(self, steps: dict, sentences: list, random_names: list[str]) -> pd.DataFrame:
         data = []
 
-        for sentence in sentences:
-
-            final_sentence = sentence.format(departure=steps["departure"], arrival=steps["arrival"], name=np.random.choice(self.names))
+        for i, sentence in enumerate(sentences):
+            final_sentence = self.replace_de_with_d(sentence, steps)
+            final_sentence = final_sentence.format(departure=steps["departure"], arrival=steps["arrival"], name=random_names[i])
             spacy_tags = []
 
             elements = ["departure", "arrival"]
@@ -120,12 +124,12 @@ class TokenClassificationGenerator(DatasetGenerator):
                 "text": final_sentence,
                 "spacy_ner_tags": spacy_tags,
             })
-
         return pd.DataFrame(data, columns=["text", "spacy_ner_tags"])
 
     def generate_ner_tags_from_correct_sentences(self, steps: dict, sentences: list) -> list:
-        bert_data = self.generate_bert_ner_tags_from_correct_sentences(steps, sentences)
-        spacy_data = self.generate_spacy_ner_tags_from_correct_sentences(steps, sentences)
+        random_names = np.random.choice(self.names, len(sentences))
+        bert_data = self.generate_bert_ner_tags_from_correct_sentences(steps, sentences, random_names)
+        spacy_data = self.generate_spacy_ner_tags_from_correct_sentences(steps, sentences, random_names)
 
         # Combine both datasets based on text attribute of objects using pandas
         return pd.merge(bert_data, spacy_data, on="text").to_dict("records")
@@ -154,10 +158,11 @@ class TokenClassificationGenerator(DatasetGenerator):
         dataset = []
 
         sentences = self.prepare_sentences()
+        print(f"Generated {len(sentences)} sentences.")
 
         arrivals = self.arrivals.copy()
 
-        for departure in self.departures:
+        for i, departure in enumerate(self.departures):
             arrival = np.random.choice(arrivals)
             arrivals.remove(arrival)
             steps = {"departure": departure, "arrival": arrival}
@@ -169,7 +174,9 @@ class TokenClassificationGenerator(DatasetGenerator):
                     if special_char and special_char in step:
                         steps[k] = step.replace(special_char, " ")
 
-                    dataset.extend(self.generate_ner_tags_from_correct_sentences(steps, sentences))
+                dataset.extend(self.generate_ner_tags_from_correct_sentences(steps, sentences))
+
+            print(f"Progress: {i + 1}/{len(self.departures)}", end="\r")
 
         # Add random sentences to dataset
         random_sentences = self.generate_ner_tags_from_random_sentences(self.random_sentences_french)
