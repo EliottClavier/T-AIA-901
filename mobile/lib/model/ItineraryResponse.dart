@@ -1,22 +1,20 @@
+import 'dart:core';
+
+import 'package:mobile/model/TripStep.dart';
+
 class ItineraryResponse {
-  final String sentenceID;
-  final String departure;
-  final String destination;
-  final List<String> steps;
+  final String state;
+  final List<TripStep>? steps;
 
   ItineraryResponse({
-    required this.sentenceID,
-    required this.departure,
-    required this.destination,
-    required this.steps,
+    required this.state,
+    this.steps
   });
 
   factory ItineraryResponse.fromJson(Map<String, dynamic> json) {
     return ItineraryResponse(
-      sentenceID: json['sentenceID'],
-      departure: json['departure'],
-      destination: json['destination'],
-      steps: List<String>.from(json['steps']),
+      state: json['state'],
+      steps: json['steps'] != null ? (json['steps'] as List).map((i) => TripStep.fromJson(i)).toList() : null,
     );
   }
 }

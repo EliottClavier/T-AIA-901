@@ -2,6 +2,8 @@ Je veux aller de {departure} à {arrival} ou {arrival}.
 Je veux me rendre de {departure} à {arrival} ou {departure}.
 Je veux me rendre à {arrival} ou {departure}.
 Je veux me diriger vers {arrival} depuis {departure} ou {arrival}.
+{departure} à {arrival}.
+{departure} ou {arrival}.
 {departure} à {dup_departure}.
 {departure} vers {dup_departure}.
 {arrival} à {dup_arrival}.

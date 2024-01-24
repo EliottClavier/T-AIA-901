@@ -118,9 +118,13 @@ class FormatTimetables:
 
                 to_check = [
                     row[gare],
-                    row[gare].split(" ")[0],
-                    row[gare].split(".")[0]
                 ]
+
+                if not row[gare].startswith(("Le ", "La ", "Les ", "L'", "St")):
+                    to_check += [
+                        row[gare].split(" ")[0],
+                        row[gare].split(".")[0]
+                    ]
 
                 to_check = list(set(to_check))
 

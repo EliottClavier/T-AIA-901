@@ -5,11 +5,8 @@ class ItineraryException extends CommonException {
 
   ItineraryException(super.code, super.message);
 
-  factory ItineraryException.createFromEnumCode(ItineraryExceptionEnumCode code, String? sentenceId){
-    String message = code.getMessage();
-    if(sentenceId!.isNotEmpty){
-      message = "Sentence Id : $sentenceId, Error message : " + message;
-    }
+  factory ItineraryException.createFromEnumCode(ItineraryExceptionEnumCode code){
+    String message = code.getCode() + ": " + code.getMessage();
     return ItineraryException(
         code.getCode(),
         message

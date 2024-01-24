@@ -1,6 +1,9 @@
 import heapq
+import logging
 import os
 import json
+from typing import Union
+
 import pandas as pd
 
 
@@ -8,6 +11,7 @@ class PathFinder:
 
     TIME_TABLE_PATH = os.path.join(os.path.dirname(__file__), "data/timetables_formatted.csv")
     GRAPH_PATH = os.path.join(os.path.dirname(__file__), "data/graph.json")
+    STATIONS_CITIES_PATH = os.path.join(os.path.dirname(__file__), "data/stations_cities.csv")
 
     @staticmethod
     def check_data_exists() -> None:
@@ -44,11 +48,45 @@ class PathFinder:
             raise IOError("Unable to write the graph to file")
 
     @staticmethod
+    def generate_station_city_csv() -> None:
+        # Load the timetable csv
+        df = pd.read_csv(PathFinder.TIME_TABLE_PATH, sep="\t", encoding="utf-8")
+
+        # Isolate gare_a_city with gare_a and gare_b_city with gare_b into two different dataframes
+        df_a = df[["gare_a", "gare_a_city"]]
+        df_b = df[["gare_b", "gare_b_city"]]
+
+        # gare_a and gare_b must be uppercase
+        df_a["gare_a"] = df_a["gare_a"].str.upper()
+        df_b["gare_b"] = df_b["gare_b"].str.upper()
+
+        # Combine the two dataframes into one with columns gare and city
+        df_a.columns = ["gare", "city"]
+        df_b.columns = ["gare", "city"]
+        df_c = pd.concat([df_a, df_b])
+
+        # Remove duplicates
+        df_c = df_c.drop_duplicates()
+
+        # Save the dataframe to csv
+        df_c.to_csv(PathFinder.STATIONS_CITIES_PATH, sep=";", index=False)
+
+    @staticmethod
     def get_graph() -> dict:
         with open(PathFinder.GRAPH_PATH, "r") as f:
             graph = json.load(f)
-
         return graph
+
+    @staticmethod
+    def generate_response_dict(path: list = None, duration_between_stations: list = None, total_duration: int = 0) -> dict:
+        response_dict = {
+            "path": path if path else [],
+            "departure": path[0] if path else None,
+            "arrival": path[-1] if path else None,
+            "duration_between_stations": duration_between_stations if duration_between_stations else [],
+            "total_duration": total_duration
+        }
+        return response_dict
 
     @staticmethod
     def compute_shortest_path(graph: dict, start: str, end: str) -> dict | None:
@@ -80,11 +118,7 @@ class PathFinder:
                     current_station = previous_station[current_station]
                 path.reverse()
                 duration_between_stations.reverse()
-                return {
-                    "path": path,
-                    "duration_between_stations": duration_between_stations,
-                    "total_duration": distances[end]
-                }
+                return PathFinder.generate_response_dict(path, duration_between_stations, distances[end])
 
             # Skip if the current station is already visited
             if current_distance > distances[current_station]:
@@ -108,8 +142,8 @@ class PathFinder:
                     # the other station is 20, the neighbor's neighbors will be explored before the other station
                     heapq.heappush(priority_queue, (distance, neighbor))
 
-        # If no path is found, return None
-        return None
+        # If no path is found, return empty dict
+        return PathFinder.generate_response_dict(["UNKNOWN"])
 
     @staticmethod
     def minutes_to_hours(minutes: int) -> str:
@@ -118,7 +152,19 @@ class PathFinder:
         return f"{hours}h{test}"
 
     @staticmethod
-    def get_shortest_path(trip: list) -> str:
+    def check_alternative(city: str) -> str:
+        df = pd.read_csv(PathFinder.STATIONS_CITIES_PATH, sep=";", encoding="utf-8")
+
+        df = df[df["gare"] == city]
+
+        if df.empty:
+            return city
+        return df["city"].iloc[0]
+
+    @staticmethod
+    def get_shortest_path(trip: list, empty_object_when_error: bool = True) -> Union[list, None]:
+        results = []
+
         try:
             PathFinder.check_data_exists()
 
@@ -129,31 +175,30 @@ class PathFinder:
             # ex: ["Nantes", "Lyon", "Paris"] -> [["Nantes", "Lyon"], ["Lyon", "Paris"]]
             trip_order = [trip[i:i + 2] for i in range(len(trip) - 1)]
 
-            result = {}
+            if len(trip_order) == 0:
+                return [PathFinder.generate_response_dict(["UNKNOWN"])] if empty_object_when_error else None
+
             for i, step in enumerate(trip_order):
-                result[f"{step[0]} - {step[1]}"] = PathFinder.compute_shortest_path(PathFinder.get_graph(), step[0], step[1])
+                for city in step:
 
-            for k, v in result.items():
-                # Fill the header with "#" on both sides until 148 characters + 2 spaces
-                print("#" * ((148 - len(k)) // 2) + f" {k} " + "#" * ((148 - len(k)) // 2))
+                    # If city name is not recognized based on graph's keys
+                    if city not in PathFinder.get_graph():
+                        # We look for an alternative in the train_stations.csv
+                        if (alternative := PathFinder.check_alternative(city)) != city:
+                            step[step.index(city)] = alternative
+                        # If alternative is equal to the city name, we consider that we can't provide a path and
+                        # return None (can be managed as an error then)
+                        else:
+                            return [PathFinder.generate_response_dict(["UNKNOWN"])] if empty_object_when_error else None
 
-                final_string = ""
-                for i, station in enumerate(v["path"]):
-                    if i == 0:
-                        final_string += station
-                    else:
-                        final_string += f" -> {station}"
-                    if v["duration_between_stations"][i] is not None:
-                        final_string += f" -> {PathFinder.minutes_to_hours(v['duration_between_stations'][i])}"
-                print(final_string)
-                print(f"Total duration: {PathFinder.minutes_to_hours(v['total_duration'])}")
-                print("#" * 150 + "\n")
+                results.append(PathFinder.compute_shortest_path(PathFinder.get_graph(), step[0], step[1]))
 
-            return result
+            return results
         except Exception as e:
-            print(e)
-            return str(e)
+            logging.error(f"{e} not found in the graph")
+            return [PathFinder.generate_response_dict(["UNKNOWN"])] if empty_object_when_error else None
 
 
 if __name__ == "__main__":
-    PathFinder().check_data_exists()
+    PathFinder.generate_graph()
+    PathFinder.generate_station_city_csv()
