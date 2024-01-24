@@ -9,8 +9,7 @@ from dataset_generator import DatasetGenerator
 
 class TextClassificationGenerator(DatasetGenerator):
 
-    @staticmethod
-    def create_object_text_label(sentence: str, departure: str, arrival: str, prefix: str, name: str, correct: int,
+    def create_object_text_label(self, sentence: str, departure: str, arrival: str, prefix: str, name: str, correct: int,
                                  not_french: int, not_trip: int, unknown: int) -> dict:
 
         # Case for unclassified sentences with two times the same city
@@ -40,6 +39,8 @@ class TextClassificationGenerator(DatasetGenerator):
             "name": name
         }
 
+        sentence = self.replace_de_with_d(sentence, f_dict)
+
         return {
             "text": sentence.format(**f_dict),
             "CORRECT": correct,
@@ -66,12 +67,21 @@ class TextClassificationGenerator(DatasetGenerator):
                 for sentence in self.correct_sentences
             ])
 
+            random_names = np.random.choice(self.names, len(self.correct_sentences_with_names))
             correct_sentences.extend([
                 self.create_object_text_label(
-                    sentence, departure, arrival, prefix[0], np.random.choice(self.names),
+                    sentence, departure, arrival, prefix[0], random_names[i],
                     1, 0, 0, 0
                 )
-                for sentence in self.correct_sentences_with_names
+                for i, sentence in enumerate(self.correct_sentences_with_names)
+            ])
+
+            correct_sentences.extend([
+                self.create_object_text_label(
+                    sentence, departure, arrival, "", "",
+                    1, 0, 0, 0
+                )
+                for sentence in self.correct_sentences_no_prefix
             ])
 
             unclassified_sentences.extend([
@@ -183,11 +193,12 @@ class TextClassificationGenerator(DatasetGenerator):
         dataset = []
         arrivals = self.arrivals.copy()
 
-        for departure in self.departures:
+        for i, departure in enumerate(self.departures):
             # pick random arrival and remove it from list
             arrival = np.random.choice(arrivals)
             arrivals.remove(arrival)
             dataset.extend(self.get_batch_sentences(departure, arrival))
+            print(f"Progress: {i + 1}/{len(self.departures)}", end="\r")
 
         # Create dataframe
         df = pd.DataFrame(dataset)

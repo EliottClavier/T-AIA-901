@@ -22,3 +22,4 @@ Crée un itinéraire précis de {departure} à {arrival}, pour rencontrer {name}
 Indique le meilleur chemin de {departure} vers {arrival}, pour retrouver {name}.
 Recherche un itinéraire de {departure} à {arrival} où habite {name}.
 Aller à {arrival} en partant de {departure} là où habite {name}.
+Je veux me rendre chez mon ami {name} qui habite à {arrival} en partant de {departure}.

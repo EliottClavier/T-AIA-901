@@ -8,3 +8,5 @@ Arrivez à {arrival}, c'est là que je veux aller.
 L'arrivée à {arrival} est prévue.
 Je suis en train de planifier une arrivée à {arrival}.
 Allons vers {arrival}, c'est là où je souhaite être.
+Comment aller à {arrival} ?
+Comment se rendre à {arrival} ?

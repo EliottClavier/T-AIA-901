@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "706f73b3-31f0-4580-9e1d-d98b45a8e5df",
+		"name": "T-AIA",
+		"description": "**Postman collection that lists all routes exposed by the Flask Application :**\n\n- Trip routes (with and without details)\n    \n- Pathfinder only\n    \n- NLP related routes (to play with text classification and NER (Named Entity Recognition) inference)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15430373"
+	},
+	"item": [
+		{
+			"name": "Trip (NLP + Pathfinder)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "1,je voudrais aller de Toulouse à bordeaux\r\n2,Comment me rendre à Port-Boulet depuis la gare de Tours ?\r\n3,Je veux aller voir mon ami Albert à Tours en partant de Bordeaux\r\n4,Il y a-t-il des trains de Nantes à Montaigu\r\n5,Une phrase sans origine ni destination\r\nSi pas de numéro de séquence, on considère que c'est zéro\r\n7, is there any train going from Paris to Marseille ?",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/trip/",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"trip",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trip with details (NLP + Pathfinder)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sentence\": \"Comment aller à Lyon depuis Paris ?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/trip/details",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"trip",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pathfinder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "1,Toulouse,bordeaux\r\n2,Port-Boulet,Tours\r\n3,Bordeaux,Tours\r\n4,Nantes,Montaigu",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/pathfinder/",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"pathfinder",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NLP (Text + token classification)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "1,je voudrais aller de Toulouse à bordeaux\r\n2,Comment me rendre à Port-Boulet depuis la gare de Tours ?\r\n3,Je veux aller voir mon ami Albert à Tours en partant de Bordeaux\r\n4,Il y a-t-il des trains de Nantes à Montaigu\r\n5,Une phrase sans origine ni destination\r\nSi pas de numéro de séquence, on considère que c'est zéro\r\n7, is there any train going from Paris to Marseille ?",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/nlp",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"nlp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NLP (Text classification)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "1,je voudrais aller de Toulouse à bordeaux\r\n2,Comment me rendre à Port-Boulet depuis la gare de Tours ?\r\n3,Je veux aller voir mon ami Albert à Tours en partant de Bordeaux\r\n4,Il y a-t-il des trains de Nantes à Montaigu\r\n5,Une phrase sans origine ni destination\r\nSi pas de numéro de séquence, on considère que c'est zéro\r\n7, is there any train going from Paris to Marseille ?",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/nlp/text",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"nlp",
+						"text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NLP (Token classification)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "1,je voudrais aller de Toulouse à bordeaux\r\n2,Comment me rendre à Port-Boulet depuis la gare de Tours ?\r\n3,Je veux aller voir mon ami Albert à Tours en partant de Bordeaux\r\n4,Il y a-t-il des trains de Nantes à Montaigu",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/nlp/token",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"nlp",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "localhost:5000"
+		}
+	]
+}

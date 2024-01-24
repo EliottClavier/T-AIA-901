@@ -10,12 +10,11 @@ Trouver un moyen d'atteindre {arrival} depuis {departure} est mon objectif.
 Serait-il possible de me rendre de {departure} à {arrival}, s'il vous plaît ?
 Je souhaiterais me déplacer de {departure} à {arrival}, si c'est réalisable.
 Pourriez-vous m'indiquer comment aller de {departure} à {arrival}, je vous prie ?
-Allez de {departure} à {arrival}.
+Aller de {departure} à {arrival}.
 Dirigez-vous vers {arrival} en partant de {departure}.
 Trouve un moyen d'atteindre {arrival} depuis {departure}.
 Rendez-vous à {arrival} depuis {departure}.
 Partez pour {arrival} en partant de {departure}.
-{departure} à {arrival}.
 De {departure} à {arrival}.
 De {departure} vers {arrival}.
 Depuis {departure} vers {arrival}.
@@ -48,10 +47,10 @@ Comment atteindre {arrival} à partir de {departure} ?
 Pourrais-tu me guider vers {arrival} depuis {departure} ?
 Trouve-moi un itinéraire pour aller de {departure} à {arrival}.
 Comment puis-je rejoindre {arrival} depuis {departure} ?
-Je souhaite me rendre de {arrival} jusqu'à {departure}.
+Je souhaite me rendre de {departure} jusqu'à {arrival}.
 Trouve-moi un itinéraire de {arrival} vers {departure}.
-Comment puis-je aller à {departure} en venant de {arrival} ?
-Peux-tu me guider de {arrival} jusqu'à {departure} ?
+Comment puis-je aller à {arrival} en venant de {departure} ?
+Peux-tu me guider de {departure} jusqu'à {arrival} ?
 Je cherche le chemin pour aller à {arrival} depuis {departure}.
 Montre-moi le trajet pour aller à {arrival} en partant de {departure}.
 Pourrais-tu m'indiquer comment aller de {departure} à {arrival} ?
@@ -61,23 +60,22 @@ Je recherche un itinéraire pour aller à {arrival} en partant de {departure}.
 Indique-moi le chemin depuis {departure} jusqu'à {arrival}.
 Je souhaite me déplacer vers {arrival} à partir de {departure}.
 Pourrais-tu me diriger de {departure} vers {arrival} ?
-Comment puis-je me rendre à {departure} en partant de {arrival} ?
-Je désire aller à {departure} depuis {arrival}. Peux-tu aider ?
+Comment puis-je me rendre à {arrival} en partant de {departure} ?
+Je désire aller à {arrival} depuis {departure}. Peux-tu aider ?
 Peux-tu m'aider à planifier le trajet depuis {departure} jusqu'à {arrival} ?
 Comment atteindre {arrival} en partant de {departure} le plus rapidement ?
-J'aimerais connaître le chemin pour aller à {departure} depuis {arrival}.
+J'aimerais connaître le chemin pour aller à {arrival} depuis {departure}.
 Trouve-moi un moyen de transport de {departure} vers {arrival}.
-Je cherche à me déplacer vers {departure} depuis {arrival}. Comment procéder ?
-Indique-moi le trajet le plus simple depuis {arrival} vers {departure}.
-Je voudrais savoir comment me rendre à {departure} depuis {arrival}, s'il te plaît.
-Peux-tu m'aider à trouver mon chemin de {arrival} à {departure} ?
-Montre-moi le chemin pour aller à {departure} à partir de {arrival}.
-Je souhaite aller à {departure} en partant de {arrival}. Comment faire ?
-Comment atteindre {departure} depuis {arrival} ?
-Pourrais-tu me guider vers {departure} depuis {arrival} ?
-Trouve-moi un itinéraire pour aller à {departure} depuis {arrival}.
-Je cherche à me déplacer vers {departure} depuis {arrival}. Peux-tu m'aider ?
-Comment puis-je rejoindre {departure} à partir de {arrival} ?
+Je cherche à me déplacer vers {arrival} depuis {departure}. Comment procéder ?
+Indique-moi le trajet le plus simple depuis {departure} vers {arrival}.
+Je voudrais savoir comment me rendre à {arrival} depuis {departure}, s'il te plaît.
+Peux-tu m'aider à trouver mon chemin de {departure} à {arrival} ?
+Montre-moi le chemin pour aller à {arrival} à partir de {departure}.
+Je souhaite aller à {arrival} en partant de {departure}. Comment faire ?
+Comment atteindre {arrival} depuis {departure} ?
+Pourrais-tu me guider vers {arrival} depuis {departure} ?
+Je cherche à me déplacer vers {arrival} depuis {departure}. Peux-tu m'aider ?
+Comment puis-je rejoindre {arrival} à partir de {departure} ?
 J'aimerais aller à {arrival} en partant de {departure}.
 Comment me rendre à {arrival} depuis {departure} ?
 Comment me rendre de {departure} à {arrival} ?
@@ -87,3 +85,13 @@ Je pars de {departure} en direction de {arrival}.
 Je vais à {arrival} en partant de {departure}.
 Recherche le chemin entre {departure} et {arrival}.
 Recherche le trajet le plus court vers {arrival} à partir de {departure}.
+Comment aller à {arrival} depuis {departure} ?
+Je souhaiterais aller à {arrival} depuis {departure}.
+Recherche le chemin le plus court entre {departure} et {arrival}.
+Trouve un itinéraire de {departure} à {arrival}.
+Trouve un itinéraire pour aller de {departure} à {arrival}.
+Trouve un itinéraire pour aller à {arrival} en partant de {departure}.
+Trouve un itinéraire pour aller à {arrival} depuis {departure}.
+Peux-tu m'aider à trouver mon chemin vers {arrival} en partant de {departure} ?
+Il y a-t-il des trains de {departure} à {arrival} ?
+Il y a-t-il des trains vers {arrival} depuis {departure} ?
