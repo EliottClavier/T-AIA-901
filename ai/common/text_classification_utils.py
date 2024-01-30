@@ -1,7 +1,12 @@
 import os
+import re
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import nltk
+from nltk import PorterStemmer
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
 from sklearn.metrics import confusion_matrix, classification_report, roc_curve, auc
 from sklearn.model_selection import train_test_split, KFold
 from sklearn.multiclass import OneVsRestClassifier
@@ -12,6 +17,12 @@ from sklearn.utils import shuffle
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.svm import LinearSVC
+
+# Global variables
+nltk.download('stopwords')
+stop_words = set(stopwords.words('french'))
+lemmatizer = WordNetLemmatizer()
+stemmer = PorterStemmer()
 
 
 # Cell 1
@@ -54,6 +65,24 @@ def flatten_trips_labels(dataset):
 
     # Concaténation des datasets
     return pd.concat([dataset, remove_to_keep], ignore_index=True)
+
+
+def remove_stop_words(text: str):
+    words = re.findall(r'\b\w+\b', text.lower())
+    words = [word for word in words if word not in stop_words]
+    return ' '.join(words)
+
+
+def lemmatize_text(text: str):
+    words = re.findall(r'\b\w+\b', text.lower())
+    lemmatized_words = [lemmatizer.lemmatize(word) for word in words if word not in stop_words]
+    return ' '.join(lemmatized_words)
+
+
+def stem_text(text: str):
+    words = re.findall(r'\b\w+\b', text.lower())
+    stemmed_words = [stemmer.stem(word) for word in words if word not in stop_words]
+    return ' '.join(stemmed_words)
 
 
 # Cell 4
