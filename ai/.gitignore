@@ -1,3 +1,5 @@
 __pycache__/**
 models
 data/sentences/sentences.csv
+/.venv/
+/venv/
