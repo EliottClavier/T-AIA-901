@@ -27,11 +27,18 @@ Pour lancer l'application sur un émulateur, il faut d'abord le créer. Pour cel
 
 Une fois l'émulateur créé, il faut le lancer en cliquant sur `Tools > AVD Manager` puis sur le bouton `Play` à droite de l'émulateur.
 
-Avant de lancer l'application, il faut modifier le fichier `lib/config.json` et remplacer la valeur de `API_URL` par:
+Lorsque l'émulateur est lancé, il faut également executer la commande suivante pour activer le micro de l'émulateur:
+```powershell
+adb emu avd hostmicon
+```
+
+Pour finaliser la configuration du micro de l'émulateur, il faut également aller dans les options de l'émulateur et activer le micro
+dans `Extended controls > Microphone` disponible lorsque l'émulateur est lancé.
+
+Avant de lancer l'application sur l'émulateur, il faut modifier le fichier `lib/config.json` et remplacer la valeur de `API_URL` par:
 ```powershell
 http://10.0.2.2:PORT
 ```
-
 
 Enfin, pour lancer l'application sur l'émulateur, il faut exécuter la commande suivante dans le répertoire racine du projet :
 
