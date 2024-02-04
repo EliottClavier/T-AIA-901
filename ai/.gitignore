@@ -1,3 +1,6 @@
 __pycache__/**
 models
 data/sentences/sentences.csv
+/.venv/
+/venv/
+/token-classification/spacy/data/

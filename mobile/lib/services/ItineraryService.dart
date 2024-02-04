@@ -25,26 +25,36 @@ class ItineraryService {
   }
 
   sendItineraryRequest(String input) async {
-    final response = await http.post(
-      Uri.parse(this.API_URL + "trip/details/"),
-      body: jsonEncode({
-        "sentence": input,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    );
+    try {
+      final response = await http.post(
+        Uri.parse(this.API_URL + "trip/details/"),
+        body: jsonEncode({
+          "sentence": input,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      ).timeout(Duration(seconds: 10));
+      print(response);
 
-    ItineraryResponse itineraryResponse = ItineraryResponse.fromJson(jsonDecode(response.body));
+      ItineraryResponse itineraryResponse = ItineraryResponse.fromJson(jsonDecode(response.body));
 
-    if (response.statusCode == 200 && itineraryResponse.state == "CORRECT") {
-      NavigationService.navigateToItineraryPage(itineraryResponse);
-    } else {
+      if (response.statusCode == 200 && itineraryResponse.state == "CORRECT") {
+        NavigationService.navigateToItineraryPage(itineraryResponse);
+      } else {
+        NavigationService.backToVoiceRecognitionPage();
+        SnackBarUtils.showSnackBar(
+            ItineraryException.createFromEnumCode(
+                ItineraryExceptionEnumCode.fromCode(itineraryResponse.state)
+            ).message,
+            Colors.red,
+            5
+        );
+      }
+    } catch (e) {
       NavigationService.backToVoiceRecognitionPage();
       SnackBarUtils.showSnackBar(
-          ItineraryException.createFromEnumCode(
-              ItineraryExceptionEnumCode.fromCode(itineraryResponse.state)
-          ).message,
+          ItineraryException.createFromEnumCode(ItineraryExceptionEnumCode.UNKNOWN).message,
           Colors.red,
           5
       );
